@@ -280,78 +280,8 @@
 
     <script>document.onload = function() { FormsComponents.init(); }</script>
 
-    <script>
-    $(window).load(function(){
-        $("#switch").click(function () {
-            if ($(this).prop('checked') === true) {
-                $('#facebook').show();
-                $('#facebook_title').show();
-                $('#facebook_event').show();
-                $('#facebook_event_title').show();
-                $('#twitter').show();
-                $('#twitter_title').show();
-                $('#instagram').show();
-                $('#instagram_title').show();
-                $('#website').show();
-                $('#website_title').show();
 
-            } 
-            if ($(this).prop('checked') === false) {
-                $('#facebook').hide();
-                $('input[name=facebook]').prop('required',false);   
-                $('#facebook_title').hide();
-                $('input[name=facebook_title]').prop('required',false);   
-                $('#facebook_event').hide();
-                $('input[name=facebook_event]').prop('required',false);   
-                $('#facebook_event_title').hide();
-                $('input[name=facebook_event_title]').prop('required',false);
-                $('#twitter').hide();
-                $('input[name=twitter]').prop('required',false);   
-                $('#twitter_title').hide();
-                $('input[name=twitter_title]').prop('required',false); 
-                $('#instagram').hide();
-                $('input[name=instagram]').prop('required',false);   
-                $('#instagram_title').hide();
-                $('input[name=instagram_title]').prop('required',false);  
-                $('#website_title').hide();
-                $('input[name=website_title]').prop('required',false);   
-                $('#website').hide();
-                $('input[name=website]').prop('required',false);                 
-            }
-        });
-$("#no_presence").click(function () {
-    if ($(this).prop('checked') === true) {
-        $('.presenceTable').hide();
-    } 
-    if ($(this).prop('checked') === false) {
-        $('.presenceTable').show();
-    } 
-});
-}
-</script>
-
-<script>document.onload = function() { 
-    $("input[id=target_audience]").change(function(){
-        var max= 3;
-        if( $("input[id=target_audience]:checked").length == max ){
-            $("input[id=target_audience]").attr('disabled', 'disabled');
-            $("input[id=target_audience]:checked").removeAttr('disabled');
-        }else{
-         $("input[id=target_audience]").removeAttr('disabled');
-     }
- })
-
-    $("input[id=event_types]").change(function(){
-        var max= 3;
-        if( $("input[id=event_types]:checked").length == max ){
-            $("input[id=event_types]").attr('disabled', 'disabled');
-            $("input[id=event_types]:checked").removeAttr('disabled');
-        }else{
-         $("input[id=event_types]").removeAttr('disabled');
-     }
- })
-}
-</script>
+{{ HTML::script('js/custom/createevent.js'); }}
 </div>
 </div>
 @stop

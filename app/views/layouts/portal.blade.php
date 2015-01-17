@@ -7,6 +7,7 @@
     {{ HTML::style('/css/reset.css') }}
     {{ HTML::style('/css/bootstrap.min.css') }}
     {{ HTML::style('/css/main.css') }}
+    {{ HTML::script('js/vendor/jquery-2.1.1.min.js'); }}
 
 </head>
 <body data-spy="scroll" data-target=".nav-menu" data-offset="50">
@@ -71,14 +72,11 @@
                 <ul class="nav main-nav">
 
                     <li class="active"><a class="scroll" href="#home">Home</a></li>
-                    <li><a class="scroll" href="/create_event">Create an Event</a></li>
-                    <li><a class="scroll" href="#features">features</a></li>
-                    <li><a class="scroll" href="#history">history</a></li>
-                    <li><a class="scroll" href="#team">team</a></li>
-                    <li><a class="scroll" href="#portfolio">portfolio</a></li>
-                    <li><a class="scroll" href="#services">services</a></li>
-                    <li><a class="scroll" href="#prices">prices</a></li>
-                    <li><a class="scroll" href="#contact">contact</a></li>
+                    <li><a class="scroll" href="/create_event">My Events</a></li>
+                    <li><a class="scroll" href="#features">Sponsorship Requests</a></li>
+                    <li><a class="scroll" href="#history">Chats</a></li>
+                    <li><a class="scroll" href="#team">Past Events</a></li>
+                    <li><a class="scroll" href="#portfolio">Support</a></li>
 
                 </ul>
 
@@ -223,7 +221,7 @@
 
         </section><!-- End Footer Section -->
     </div>
-     {{ HTML::script('js/vendor/jquery-2.1.1.min.js'); }}
+    
     <script>!window.jQuery && document.write(decodeURI('%3Cscript src="js/vendor/jquery-2.1.1.min.js"%3E%3C/script%3E'));</script>
     {{ HTML::script('js/vendor/bootstrap.min.js'); }}
     {{ HTML::script('js/app.js'); }}
