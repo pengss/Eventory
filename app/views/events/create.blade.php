@@ -113,7 +113,7 @@
                                 <fieldset class="group"> 
                                     <ul class="checkbox">
                                         <?php
-                                        $event_types = DB::table('list_event_type')->get();
+                                        $event_types = DB::table('type_of_events')->get();
                                         foreach ($event_types as $type)
                                         {
                                             ?>
@@ -133,7 +133,7 @@
                                     <ul class="checkbox">
                                         <div data-toggle="checkboxes" data-max="1">
                                             <?php
-                                            $event_audience = DB::table('list_event_audience')->get();
+                                            $event_audience = DB::table('target_audience')->get();
                                             foreach ($event_audience as $aud)
                                             {
                                                 ?>
