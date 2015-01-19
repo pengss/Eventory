@@ -119,7 +119,7 @@ class UsersController extends \BaseController {
 		$userType = DB::table('users')->where('username', $data['username'])->pluck('user_type'); //SQL statement to retrieve user_type
 
         if(Auth::attempt(['username' => $data['username'], 'password' => $data['password']], true)){ //Laravel method to authenticate
-        	if($userType == "Event Organiser"){ 
+        	if($userType == "Event Organizer"){ 
         		return Redirect::to('eventOrganiserProfile'); //If user is Event Organiser, send redirect to Event Organiser Page
         	}	
         	else if($userType == "Sponsor"){
