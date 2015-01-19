@@ -119,7 +119,7 @@
                                             ?>
                                             <li><input type="checkbox" id="event_types" name="event_types[]" value="<?=$type->id?>"> <?=$type->type?></li>
 
-                                            <?
+                                            <?php
                                         }
                                         ?>
                                     </ul>
@@ -138,7 +138,7 @@
                                             {
                                                 ?>
                                                 <li><input type="checkbox" id="target_audience" name="target_audience[]" value="<?=$aud->id?>"> <?=$aud->type?></li>
-                                                <?
+                                                <?php
                                             }
                                             ?>
                                         </div>
