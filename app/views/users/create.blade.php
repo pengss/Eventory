@@ -32,8 +32,8 @@
                 {{Form::text('email', null,array('class' => 'form-control','required' => 'required'))}}
             </div>
             <div class="form-group">
-                {{Form::label('organization','Organisation')}}
-                {{Form::text('organization', null,array('class' => 'form-control','required' => 'required'))}}
+                {{Form::label('organisation','Organisation')}}
+                {{Form::text('organisation', null,array('class' => 'form-control','required' => 'required'))}}
                 {{ HTML::linkRoute('create_organisation', 'Create An Organisation') }}
             </div>
             <div class="form-group">

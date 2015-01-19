@@ -36,9 +36,7 @@ class UsersController extends \BaseController {
 	public function store()
 	{
 		//
-		$data = Input::only(['name','username','password','email','organization','user_type']);
-
-		$organizationID = DB::table('organization')->where('name', $data['organization']) -> pluck('id');
+		$data = Input::only(['name','username','password','email','organisation','user_type']);
 
         $newUser = [
             [
@@ -46,15 +44,15 @@ class UsersController extends \BaseController {
                 'password' => Hash::make($data['password']),
                 'name' => $data['name'],
                 'email' => $data['email'],
-                'organization_id' => $organizationID,
+                'organisation' => $data['organisation'],
                 'user_type' => $data['user_type']
             ]
             ];
-        $name = DB::table('users') -> where('username', $data['username']) -> pluck('name');
+        $name = DB::table('users')->where('username', $data['username']) -> pluck('name');
    
         if($name == null){
         	DB::table('users')->insert($newUser); 
-        	return View::make('users.index');
+        	return View::make('users.login');
         }
 		else{
 			$errors = new MessageBag(['username' => ['Username is taken']]);
@@ -121,13 +119,11 @@ class UsersController extends \BaseController {
 		$userType = DB::table('users')->where('username', $data['username'])->pluck('user_type'); //SQL statement to retrieve user_type
 
         if(Auth::attempt(['username' => $data['username'], 'password' => $data['password']], true)){ //Laravel method to authenticate
-        	if($userType == "Event Organizer"){ 
-        		return Redirect::to('/eventOrganiserProfile'); //If user is Event Organiser, send redirect to Event Organiser Page
-        		//return "1";
+        	if($userType == "Event Organiser"){ 
+        		return Redirect::to('eventOrganiserProfile'); //If user is Event Organiser, send redirect to Event Organiser Page
         	}	
         	else if($userType == "Sponsor"){
-        		return Redirect::to('/sponsorProfile'); //If user is Sponsor, send redirect to Sponsor Page
-        		//return "2";
+        		return Redirect::to('sponsorProfile'); //If user is Sponsor, send redirect to Sponsor Page
         	}
         }
         return Redirect::route('index')->withInput(); //If fail, send redirect to login page
@@ -136,7 +132,7 @@ class UsersController extends \BaseController {
 	public function eventOrganiserProfile(){
 		return View::make('users.event_organiser_profile'); //Links to the Event Organiser Page
 	}
-	
+
 	public function sponsorProfile(){
 		return View::make('users.sponsor_profile'); //Links to Sponsor Page
 	}
@@ -154,7 +150,7 @@ class UsersController extends \BaseController {
 
 	public function handleCreateOrganisation(){
 		$data = Input::only(['name','description']);
-		$testDescription = DB::table('organization')->where('name', $data['name'])->pluck('description');
+		$testDescription = DB::table('organisation')->where('name', $data['name'])->pluck('description');
 
 		if($testDescription == null){
 			
@@ -165,7 +161,7 @@ class UsersController extends \BaseController {
             ]
             ];
 
-            DB::table('organization')->insert($newOrganisation);
+            DB::table('organisation')->insert($newOrganisation);
             return View::make('users.create');
 		}
 
