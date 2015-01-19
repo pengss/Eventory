@@ -38,13 +38,15 @@ class UsersController extends \BaseController {
 		//
 		$data = Input::only(['name','username','password','email','organisation','user_type']);
 
+		$organizationId = DB::table('organization')->where('name', $data['organisation'])-> pluck('id');
+
         $newUser = [
             [
                 'username' => $data['username'],
                 'password' => Hash::make($data['password']),
                 'name' => $data['name'],
                 'email' => $data['email'],
-                'organisation' => $data['organisation'],
+                'organization_id' => $organizationId,
                 'user_type' => $data['user_type']
             ]
             ];
@@ -150,7 +152,7 @@ class UsersController extends \BaseController {
 
 	public function handleCreateOrganisation(){
 		$data = Input::only(['name','description']);
-		$testDescription = DB::table('organisation')->where('name', $data['name'])->pluck('description');
+		$testDescription = DB::table('organization')->where('name', $data['name'])->pluck('description');
 
 		if($testDescription == null){
 			
@@ -161,7 +163,7 @@ class UsersController extends \BaseController {
             ]
             ];
 
-            DB::table('organisation')->insert($newOrganisation);
+            DB::table('organization')->insert($newOrganisation);
             return View::make('users.create');
 		}
 
