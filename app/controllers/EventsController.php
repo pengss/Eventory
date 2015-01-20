@@ -34,7 +34,7 @@ class EventsController extends \BaseController {
 	{
 		$id = Auth::user() -> id; //get the id of the current user to be used during creation
 
-		$data = Input::only(['title','location','start_date','end_date','start_time','end_time','event_types[]','target_audience[]',
+		$data = Input::only(['title','location','start_date','end_date','start_time','end_time','event_types','target_audience',
 		 'banner', 'turnout','description', 'org_name', 'logo', 'orgInfo', 'facebook', 'facebook_event', 'twitter',
 		 'instagram', 'website']); //retrieve all the inputs by the user
 
@@ -61,7 +61,33 @@ class EventsController extends \BaseController {
 
        	DB::table('event')->insert($newEvent); //insert event into the database
 
-       	return $data['target_audience'];
+       	$eventId = DB::table('event')->where('event_name', $data['title'])->pluck('id');
+
+       	if(count($data['event_types']) != 0){
+       		foreach($data['event_types'] as $eventType){
+       			$newEventType = [
+       				[
+       					'event_id' => $eventId,
+       					'event_type_id' => $eventType
+       				]
+					];
+       			DB::table('events_type')->insert($newEventType);
+       		}
+       	}
+
+       	if(count($data['target_audience']) != 0){
+       		foreach($data['target_audience'] as $targetAudience){
+       			$newTargetAudience = [
+       				[
+       					'event_id' => $eventId,
+       					'audience_id' => $targetAudience
+       				]
+       				];
+       			DB::table('events_audience')->insert($newTargetAudience);
+       		}
+       	}
+
+       	return View::make('users.event_organiser_profile');
 
        	//$event = DB::table('event') -> where('event_name', $data['event_name']) -> first();
 
