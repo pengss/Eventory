@@ -157,6 +157,7 @@
                     </div>
                 </div>
             </div>
+            
         </div>
         <!-- END Login Modal -->
         @yield('body')

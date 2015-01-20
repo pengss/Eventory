@@ -3198,6 +3198,7 @@ p, .table, .alert, .carousel {
     .modal-body {
         padding-left: 20px;
         padding-right: 20px;
+        z-index: 2;
     }
 
     .block .block-content-full {
