@@ -34,20 +34,19 @@ class EventsController extends \BaseController {
 	{
 		$id = Auth::user() -> id; //get the id of the current user to be used during creation
 
-		$data = Input::only(['event_name','banner','location','event_type','turnout','target_audience','description','organisation_info', 'start_date', 'end_date',
-			'start_time', 'end_time', 'facebook', 'facebook_event', 'twitter', 'instagram', 'website']); //retrieve all the inputs by the user
+		$data = Input::only(['title','location','start_date','end_date','start_time','end_time','event_types[]','target_audience[]',
+		 'banner', 'turnout','description', 'org_name', 'logo', 'orgInfo', 'facebook', 'facebook_event', 'twitter',
+		 'instagram', 'website']); //retrieve all the inputs by the user
 
 		$newEvent = [ //create instance of a new event with current user id and all the inputs by the user
             [
-                'event_organiser_id' => $id,
-                'event_name' => $data['event_name'],
-                'banner' => $data['banner'],
+                'creator_id' => $id,
+                'event_name' => $data['title'],
+                'logo' => $data['logo'],
                 'location' => $data['location'],
-                'event_type' => $data['event_type'],
                 'turnout' => $data['turnout'],
-                'target_audience' => $data['target_audience'],
                 'description' => $data['description'],
-                'organisation_info' => $data['organisation_info'],
+                'org_info' => $data['orgInfo'],
                 'start_date' => $data['start_date'],
                 'end_date' => $data['end_date'],
                 'start_time' => $data['start_time'],
@@ -62,7 +61,9 @@ class EventsController extends \BaseController {
 
        	DB::table('event')->insert($newEvent); //insert event into the database
 
-       	$event = DB::table('event') -> where('event_name', $data['event_name']) -> first();
+       	return $data['target_audience'];
+
+       	//$event = DB::table('event') -> where('event_name', $data['event_name']) -> first();
 
        	/*$eventId = DB::table('event') -> where('event_name', $data['event_name']) -> pluck('id');
        	$eventType = DB::table('event') -> where('event_name', $data['event_name']) -> pluck('event_type');
@@ -77,7 +78,7 @@ class EventsController extends \BaseController {
        		];
 
        	DB::table('event_type') -> insert($newEventType);*/
-       	return $this -> findRelevantSponsor($event);	    
+       	//return $this -> findRelevantSponsor($event);	    
 	}
 
 	/**
@@ -135,7 +136,7 @@ class EventsController extends \BaseController {
 	public function viewAllEvents(){ //redirect users to view all the listed events
 		$id = Auth::user() -> id; //checks for current user's id
 
-		$events = DB::table('event')->where('event_organiser_id', '=', $id)->get(); //retrieve all events with the user's id from the database
+		$events = DB::table('event')->where('creator_id', '=', $id)->get(); //retrieve all events with the user's id from the database
 
 		View::share('events', $events); //share the variable accross all views, such that there is direct access to this variable
 
