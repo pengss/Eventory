@@ -54,7 +54,7 @@ class UsersController extends \BaseController {
    
         if($name == null){
         	DB::table('users')->insert($newUser); 
-        	return View::make('users.login');
+        	return View::make('users.index');
         }
 		else{
 			$errors = new MessageBag(['username' => ['Username is taken']]);
