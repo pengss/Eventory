@@ -1,4 +1,9 @@
-@extends('layouts.default')
+@extends('layouts.portal')
+@section('body')
+
+{{ HTML::style('/css/font-awesome.css') }}
+{{ HTML::style('/css/style.css') }}
+{{ HTML::style('/css/responsive.css') }}
 <div class="container">
     <div>
         @if(Auth::check())

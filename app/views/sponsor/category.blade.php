@@ -1,5 +1,10 @@
-@extends('layouts.default_create_event')
+@extends('layouts.default')
 @section('body')
+
+
+{{ HTML::style('/css/font-awesome.css') }}
+{{ HTML::style('/css/style.css') }}
+{{ HTML::style('/css/responsive.css') }}
 <div class="row">
     <div class="col-md-4 col-md-offset-4">
         <h2>What kind of events are you interested in</h2>
