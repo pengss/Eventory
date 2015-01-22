@@ -7,7 +7,7 @@
 
 <div id="page-content">
     <div class="row">
-       <div class="col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-2 col-lg-8 col-lg-offset-2">
+     <div class="col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-2 col-lg-8 col-lg-offset-2">
         <!-- Clickable Wizard Block -->
         <div class="block">
             <!-- Clickable Wizard Title -->
@@ -255,8 +255,19 @@
                             <div class="col-md-6">
                                 <input type="text" id="example-clickable-pc" name="example-clickable-pc" class="form-control" placeholder="">
                             </div>
-                        </div>
+                            <div class="col-md-12">
+                                <div class="block">
+                                    <div class="block-title">
+                                        <h4 class="danger">Offer Presence items</h4>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table id="presence" class="table table-borderless table-striped table-vcenter">
 
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <!-- END Third Step -->
 
@@ -281,7 +292,11 @@
     <script>document.onload = function() { FormsComponents.init(); }</script>
 
 
-{{ HTML::script('js/custom/createevent.js'); }}
+    {{ HTML::script('js/custom/createevent.js'); }}
+    {{ HTML::script('js/jquery.appendGrid-1.5.1.min.js'); }}
+    {{ HTML::script('js/jquery.appendGrid-1.5.1.js'); }}
+    {{ HTML::script('js/jquery-ui.js'); }}
+    {{ HTML::script('js/custom/addpresence.js'); }}
 </div>
 </div>
 @stop
