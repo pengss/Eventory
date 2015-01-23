@@ -105,7 +105,7 @@
         // Extra CSS to be added to the control.
         ctrlCss: null,
         // Extra name of class to be added to the control.
-        ctrlClass: null,
+        ctrlClass: 'form-control',
         // The available option for building `select` type control.
         ctrlOptions: null,
         // Options for initalize jQuery UI widget.
@@ -498,101 +498,6 @@
             }
             return target;
         },
-        moveUpRow: function (rowIndex, uniqueIndex) {
-            var settings = checkGridAndGetSettings(this), target = this;
-            if (settings) {
-                var tbWhole = target[0], trTarget, trSwap, trAdtTarget, swapSeq, oldIndex = null;
-                var tbBody = tbWhole.getElementsByTagName('tbody')[0];
-                if ($.isNumeric(rowIndex) && rowIndex > 0 && rowIndex < settings._rowOrder.length) {
-                    oldIndex = rowIndex;
-                    uniqueIndex = settings._rowOrder[rowIndex];
-                } else if ($.isNumeric(uniqueIndex)) {
-                    oldIndex = findRowIndex(uniqueIndex, settings);
-                }
-                if (oldIndex != null && oldIndex > 0) {
-                    // Get row to swap
-                    trTarget = document.getElementById(settings.idPrefix + '_Row_' + uniqueIndex, tbWhole);
-                    trSwap = document.getElementById(settings.idPrefix + '_Row_' + settings._rowOrder[oldIndex - 1], tbWhole);
-                    // Get the sub panel row if used
-                    if (settings.useSubPanel) {
-                        trAdtTarget = document.getElementById(settings.idPrefix + '_SubRow_' + uniqueIndex, tbWhole);
-                    }
-                    // Remove current row
-                    tbBody.removeChild(trTarget);
-                    if (settings.useSubPanel) {
-                        tbBody.removeChild(trAdtTarget);
-                    }
-                    // Insert before the above row
-                    tbBody.insertBefore(trTarget, trSwap);
-                    if (settings.useSubPanel) {
-                        tbBody.insertBefore(trAdtTarget, trSwap);
-                    }
-                    // Update rowOrder
-                    settings._rowOrder[oldIndex] = settings._rowOrder[oldIndex - 1];
-                    settings._rowOrder[oldIndex - 1] = uniqueIndex;
-                    // Update row label
-                    swapSeq = $('td.first', trSwap).html();
-                    $('td.first', trSwap).html($('td.first', trTarget).html());
-                    $('td.first', trTarget).html(swapSeq)
-                    // Save setting
-                    saveSetting(tbWhole, settings);
-                    // Change focus
-                    $('td.last button.moveUp', trTarget).removeClass('ui-state-hover').blur();
-                    $('td.last button.moveUp', trSwap).focus();
-                    // Trigger event
-                    if (settings.afterRowSwapped) {
-                        settings.afterRowSwapped(tbWhole, oldIndex, oldIndex - 1);
-                    }
-                }
-            }
-            return target;
-        },
-        moveDownRow: function (rowIndex, uniqueIndex) {
-            var settings = checkGridAndGetSettings(this), target = this;
-            if (settings) {
-                var tbWhole = target[0], trTarget, trSwap, trAdtSwap, swapSeq, oldIndex = null;
-                var tbBody = tbWhole.getElementsByTagName('tbody')[0];
-                if ($.isNumeric(rowIndex) && rowIndex >= 0 && rowIndex < settings._rowOrder.length - 1) {
-                    oldIndex = rowIndex;
-                    uniqueIndex = settings._rowOrder[rowIndex];
-                } else if ($.isNumeric(uniqueIndex)) {
-                    oldIndex = findRowIndex(uniqueIndex, settings);
-                }
-                if (oldIndex != null && oldIndex != settings._rowOrder.length - 1) {
-                    // Get row to swap
-                    trTarget = document.getElementById(settings.idPrefix + '_Row_' + uniqueIndex, tbWhole);
-                    trSwap = document.getElementById(settings.idPrefix + '_Row_' + settings._rowOrder[oldIndex + 1], tbWhole);
-                    // Get the sub panel row if used
-                    if (settings.useSubPanel) {
-                        trAdtSwap = document.getElementById(settings.idPrefix + '_SubRow_' + settings._rowOrder[oldIndex + 1], tbWhole);
-                    }
-                    // Remove current row
-                    tbBody.removeChild(trSwap);
-                    // Insert before the above row
-                    tbBody.insertBefore(trSwap, trTarget);
-                    if (settings.useSubPanel) {
-                        tbBody.insertBefore(trAdtSwap, trTarget);
-                    }
-                    // Update rowOrder
-                    settings._rowOrder[oldIndex] = settings._rowOrder[oldIndex + 1];
-                    settings._rowOrder[oldIndex + 1] = uniqueIndex;
-                    // Update row label
-                    swapSeq = $('td.first', trSwap).html();
-                    $('td.first', trSwap).html($('td.first', trTarget).html());
-                    $('td.first', trTarget).html(swapSeq)
-                    // Save setting
-                    saveSetting(tbWhole, settings);
-                    // Change focus
-                    $('td.last button.moveDown', trTarget).removeClass('ui-state-hover').blur();
-                    $('td.last button.moveDown', trSwap).focus();
-                    // Trigger event
-                    if (settings.afterRowSwapped) {
-                        settings.afterRowSwapped(tbWhole, oldIndex, oldIndex + 1);
-                    }
-                }
-            }
-            return target;
-        },
         showColumn: function (name) {
             var settings = checkGridAndGetSettings(this);
             if (settings && name) {
@@ -939,7 +844,7 @@
                 tbCell.className = className;
                 if (settings.columns[y].cellCss != null) $(tbCell).css(settings.columns[y].cellCss);
                 // Prepare control id and name
-                var ctrlId = settings.idPrefix + '_' + settings.columns[y].name + '_' + uniqueIndex, ctrlName;
+                var ctrlId = settings.columns[y].name + '_' + uniqueIndex, ctrlName;
                 if ($.isFunction(settings.nameFormatter)) {
                     ctrlName = settings.nameFormatter(settings.idPrefix, settings.columns[y].name, uniqueIndex);
                 } else {

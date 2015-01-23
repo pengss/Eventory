@@ -251,11 +251,7 @@
                         </div>
                         <!-- END Step Info -->
                         <div class="form-group">
-                            <label class="col-md-4 control-label" for="example-clickable-pc">Package</label>
-                            <div class="col-md-6">
-                                <input type="text" id="example-clickable-pc" name="example-clickable-pc" class="form-control" placeholder="">
-                            </div>
-                            <div class="col-md-12">
+                            <div class="col-xs-12">
                                 <div class="block">
                                     <div class="block-title">
                                         <h4 class="danger">Offer Presence items</h4>
