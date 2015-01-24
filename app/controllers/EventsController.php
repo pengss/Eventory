@@ -211,11 +211,12 @@ class EventsController extends \BaseController {
 	}
 
 	public function handleEditMyEvent($myEvent){ //updates database based on the inputs by the user
-		$data = Input::only(['event_name','banner','location','turnout','description','organisation_info', 'start_date', 'end_date',
-			'start_time', 'end_time', 'facebook', 'facebook_event', 'twitter', 'instagram', 'website']); //retrieve all the inputs by the user
+		$data = Input::only(['title','location','start_date','end_date','start_time','end_time','event_types','target_audience',
+		 'banner', 'turnout','description', 'org_name', 'logo', 'orgInfo', 'facebook', 'facebook_event', 'twitter',
+		 'instagram', 'website']); //retrieve all the inputs by the user
 
-		DB::table('event') -> where('event_name', $myEvent) -> update(array('event_name' => $data['event_name'], 'banner' => $data['banner'], 
-			'location' => $data['location'], 'turnout' => $data['turnout'], 'description' => $data['description'], 'organisation_info' => $data['organisation_info'],
+		DB::table('event') -> where('event_name', $myEvent) -> update(array('event_name' => $data['title'], 'banner' => $data['banner'], 
+			'location' => $data['location'], 'turnout' => $data['turnout'], 'description' => $data['description'], 'org_info' => $data['orgInfo'],
 			'start_date' => $data['start_date'], 'end_date' => $data['end_date'], 'start_time' => $data['start_time'], 'end_time' => $data['end_time'],
 			'facebook' => $data['facebook'], 'facebook_event' => $data['facebook_event'], 'twitter' => $data['twitter'], 'instagram' => $data['instagram'], 'website' => $data['website'])); 
 			//updates the event table based on the event chosen
