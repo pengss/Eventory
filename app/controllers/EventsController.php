@@ -87,7 +87,7 @@ class EventsController extends \BaseController {
        		}
        	}
 
-       	return View::make('users.event_organiser_profile');
+       	return View::make('events.success');
 
        	//$event = DB::table('event') -> where('event_name', $data['event_name']) -> first();
 
@@ -230,7 +230,7 @@ class EventsController extends \BaseController {
 		return View::make('events.view_all_events'); //successfully updates the database and return to all events page
 	}
 
-	public function createPresence($myEvent){
+	/*public function createPresence($myEvent){
 		$currentEvent = DB::table('event')->where('event_name', $myEvent)->first(); //select the specific instance of event from database
 
 		return View::make('events.create_presence', compact('currentEvent')); //return the page to create presence for a certain event
@@ -257,7 +257,7 @@ class EventsController extends \BaseController {
 		else{
 			return 'error';
 		}
-	}
+	}*/
 
 	public function findRelevantSponsor($currentEvent){
 		$sponsors = DB::table('sponsor') -> get();
@@ -313,5 +313,9 @@ class EventsController extends \BaseController {
 			                   -> update(array('relevant_sponsor' => $relevantSponsor));
 		}
 		return $eventTypeArray;
+	}
+
+	public function success(){
+		return View::make('events.success');
 	}
 }	
