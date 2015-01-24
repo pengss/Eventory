@@ -1097,6 +1097,7 @@ img.full-bg.full-bg-bottom {
 /* Gallery */
 .gallery img, a[data-toggle="lightbox-image"] img {
     max-width: 100%;
+    -webkit-filter: blur(20px);
 }
 
 a[data-toggle="lightbox-image"],
@@ -3266,8 +3267,8 @@ p, .table, .alert, .carousel {
 
     /* Error Page */
     #error-container h1 {
-        font-size: 96px;
-        margin: 50px 0 70px;
+        font-size: 60px;
+        margin: 200px 0 70px;
     }
 
     /* Timeline */

@@ -39,6 +39,8 @@ Route::get('view_my_event/{myEvent}', array('as' => 'view_my_event', 'uses' => '
 Route::get('edit_my_event/{myEvent}', array('as' => 'edit_my_event', 'uses' => 'EventsController@editMyEvent')); //route to edit specific event with form filled
 Route::post('/edit_my_event/{myEvent}', array('as' => 'edit_my_event', 'uses' => 'EventsController@handleEditMyEvent'));
 Route::resource('event', 'EventsController');
+Route::get('/success', array('as' => 'success', 'uses' => 'EventsController@createPresence')); //display success page after creating event
+
 
 Route::get('/logout', array('as' => 'logout', 'uses' => 'UsersController@logout')); //route to process logout
 /*Route::group(array('before' => 'auth'), function()
