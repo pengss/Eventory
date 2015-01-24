@@ -1,33 +1,47 @@
-@extends('layouts.portal')
+@extends('layouts.main')
 @section('body')
-
-{{ HTML::style('/css/font-awesome.css') }}
-{{ HTML::style('/css/style.css') }}
-{{ HTML::style('/css/responsive.css') }}
 
 <!-- Full Background -->
         <!-- For best results use an image with a resolution of 1280x1280 pixels (prefer a blurred image for smaller file size) -->
-        <img src="img/placeholders/layout/error_full_bg.jpg" alt="Full Background" class="full-bg full-bg-bottom animation-pulseSlow">
+        <img src="images/error_full_bg.jpg" alt="Full Background" class="full-bg full-bg-bottom animation-pulseSlow">
         <!-- END Full Background -->
 
         <!-- Error Container -->
         <div id="error-container">
             <div class="row text-center">
-                <div class="col-md-6 col-md-offset-3">
-                    <h1 class="text-light animation-fadeInQuick"><strong>Feeling Lost?</strong></h1>
-                    <h2 class="text-muted animation-fadeInQuickInv"><em>We sorry but this page can't be found..</em></h2>
+                <div class="col-md-8 col-md-offset-2">
+                    <h1 class="text-light animation-fadeInQuick"><strong>You're matched with <br/>10 Sponsors!</strong></h1>
+                    <h2 class="text-muted animation-fadeInQuickInv"><em>Now all you'll have to do is to wait for their interest if they are willing to partner with you</em></h2>
                 </div>
-                <div class="col-md-4 col-md-offset-4">
-                    <form action="page_ready_search_results.html" method="post" class="push">
-                        <div class="input-group input-group-lg">
-                            <input type="text" id="search-term" name="search-term" class="form-control" placeholder="Search AppUI..">
-                            <div class="input-group-btn">
-                                <button type="submit" class="btn btn-effect-ripple btn-primary"><i class="fa fa-search"></i></button>
+                <div class="row gallery">
+                            <div class="col-sm-3">
+                                <div class="gallery2-image-container animation-fadeInQuick2">
+                                    <img src="images/photo5.jpg" alt="Image">
+                                    </a>
+                                </div>
                             </div>
+                            <div class="col-sm-3">
+                                <div class="gallery2-image-container animation-fadeInQuick2">
+                                    <img src="images/photo2.jpg" alt="Image">
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="gallery2-image-container animation-fadeInQuick2">
+                                    <img src="images/photo1.jpg" alt="Image">
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="gallery2-image-container animation-fadeInQuick2" data-category="nature">
+                                    <img src="images/photo3.jpg" alt="Image">
+                                </div>
+                            </div>
+                            
                         </div>
-                    </form>
-                    <a href="page_ready_blank.html" class="btn btn-effect-ripple btn-default"><i class="fa fa-arrow-left"></i> Go back</a>
-                </div>
+                        <!-- END Gallery Items -->
+                
+                        <a href="page_ready_blank.html" class="btn btn-effect-ripple btn-primary"><i class="fa fa-arrow-left"></i> Back to Dashboard</a>
+                        <button class="btn btn-warning" style="margin-left: 48px;"><i class="gi gi-kiosk"></i> View My Event</button>
+                 
             </div>
         </div>
         <!-- END Error Container -->

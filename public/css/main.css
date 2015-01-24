@@ -1120,6 +1120,13 @@ a[data-toggle="lightbox-image"]:hover img {
     min-height: 500px
 }
 
+.gallery2-image-container {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+    max-height: 500px;
+}
+
 .gallery-image-options {
     padding: 30px 0;
     text-align: center;
@@ -3268,7 +3275,7 @@ p, .table, .alert, .carousel {
     /* Error Page */
     #error-container h1 {
         font-size: 60px;
-        margin: 200px 0 70px;
+        margin: 50px 0 70px;
     }
 
     /* Timeline */
