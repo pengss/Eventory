@@ -164,7 +164,25 @@ class EventsController extends \BaseController {
 
 		$events = DB::table('event')->where('creator_id', '=', $id)->get(); //retrieve all events with the user's id from the database
 
+		$event_types = array();
+
+		$event_audiences = array();
+
+		foreach($events as $current){
+			$currentEventId = $current -> id;
+			$event_types = DB::table('event')->join('events_type', 'event.id', '=', 'events_type.event_id')
+						   ->join('type_of_events', 'events_type.event_type_id', '=', 'type_of_events.id')
+						   ->select('event.id', 'type')
+						   ->get();
+			$event_audiences = DB::table('event')->join('events_audience', 'event.id', '=', 'events_audience.event_id')
+						       ->join('target_audience', 'events_audience.audience_id', '=', 'target_audience.id')
+						       ->select('event.id', 'type')
+						       ->get();
+		}
+
 		View::share('events', $events); //share the variable accross all views, such that there is direct access to this variable
+		View::share('event_types', $event_types);
+		View::share('event_audiences', $event_audiences);
 
 		return View::make('events.view_all_events'); //return to page with all events listed
 		//return $events;
@@ -181,6 +199,7 @@ class EventsController extends \BaseController {
 
 		View::share('selectedEvent', $selectedEvent); //share the selectedEvent accross the Views 
 		View::share('selectedOrganisation', $selectedOrganisation);
+
 
 		return View::make('events.view_selected_event'); //return to page with the information of the selected page
 	}
