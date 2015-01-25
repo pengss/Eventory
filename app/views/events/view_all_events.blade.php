@@ -42,7 +42,9 @@
 					<span class="pull-right"><i class="fa fa-users"></i>{{$event->turnout}}</span>
 					<i class="fa fa-fw fa-file-text"></i> <strong>
 					@foreach($event_types as $eventType)
-						{{$eventType -> type}}
+						@if($eventType -> id == $event -> id)
+							{{$eventType -> type}}
+						@endif
 					<?
 					$str = '';
 					$str = substr($str, 0, strlen($str) - 2);
@@ -71,7 +73,9 @@
 				<div class="g-row">
 					<h6 class="widget-heading"><i class="fa fa-tags"></i> 
 						@foreach($event_audiences as $eventAudience)
-						<span class="label label-default">{{$eventAudience -> type}}</span>,
+							@if($eventAudience -> id == $event -> id)
+								<span class="label label-default">{{$eventAudience -> type}}</span>,
+							@endif	
 						@endforeach
 						<?
 						$str = '';
