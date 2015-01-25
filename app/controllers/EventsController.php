@@ -191,14 +191,14 @@ class EventsController extends \BaseController {
 	public function viewMyEvent($myEvent){ //redirect users to specific events that they chose
 		$selectedEvent = DB::table('event')->where('event_name', $myEvent)->first(); //select the event from the database using eventName passed in from route
 		
-		$selectedId = $selectedEvent -> event_organiser_id;
+		$selectedId = $selectedEvent -> creator_id;
 
-		$selectedUser = DB::table('users')->where('id', $selectedId) -> pluck('organisation');
+		//$selectedUser = DB::table('users')->where('id', $selectedId) -> pluck('organization');
 
-		$selectedOrganisation = DB::table('organisation')->where('name', $selectedUser)->first();
+		//$selectedOrganisation = DB::table('organization')->where('name', $selectedUser)->first();
 
 		View::share('selectedEvent', $selectedEvent); //share the selectedEvent accross the Views 
-		View::share('selectedOrganisation', $selectedOrganisation);
+		//View::share('selectedOrganisation', $selectedOrganisation);
 
 
 		return View::make('events.view_selected_event'); //return to page with the information of the selected page
@@ -230,7 +230,7 @@ class EventsController extends \BaseController {
 		return View::make('events.view_all_events'); //successfully updates the database and return to all events page
 	}
 
-	/*public function createPresence($myEvent){
+	public function createPresence($myEvent){
 		$currentEvent = DB::table('event')->where('event_name', $myEvent)->first(); //select the specific instance of event from database
 
 		return View::make('events.create_presence', compact('currentEvent')); //return the page to create presence for a certain event
@@ -257,7 +257,7 @@ class EventsController extends \BaseController {
 		else{
 			return 'error';
 		}
-	}*/
+	}
 
 	public function findRelevantSponsor($currentEvent){
 		$sponsors = DB::table('sponsor') -> get();

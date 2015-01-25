@@ -34,8 +34,8 @@ Route::get('successEvent', array('as' => 'successEvent', 'uses' => 'EventsContro
 
 Route::get('/eventOrganiserProfile', array('as' => 'eventOrganiserProfile', 'uses' => 'UsersController@eventOrganiserProfile')); //route to display Event Organiser Profile
 Route::get('create_event', array('as' => 'create_event', 'uses' => 'EventsController@createEvent')); //route to create event page
-//Route::get('create_presence/{myEvent}', array('as' => 'create_presence', 'uses' => 'EventsController@createPresence')); //route to create presence page
-//Route::post('/create_presence/{myEvent}', array('as' => 'create_presence', 'uses' => 'EventsController@handleCreatePresence')); //route to process created presence
+Route::get('create_presence/{myEvent}', array('as' => 'create_presence', 'uses' => 'EventsController@createPresence')); //route to create presence page
+Route::post('/create_presence/{myEvent}', array('as' => 'create_presence', 'uses' => 'EventsController@handleCreatePresence')); //route to process created presence
 Route::get('view_events', array('as' => 'view_events', 'uses' => 'EventsController@viewAllEvents' )); //route to view all events
 Route::get('view_my_event/{myEvent}', array('as' => 'view_my_event', 'uses' => 'EventsController@viewMyEvent' )); //route to view specific event
 Route::get('edit_my_event/{myEvent}', array('as' => 'edit_my_event', 'uses' => 'EventsController@editMyEvent')); //route to edit specific event with form filled
