@@ -13,7 +13,7 @@
                     <h1 class="text-light animation-fadeInQuick"><strong>You're matched with <br/>10 Sponsors!</strong></h1>
                     <h2 class="text-muted animation-fadeInQuickInv"><em>Now all you'll have to do is to wait for their interest if they are willing to partner with you</em></h2>
                 </div>
-                <div class="row gallery">
+                <div class="row gallery2">
                             <div class="col-sm-3">
                                 <div class="gallery2-image-container animation-fadeInQuick2">
                                     <img src="images/photo5.jpg" alt="Image">
@@ -38,8 +38,7 @@
                             
                         </div>
                         <!-- END Gallery Items -->
-                
-                        <a href="page_ready_blank.html" class="btn btn-effect-ripple btn-primary"><i class="fa fa-arrow-left"></i> Back to Dashboard</a>
+                        <a href="{{ URL::to('eventOrganiserProfile') }}" class="btn btn-effect-ripple btn-primary"><i class="fa fa-arrow-left"></i>Back to Dashboard</a>
                         <button class="btn btn-warning" style="margin-left: 48px;"><i class="gi gi-kiosk"></i> View My Event</button>
                  
             </div>

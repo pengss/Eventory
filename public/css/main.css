@@ -1095,9 +1095,13 @@ img.full-bg.full-bg-bottom {
 }
 
 /* Gallery */
-.gallery img, a[data-toggle="lightbox-image"] img {
+.gallery2 img, a[data-toggle="lightbox-image"] img {
     max-width: 100%;
     -webkit-filter: blur(20px);
+}
+
+.gallery img, a[data-toggle="lightbox-image"] img {
+    max-width: 100%;
 }
 
 a[data-toggle="lightbox-image"],
