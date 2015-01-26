@@ -6,7 +6,12 @@
     
     {{ HTML::style('/css/reset.css') }}
     {{ HTML::style('/css/bootstrap.min.css') }}
+    {{ HTML::style('/css/font-awesome.css') }}
+    {{ HTML::style('/css/plugin.css') }}
+    {{ HTML::style('/css/style.css') }}
     {{ HTML::style('/css/main.css') }}
+    {{ HTML::style('/css/responsive.css') }}
+
     {{ HTML::script('js/vendor/jquery-2.1.1.min.js'); }}
 
 </head>
@@ -127,26 +132,26 @@
                     </div>
                     <div class="modal-body">
                         {{ Form::open(array('url' => 'index', 'method' => 'post', 'class' => 'form-horizontal form-bordered')) }}
-                            <div class="form-group">
-                                <label class="col-md-3 control-label">{{Form::label('username','Username')}}</label>
-                                <div class="col-md-6">
-                                    {{Form::text('username', null,array('class' => 'form-control','required' => 'required','class' => 'form-control'))}}
-                                </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">{{Form::label('username','Username')}}</label>
+                            <div class="col-md-6">
+                                {{Form::text('username', null,array('class' => 'form-control','required' => 'required','class' => 'form-control'))}}
                             </div>
-                            <div class="form-group">
-                                <label class="col-md-3 control-label">{{Form::label('password','Password')}}</label>
-                                <div class="col-md-6">
-                                    {{Form::password('password',array('class' => 'form-control','required' => 'required','class' => 'form-control'))}}
-                                </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">{{Form::label('password','Password')}}</label>
+                            <div class="col-md-6">
+                                {{Form::password('password',array('class' => 'form-control','required' => 'required','class' => 'form-control'))}}
                             </div>
-                            <div class="form-group form-actions">
-                                <div class="col-md-9 col-md-offset-3">
-                                    {{Form::submit('Login', array('class' => 'btn btn-effect-ripple btn-primary'))}}
-                                    <button type="reset" class="btn btn-effect-ripple btn-danger">Reset</button>
-                                </div>
+                        </div>
+                        <div class="form-group form-actions">
+                            <div class="col-md-9 col-md-offset-3">
+                                {{Form::submit('Login', array('class' => 'btn btn-effect-ripple btn-primary'))}}
+                                <button type="reset" class="btn btn-effect-ripple btn-danger">Reset</button>
                             </div>
+                        </div>
                         {{ Form::close() }}
-                      
+
                     </div>
                 </div>
             </div>
@@ -254,7 +259,7 @@
     {{ HTML::script('js/pages/formsWizard.js'); }}
     <script>$(function(){ FormsWizard.init(); });</script>
     {{ HTML::script('js/pages/formsComponents.js'); }}
-   
+
 
     @show
 </body>
