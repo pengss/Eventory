@@ -35,7 +35,7 @@ class EventsController extends \BaseController {
 		$id = Auth::user() -> id; //get the id of the current user to be used during creation
 
 		$data = Input::only(['title','location','start_date','end_date','start_time','end_time','event_types','target_audience',
-		 'banner', 'turnout','description', 'org_name', 'logo', 'orgInfo', 'facebook', 'facebook_event', 'twitter',
+		 'banner', 'turnout','desc', 'org_name', 'logo', 'orgInfo', 'facebook', 'facebook_event', 'twitter',
 		 'instagram', 'website']); //retrieve all the inputs by the user
 
 		$newEvent = [ //create instance of a new event with current user id and all the inputs by the user
@@ -45,7 +45,7 @@ class EventsController extends \BaseController {
                 'logo' => $data['logo'],
                 'location' => $data['location'],
                 'turnout' => $data['turnout'],
-                'description' => $data['description'],
+                'description' => $data['desc'],
                 'org_info' => $data['orgInfo'],
                 'start_date' => $data['start_date'],
                 'end_date' => $data['end_date'],

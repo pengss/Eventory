@@ -181,10 +181,8 @@
                         <div class="form-group">
                             <label class="col-md-3 control-label">Event Details<span class="text-danger">*</span></label>
                             <div class="col-md-9">
-                                <div class="form-group">
-                                    <div class="col-xs-12">
-                                        <textarea id="event_description" name="description" rows="10" class="form-control textarea-editor" value = "" placeholder="Tell your potential sponsors more about your event!" style="cursor: auto;"></textarea>
-                                    </div>
+                                <div class="col-xs-12">
+                                    <textarea id="desc" name="desc" rows="10" class="form-control textarea-editor" value = "" placeholder="Tell your potential sponsors more about your event!" style="cursor: auto;"></textarea>
                                 </div>
                             </div>
                         </div>
