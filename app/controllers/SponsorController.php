@@ -35,25 +35,54 @@ class SponsorController extends \BaseController {
 		//
 		$id = Auth::user() -> id; //get the id of the current user to be used during creation
 
-		$data = Input::only(['target_audience','minimum_turnout','event_type','type_of_sponsorship']);
+		$data = Input::only(['target_audience','turnout','event_types','sponsorship']);
 
 		if($data != null){
-			$sponsor = [
-            [
-                'sponsor_id' => $id,
-                'target_audience' => $data['target_audience'],
-                'minimum_turnout' => $data['minimum_turnout'],
-                'event_type' => $data['event_type'],
-                'type_of_sponsorship' => $data['type_of_sponsorship']
-            ]
-            ];
 
-            DB::table('sponsor') -> insert($sponsor);
-            return View::make('users.sponsor_profile');
+			if(count($data['target_audience']) != 0){
+				foreach($data['target_audience'] as $targetAudience){
+					$newSponsorAudience =[
+										 [
+										 	'sponsor_id' => $id,
+										 	'audience_id' => $targetAudience
+										 ]	
+										 ];
+					DB::table('sponsor_audience') -> insert($newSponsorAudience);
+				}
+			}
+
+			if(count($data['event_types']) != 0){
+				foreach($data['event_types'] as $eventTypes){
+					$newSponsorEventType =[
+										 [
+										 	'sponsor_id' => $id,
+										 	'event_type_id' => $eventTypes
+										 ]	
+										 ];
+					DB::table('sponsor_event_type') -> insert($newSponsorEventType);
+				}
+			}
+
+			$wantedSponsorshipId = DB::table('type_of_sponsorship') -> where('sponsorship_type', $data['sponsorship']) -> pluck('id');
+			$newSponsorship = [
+							  [
+								 'sponsor_id' => $id,
+								 'sponsorship_type_id' => $wantedSponsorshipId
+						 	  ]
+						 	  ];
+			DB::table('sponsor_sponsorship_type') -> insert($newSponsorship);
+
+			$newSponsorTurnout =[
+							 [
+								'sponsor_id' => $id,
+								'expected_turnout' => $data['turnout']
+							 ]
+							 ];
+			DB::table('sponsor_turnout') -> insert($newSponsorTurnout);
+			return View::make('users.sponsor_profile');
 		}
-
 		else{
-			return 'error';
+			return 'Error';
 		}
 	}
 
