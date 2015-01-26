@@ -43,6 +43,7 @@ Route::post('/edit_my_event/{myEvent}', array('as' => 'edit_my_event', 'uses' =>
 Route::resource('event', 'EventsController');
 Route::get('/success', array('as' => 'success', 'uses' => 'EventsController@createPresence')); //display success page after creating event
 
+Route::get('send_email', array('as' => 'send_email', 'uses' => 'SponsorController@sendEmail'));
 
 Route::get('/logout', array('as' => 'logout', 'uses' => 'UsersController@logout')); //route to process logout
 /*Route::group(array('before' => 'auth'), function()

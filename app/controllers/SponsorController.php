@@ -109,4 +109,15 @@ class SponsorController extends \BaseController {
 		return View::make('sponsor.category');
 	}
 
+	public function sendEmail() {	
+		$id = Auth::user() -> id; //retrieve the id of logged in user
+		$username = DB::table('users')->where('id', $id)->pluck('username'); //retrieve the username of the logged in user
+
+		Mail::send('emails.welcome', array('username'=>$username), function($message){
+			$id = Auth::user() -> id; //retrieve the id of logged in user
+			$email = DB::table('users')->where('id', $id)->pluck('email'); //retrieve the email of the logged in user
+			$username = DB::table('users')->where('id', $id)->pluck('username'); //retrieve the username of the logged in user
+			$message->to($email, $username)->subject('Welcome to Eventory!');
+		});
+	}
 }
