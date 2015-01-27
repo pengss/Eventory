@@ -24,6 +24,10 @@
 /* Include Lato font from Google Web Fonts */
 @import url('http://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,500,500italic,600,600italic,700,700italic');
 
+a.btn.btn-effect-ripple.btn-default.dropdown-toggle.enable-tooltip {
+margin-top: -8px;
+}
+
 /* Preloader */
 #page-wrapper.page-loading {
     overflow: hidden;
@@ -1120,7 +1124,8 @@ a[data-toggle="lightbox-image"]:hover img {
     position: relative;
     overflow: hidden;
     margin-bottom: 20px;
-    min-height: 500px
+    min-height: 450px;
+    background-color: white;
 }
 
 .gallery2-image-container {

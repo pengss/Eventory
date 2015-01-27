@@ -33,20 +33,30 @@
 
 	<div class="col-sm-4">
 		<div class="gallery-image-container animation-fadeInQuick2" data-category="new">
-			<a href="{{URL::to('view_my_event', $event->event_name)}}" class="widget">
 				<div class="widget-content themed-background text-light-op grid-header">
-					<span class="pull-right"></span>
+					
+					<div class="btn-group pull-right">
+						<a href="javascript:void(0)" class="btn btn-effect-ripple btn-default dropdown-toggle enable-tooltip" data-toggle="dropdown" title="Options"><i class="fa fa-chevron-down"></i></a>
+						<ul class="dropdown-menu dropdown-menu-right">
+							<li>
+								<a href="{{URL::to('edit_my_event', $event->event_name)}}">
+									<i class="fa fa-pencil pull-right"></i>
+									Edit
+								</a>
+							</li>
+						</ul>
+					</div>
 					<i class="fa fa-fw fa-file-text"></i> <strong>
 					<?
 					$str = '';
 					?>
 					@foreach($event_types as $eventType)
-						@if($eventType -> id == $event -> id)
-						<?
-						$str .= $eventType -> type;
-						$str .= ', ';
-						?>
-						@endif	
+					@if($eventType -> id == $event -> id)
+					<?
+					$str .= $eventType -> type;
+					$str .= ', ';
+					?>
+					@endif	
 					@endforeach
 					<?
 					$str = substr($str, 0, strlen($str) - 2);
@@ -54,6 +64,8 @@
 					?>
 				</strong>
 			</div>
+
+			<a href="{{URL::to('view_my_event', $event->event_name)}}">
 			<div class="widget-image widget-image-sm">
 				{{ HTML::image($event->logo) }}
 				<div class="widget-image-content">
@@ -71,26 +83,26 @@
 					<h5 class="widget-heading event-desc">{{$event->description}}</h5>
 				</div>
 				<div class="g-row">
-					
-						<span class="pull-right"><i class="fa fa-users"></i> {{$event->turnout}}</span>
-						<h6 class="widget-heading"><i class="fa fa-tags"></i> 
-							<?
-							$str = '';
-							?>
-							@foreach($event_audiences as $eventAudience)
-							@if($eventAudience -> id == $event -> id)
-							<?
-							$str .= '<span class="label label-default">';
-							$str .= $eventAudience -> type;
-							$str .= '</span>, ';
-							?>
-							@endif	
-							@endforeach
-							<?
-							$str = substr($str, 0, strlen($str) - 2);
-							echo $str;
-							?>
-						</h6>
+
+					<span class="pull-right"><i class="fa fa-users"></i> {{$event->turnout}}</span>
+					<h6 class="widget-heading"><i class="fa fa-tags"></i> 
+						<?
+						$str = '';
+						?>
+						@foreach($event_audiences as $eventAudience)
+						@if($eventAudience -> id == $event -> id)
+						<?
+						$str .= '<span class="label label-default">';
+						$str .= $eventAudience -> type;
+						$str .= '</span>, ';
+						?>
+						@endif	
+						@endforeach
+						<?
+						$str = substr($str, 0, strlen($str) - 2);
+						echo $str;
+						?>
+					</h6>
 					
 				</div>
 			</div>
