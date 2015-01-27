@@ -4,7 +4,7 @@
     <title>Eventory</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    {{ HTML::style('/css/reset.css') }}
+    
     {{ HTML::style('/css/bootstrap.min.css') }}
     {{ HTML::style('/css/font-awesome.css') }}
     {{ HTML::style('/css/plugin.css') }}
@@ -231,26 +231,6 @@
     <script>!window.jQuery && document.write(decodeURI('%3Cscript src="js/vendor/jquery-2.1.1.min.js"%3E%3C/script%3E'));</script>
     {{ HTML::script('js/vendor/bootstrap.min.js'); }}
     {{ HTML::script('js/app.js'); }}
-    {{ HTML::script('js/plugins/ckeditor/ckeditor.js'); }}
-
-    {{ HTML::script('js/jquery-1.10.2.min.js'); }}
-    {{ HTML::script('js/bootstrap.js'); }}
-    {{ HTML::script('js/jquery.appear.js'); }}
-    {{ HTML::script('js/waypoints.min.js'); }}
-    {{ HTML::script('js/jquery.prettyPhoto.js'); }}
-    {{ HTML::script('js/modernizr-latest.js'); }}
-    {{ HTML::script('js/SmoothScroll.js'); }}
-    {{ HTML::script('js/jquery.parallax-1.1.3.js'); }}
-    {{ HTML::script('js/jquery.easing.1.3.js'); }}
-    {{ HTML::script('js/jquery.superslides.js'); }}
-    {{ HTML::script('js/jquery.flexslider.js'); }}
-    {{ HTML::script('js/jquery.sticky.js'); }}
-    {{ HTML::script('js/owl.carousel.js'); }}
-    {{ HTML::script('js/jquery.isotope.js'); }}
-    {{ HTML::script('js/rev-slider/jquery.themepunch.plugins.min.js'); }}
-    {{ HTML::script('js/rev-slider/jquery.themepunch.revolution.min.js'); }}
-    {{ HTML::script('js/jquery.mb.YTPlayer.js'); }}
-    {{ HTML::script('js/jquery.fitvids.js'); }}
     {{ HTML::script('js/plugins.js'); }}
 
 

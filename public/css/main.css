@@ -1120,7 +1120,6 @@ a[data-toggle="lightbox-image"]:hover img {
     position: relative;
     overflow: hidden;
     margin-bottom: 20px;
-    max-height: 500px;
     min-height: 500px
 }
 
@@ -1129,6 +1128,11 @@ a[data-toggle="lightbox-image"]:hover img {
     overflow: hidden;
     margin-bottom: 20px;
     max-height: 500px;
+}
+
+
+h6.widget-heading {
+    line-height: 18px;
 }
 
 .gallery-image-options {

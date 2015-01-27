@@ -23,13 +23,13 @@
 
                     Event's type: 
                     
-                 
+
                     <?
 
                     $str = '';
 
-                        $str .= "event type, ";
-                   
+                    $str .= "event type, ";
+
                     $str = substr($str, 0, strlen($str) - 2);
                     echo $str;
                     ?>
@@ -141,158 +141,6 @@
     <div class="col-md-1"></div>
 </div>
 
-<!-- Sponsorship Packages Content -->
-<div class="block">
-    <div class="block-title">
-        <h2>Sponsorship Packages</h2>
-    </div>
-    <div class="row">
-        <div class="col-sm-3">
-            <table class="table table-borderless table-pricing">
-                <thead>
-                    <tr>
-                        <th>Be a Platinum Sponsor</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Logo Placement</strong></li></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Emcee shoutout x1</strong></td>
-                    </tr>
-                    <tr class="active">
-                        <td>
-                            <h2>$500<br><small>10 slots left</small></h2>
-                        </td>
-                    </tr>
-                    <tr class="active">
-                        <td>
-                            <a href="javascript:void(0)" class="btn btn-effect-ripple  btn-success" style="overflow: hidden; position: relative;"><i class="fa fa-arrow-right"></i> Register Today</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="text-muted">
-                            <small><em>* All plans include free support!</em></small>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="col-sm-3">
-            <table class="table table-borderless table-pricing">
-                <thead>
-                    <tr>
-                        <th>Be a Bronze Sponsor</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Logo Placement</strong></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Emcee shoutout x2</strong></td>
-                    </tr>
-                    <tr>
-                        <td><strong></strong></td>
-                    </tr>
-                    <tr class="active">
-                        <td>
-                            <h1>$800<small></small><br><small>5 slots left</small></h1>
-                        </td>
-                    </tr>
-                    <tr class="active">
-                        <td>
-                            <a href="javascript:void(0)" class="btn btn-effect-ripple  btn-success" style="overflow: hidden; position: relative;"><i class="fa fa-arrow-right"></i> Register Today</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="text-muted">
-                            <small><em>* All plans include free support!</em></small>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="col-sm-3">
-            <table class="table table-borderless table-pricing">
-                <thead>
-                    <tr>
-                        <th>Be a Silver Sponsor</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Logo Placement</strong></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Emcee shoutout every 3hr</strong></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Social media shoutout</strong></td>
-                    </tr>
-                    <tr class="active">
-                        <td>
-                            <h1>$2000<small></small><br><small>5 slot left</small></h1>
-                        </td>
-                    </tr>
-                    <tr class="active">
-                        <td>
-                            <a href="javascript:void(0)" class="btn btn-effect-ripple  btn-success" style="overflow: hidden; position: relative;"><i class="fa fa-arrow-right"></i> Register Today</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="text-muted">
-                            <small><em>* All plans include free support!</em></small>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="col-sm-3">
-            <table class="table table-borderless table-pricing table-featured">
-                <thead>
-                    <tr>
-                        <th>Be a Gold Sponsor</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Logo Placement</strong> (extra big)</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Emcee shoutout every 1hr</strong></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Social media shoutout</strong></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Participants' likes for your page</strong></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Participants engagement with your brand</strong></td>
-                    </tr>
-                    <tr class="active">
-                        <td>
-                            <h1>$5000<small></small><br><small>1 slot left</small></h1>
-                        </td>
-                    </tr>
-                    <tr class="active">
-                        <td>
-                            <a href="javascript:void(0)" class="btn btn-effect-ripple  btn-success" style="overflow: hidden; position: relative;"><i class="fa fa-arrow-right"></i> Register Today</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="text-muted">
-                            <small><em>* All plans include free support!</em></small>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-    <!-- END Sponsorship Packages Content -->
-</div>
 <!--Single Sponsorship Presence -->
 <div class="block">
     <!-- Mini Pricing Tables Title -->
@@ -407,42 +255,5 @@
 </div>
 <!-- END Page Content -->
 
-{{ HTML::linkRoute('edit_my_event', 'Edit this event', array('$myEvent' => $selectedEvent->event_name)) }}<br>
-<div class="col-md-4 col-md-offset-4">
-   <h4>{{'Location:' . ' ' . $selectedEvent -> location}}</h4><br>
-
-   <h4>{{'Expected Turn Out:' . ' ' . $selectedEvent -> turnout}}</h4><br>
-
-   <h4>{{'Description:' . ' ' . $selectedEvent -> description}}</h4><br>
-
-   <h4>{{'Organisation Information:' . ' ' . $selectedEvent -> org_info}}</h4><br>
-
-   <h4>{{'Start Date:' . ' ' . $selectedEvent -> start_date}}</h4><br>
-
-   <h4>{{'End Date:' . ' ' . $selectedEvent -> end_date}}</h4><br>
-
-   <h4>{{'Start Time:' . ' ' . $selectedEvent -> start_time}}</h4><br>
-
-   <h4>{{'End Time:' . ' ' . $selectedEvent -> end_time}}</h4><br>
-
-   @if($selectedEvent -> facebook != null)
-   <h4>{{'Facebook:' . ' ' . $selectedEvent -> facebook}}</h4><br>
-   @endif
-
-   @if($selectedEvent -> facebook_event != null)
-   <h4>{{'Facebook Event:' . ' ' . $selectedEvent -> facebook_event}}</h4><br>
-   @endif
-
-   @if($selectedEvent -> twitter != null)
-   <h4>{{'Twitter:' . ' ' . $selectedEvent -> twitter}}</h4><br>
-   @endif
-
-   @if($selectedEvent -> instagram != null)
-   <h4>{{'Instagram:' . ' ' . $selectedEvent -> instagram}}</h4><br>
-   @endif
-
-   @if($selectedEvent -> website != null)
-   <h4>{{'Website:' . ' ' . $selectedEvent -> website}}</h4><br>
-   @endif
 </div>
 @stop
