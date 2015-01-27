@@ -30,22 +30,6 @@
             
             <div class="col-xs-6 right">
 
-                <a href="mailto:support@goldeyestheme.com">
-                    <i class="fa fa-envelope"></i>
-                </a>
-                <a href="#">
-                    <i class="fa fa-twitter"></i>
-                </a>
-                <a href="#">
-                    <i class="fa fa-vimeo-square"></i>
-                </a>
-                <a href="#">
-                    <i class="fa fa-rss"></i>
-                </a>
-                <a href="#">
-                    <i class="fa fa-instagram"></i>
-                </a>
-
                 @if (Auth::check())
                 <a href="/Eventory/public/logout"><button type="button" class="btn btn-xs btn-square btn-primary">Logout</button></a>
                 <a href="/profile">{{ Auth::user()->first_name }}</a>
@@ -76,12 +60,12 @@
 
                 <ul class="nav main-nav">
 
-                    <li class="active"><a class="scroll" href="#home">Home</a></li>
-                    <li><a class="scroll" href="/create_event">My Events</a></li>
+                    <li class="active"><a class="scroll" href="/Eventory/public/eventOrganiserProfile">Home</a></li>
+                    <li><a class="scroll" href="/Eventory/public/create_event">Create An Event</a></li>
+                    <li><a class="scroll" href="/Eventory/public/view_events">View My Events</a></li>
                     <li><a class="scroll" href="#features">Sponsorship Requests</a></li>
                     <li><a class="scroll" href="#history">Chats</a></li>
                     <li><a class="scroll" href="#team">Past Events</a></li>
-                    <li><a class="scroll" href="#portfolio">Support</a></li>
 
                 </ul>
 

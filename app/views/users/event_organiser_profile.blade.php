@@ -11,18 +11,7 @@
 			<div class="row">
 				<div class="col-sm-7 col-md-8 col-lg-9 content-float-hor push-bit-top-bottom clearfix">
 					<img src="images/avatar9.jpg" alt="User Image" class="img-circle img-thumbnail img-thumbnail-avatar pull-left">
-					<h1>Jeremy Doe</h1>
-					<h2 class="text-light-op"> Web Designer, Tokyo</h2>
-				</div>
-				<div class="col-sm-5 col-md-4 col-lg-3 text-right push-bit-top-bottom">
-					<div class="row">
-						<div class="col-xs-6 col-sm-12">
-							<a href="javascript:void(0)" class="btn btn-block btn-effect-ripple btn-default"><i class="fa fa-plus"></i> Friend Request</a>
-						</div>
-						<div class="col-xs-6 col-sm-12">
-							<a href="javascript:void(0)" class="btn btn-block btn-effect-ripple btn-default"><i class="fa fa-share"></i> Follow</a>
-						</div>
-					</div>
+					<h1>Welcome!</h1>
 				</div>
 			</div>
 		</div>
@@ -114,7 +103,6 @@
 		<!-- My Events Widget -->
 		<div class="widget">
 			<div class="widget-content widget-content-mini themed-background-warning text-light-op">
-				<span class="pull-right text-dark-op">2 People</span>
 				<i class="gi gi-cake fa-fw"></i> My Events
 			</div>
 			<div class="widget-content widget-content-full">
@@ -125,7 +113,6 @@
 								<img src="images/avatar14.jpg" alt="User Image" class="img-circle">
 							</td>
 							<td>
-								<a href="javascript:void(0)" class="text-warning">Dylan Cruz</a><br>
 								<a href="javascript:void(0)" class="text-muted"><small>29 years old on Friday</small></a>
 							</td>
 							<td class="text-center" style="width: 80px;">
@@ -149,18 +136,6 @@
 			</div>
 		</div>
 		<!-- END My Events Widget -->
-	</div>
-
-	<div class="row">
-
-		@if(Auth::check())
-		<p>Welcome to your profile page (Event Organiser)</p>
-		@endif
-		{{ HTML::linkRoute('create_event', 'Create an event') }}
-
-
-		{{ HTML::linkRoute('view_events', 'View all my events') }}
-
 	</div>
 </div>
 @stop
