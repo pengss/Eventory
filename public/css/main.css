@@ -28,6 +28,11 @@ a.btn.btn-effect-ripple.btn-default.dropdown-toggle.enable-tooltip {
 margin-top: -8px;
 }
 
+.emptydiv {
+height: 60px;
+}
+
+
 /* Preloader */
 #page-wrapper.page-loading {
     overflow: hidden;

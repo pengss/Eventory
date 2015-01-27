@@ -35,29 +35,29 @@ class EventsController extends \BaseController {
 		$id = Auth::user() -> id; //get the id of the current user to be used during creation
 
 		$data = Input::only(['title','location','start_date','end_date','start_time','end_time','event_types','target_audience',
-		 'banner', 'turnout','desc', 'org_name', 'logo', 'orgInfo', 'facebook', 'facebook_event', 'twitter',
+			'banner', 'turnout','desc', 'org_name', 'logo', 'orgInfo', 'facebook', 'facebook_event', 'twitter',
 		 'instagram', 'website']); //retrieve all the inputs by the user
 
 		$newEvent = [ //create instance of a new event with current user id and all the inputs by the user
-            [
-                'creator_id' => $id,
-                'event_name' => $data['title'],
-                'logo' => $data['logo'],
-                'location' => $data['location'],
-                'turnout' => $data['turnout'],
-                'description' => $data['desc'],
-                'org_info' => $data['orgInfo'],
-                'start_date' => $data['start_date'],
-                'end_date' => $data['end_date'],
-                'start_time' => $data['start_time'],
-                'end_time' => $data['end_time'],
-                'facebook' => $data['facebook'],
-                'facebook_event' => $data['facebook_event'],
-                'twitter' => $data['twitter'],
-                'instagram' => $data['instagram'],
-                'website' => $data['website']
-            ]
-            ];
+		[
+		'creator_id' => $id,
+		'event_name' => $data['title'],
+		'logo' => $data['logo'],
+		'location' => $data['location'],
+		'turnout' => $data['turnout'],
+		'description' => $data['desc'],
+		'org_info' => $data['orgInfo'],
+		'start_date' => $data['start_date'],
+		'end_date' => $data['end_date'],
+		'start_time' => $data['start_time'],
+		'end_time' => $data['end_time'],
+		'facebook' => $data['facebook'],
+		'facebook_event' => $data['facebook_event'],
+		'twitter' => $data['twitter'],
+		'instagram' => $data['instagram'],
+		'website' => $data['website']
+		]
+		];
 
        	DB::table('event')->insert($newEvent); //insert event into the database
 
@@ -66,11 +66,11 @@ class EventsController extends \BaseController {
        	if(count($data['event_types']) != 0){
        		foreach($data['event_types'] as $eventType){
        			$newEventType = [
-       				[
-       					'event_id' => $eventId,
-       					'event_type_id' => $eventType
-       				]
-					];
+       			[
+       			'event_id' => $eventId,
+       			'event_type_id' => $eventType
+       			]
+       			];
        			DB::table('events_type')->insert($newEventType);
        		}
        	}
@@ -78,11 +78,11 @@ class EventsController extends \BaseController {
        	if(count($data['target_audience']) != 0){
        		foreach($data['target_audience'] as $targetAudience){
        			$newTargetAudience = [
-       				[
-       					'event_id' => $eventId,
-       					'audience_id' => $targetAudience
-       				]
-       				];
+       			[
+       			'event_id' => $eventId,
+       			'audience_id' => $targetAudience
+       			]
+       			];
        			DB::table('events_audience')->insert($newTargetAudience);
        		}
        	}
@@ -103,9 +103,9 @@ class EventsController extends \BaseController {
        		]
        		];
 
-       	DB::table('event_type') -> insert($newEventType);*/
+       		DB::table('event_type') -> insert($newEventType);*/
        	//return $this -> findRelevantSponsor($event);	    
-	}
+       	}
 
 	/**
 	 * Display the specified resource.
@@ -171,13 +171,13 @@ class EventsController extends \BaseController {
 		foreach($events as $current){
 			$currentEventId = $current -> id;
 			$event_types = DB::table('event')->join('events_type', 'event.id', '=', 'events_type.event_id')
-						   ->join('type_of_events', 'events_type.event_type_id', '=', 'type_of_events.id')
-						   ->select('event.id', 'type')
-						   ->get();
+			->join('type_of_events', 'events_type.event_type_id', '=', 'type_of_events.id')
+			->select('event.id', 'type')
+			->get();
 			$event_audiences = DB::table('event')->join('events_audience', 'event.id', '=', 'events_audience.event_id')
-						       ->join('target_audience', 'events_audience.audience_id', '=', 'target_audience.id')
-						       ->select('event.id', 'type')
-						       ->get();
+			->join('target_audience', 'events_audience.audience_id', '=', 'target_audience.id')
+			->select('event.id', 'type')
+			->get();
 		}
 
 		View::share('events', $events); //share the variable accross all views, such that there is direct access to this variable
@@ -193,11 +193,22 @@ class EventsController extends \BaseController {
 		
 		$selectedId = $selectedEvent -> creator_id;
 
+		$event_types = DB::table('event')->join('events_type', 'event.id', '=', 'events_type.event_id')
+		->join('type_of_events', 'events_type.event_type_id', '=', 'type_of_events.id')
+		->select('event.id', 'type')
+		->get();
+		$event_audiences = DB::table('event')->join('events_audience', 'event.id', '=', 'events_audience.event_id')
+		->join('target_audience', 'events_audience.audience_id', '=', 'target_audience.id')
+		->select('event.id', 'type')
+		->get();
+
 		//$selectedUser = DB::table('users')->where('id', $selectedId) -> pluck('organization');
 
 		//$selectedOrganisation = DB::table('organization')->where('name', $selectedUser)->first();
 
 		View::share('selectedEvent', $selectedEvent); //share the selectedEvent accross the Views 
+		View::share('event_types', $event_types);
+		View::share('event_audiences', $event_audiences);
 		//View::share('selectedOrganisation', $selectedOrganisation);
 
 
@@ -212,7 +223,7 @@ class EventsController extends \BaseController {
 
 	public function handleEditMyEvent($myEvent){ //updates database based on the inputs by the user
 		$data = Input::only(['title','location','start_date','end_date','start_time','end_time','event_types','target_audience',
-		 'banner', 'turnout','description', 'org_name', 'logo', 'orgInfo', 'facebook', 'facebook_event', 'twitter',
+			'banner', 'turnout','description', 'org_name', 'logo', 'orgInfo', 'facebook', 'facebook_event', 'twitter',
 		 'instagram', 'website']); //retrieve all the inputs by the user
 
 		DB::table('event') -> where('event_name', $myEvent) -> update(array('event_name' => $data['title'], 'banner' => $data['banner'], 
@@ -243,16 +254,16 @@ class EventsController extends \BaseController {
 
 		if($data != null){
 			$newPresence = [ //create instance of a new presence with current event id and all the inputs by the user
-            [
-                'event_id' => $currentEventId,
-                'presence_type' => $data['presence_type'],
-                'presence_quantity' => $data['presence_quantity'],
-                'presence_price' => $data['presence_price']
-            ]
-            ];
+			[
+			'event_id' => $currentEventId,
+			'presence_type' => $data['presence_type'],
+			'presence_quantity' => $data['presence_quantity'],
+			'presence_price' => $data['presence_price']
+			]
+			];
 
-            DB::table('presence') -> insert($newPresence);
-            return 'successful';
+			DB::table('presence') -> insert($newPresence);
+			return 'successful';
 		}
 		else{
 			return 'error';
@@ -273,10 +284,10 @@ class EventsController extends \BaseController {
 						  -> select('event_type_id')
 						  -> get();
 
-		$eventTurnOut = $currentEvent -> turnout;*/
-	}
+						  $eventTurnOut = $currentEvent -> turnout;*/
+						}
 
-	public function success(){
-		return View::make('events.success');
-	}
-}	
+						public function success(){
+							return View::make('events.success');
+						}
+					}	

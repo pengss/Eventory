@@ -2,6 +2,8 @@
 @section('body')
 <!-- Page content -->
 <div id="page-content">
+    <div class ="emptydiv">
+    </div>
     <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-7">
@@ -23,13 +25,18 @@
 
                     Event's type: 
                     
-
                     <?php
-
                     $str = '';
-
-                    $str .= "event type, ";
-
+                    ?>
+                    @foreach($event_types as $eventType)
+                    @if($eventType -> id == $selectedEvent -> id)
+                    <?php
+                    $str .= $eventType -> type;
+                    $str .= ', ';
+                    ?>
+                    @endif  
+                    @endforeach
+                    <?php
                     $str = substr($str, 0, strlen($str) - 2);
                     echo $str;
                     ?>
@@ -65,15 +72,21 @@
                 <div class="widget-content">
 
                     <h4 class="widget-heading">
-
                         <?php
-
-                        //get list of target audience
-                        $str = '';
-                        $str .= "audience<br/>";
-                        $str .= substr($str, 0, strlen($str) - 5);
-                        echo $str;
-                        ?>
+                            $str = '';
+                            ?>
+                            @foreach($event_audiences as $eventAudience)
+                            @if($eventAudience -> id == $selectedEvent -> id)
+                            <?php
+                            $str .= $eventAudience -> type;
+                            $str .= '<br/>';
+                            ?>
+                            @endif  
+                            @endforeach
+                            <?php
+                            $str = substr($str, 0, strlen($str) - 0);
+                            echo $str;
+                            ?>
                     </h4>
 
                 </div>
