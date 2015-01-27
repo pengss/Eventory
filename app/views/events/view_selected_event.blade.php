@@ -24,7 +24,7 @@
                     Event's type: 
                     
 
-                    <?
+                    <?php
 
                     $str = '';
 
@@ -66,7 +66,7 @@
 
                     <h4 class="widget-heading">
 
-                        <?
+                        <?php
 
                         //get list of target audience
                         $str = '';
@@ -85,7 +85,7 @@
                 </div>
                 <div class="widget-content text-dark text-left">
                     <p>{{$selectedEvent -> location}}</p>
-                    <?
+                    <?php
 
                     $start_date = $selectedEvent -> start_date;
                     $end_date = $selectedEvent -> end_date;

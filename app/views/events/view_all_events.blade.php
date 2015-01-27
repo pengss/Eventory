@@ -47,18 +47,18 @@
 						</ul>
 					</div>
 					<i class="fa fa-fw fa-file-text"></i> <strong>
-					<?
+					<?php
 					$str = '';
 					?>
 					@foreach($event_types as $eventType)
 					@if($eventType -> id == $event -> id)
-					<?
+					<?php
 					$str .= $eventType -> type;
 					$str .= ', ';
 					?>
 					@endif	
 					@endforeach
-					<?
+					<?php
 					$str = substr($str, 0, strlen($str) - 2);
 					echo $str;
 					?>
@@ -86,19 +86,19 @@
 
 					<span class="pull-right"><i class="fa fa-users"></i> {{$event->turnout}}</span>
 					<h6 class="widget-heading"><i class="fa fa-tags"></i> 
-						<?
+						<?php
 						$str = '';
 						?>
 						@foreach($event_audiences as $eventAudience)
 						@if($eventAudience -> id == $event -> id)
-						<?
+						<?php
 						$str .= '<span class="label label-default">';
 						$str .= $eventAudience -> type;
 						$str .= '</span>, ';
 						?>
 						@endif	
 						@endforeach
-						<?
+						<?php
 						$str = substr($str, 0, strlen($str) - 2);
 						echo $str;
 						?>
