@@ -36,134 +36,6 @@
 	<div class="tp-banner">
 
 		<ul>
-			<!-- Slide -->
-			<li class="revslide" data-transition="random" data-slotamount="7" data-masterspeed="800" >
-				<!-- MAIN IMAGE -->
-				<img src="images/rev-slider/slide1.jpg"  alt="slidebg1"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
-				<!-- LAYERS -->
-
-				<!-- Layer 1 -->
-				<div class="tp-caption  lft customout"
-				data-x="700"
-				data-y="110"
-				data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-				data-speed="500"
-				data-start="1200"
-				data-easing="Power4.easeOut"
-				data-endspeed="500"
-				data-endeasing="Power4.easeIn"
-				data-captionhidden="on">
-				<p class="stext p1">Clean And</p>
-				<h1 class="stext h1">Responsive <span>Design</span></h1>
-			</div>
-
-			<!-- Layer 2 -->
-			<div class="tp-caption  skewfromrightshort customout"
-			data-x="700"
-			data-y="180"
-			data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-			data-speed="500"
-			data-start="1500"
-			data-easing="Power4.easeOut"
-			data-endspeed="500"
-			data-endeasing="Power4.easeIn"
-			data-captionhidden="on">
-			<h2 class="stext h2">There are many variataons passages Lorem ıpsum<br/>The standard chunk of Lorem Ipsum</h2>
-		</div>
-
-		<!-- Layer 3 -->
-		<div class="tp-caption customin customout"
-		data-x="723" 
-		data-y="280" 
-		data-customin="x:0;y:50;z:0;rotationX:0;rotationY:0;rotationZ:0;skewX:0;skewY:0;opacity:0;transformPerspective:0;transformOrigin:50% 50%;"
-		data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-		data-speed="400"
-		data-start="1700"
-		data-easing="Power4.easeOut"
-		data-endspeed="500"
-		data-endeasing="Power4.easeIn"
-		>
-		<img src="images/rev-slider/s1.png" alt="">
-	</div>
-
-	<!-- Layer 4 -->
-	<div class="tp-caption customin customout"
-	data-x="723" 
-	data-y="335" 
-	data-customin="x:0;y:50;z:0;rotationX:0;rotationY:0;rotationZ:0;skewX:0;skewY:0;opacity:0;transformPerspective:0;transformOrigin:50% 50%;"
-	data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-	data-speed="400"
-	data-start="1850"
-	data-easing="Power4.easeOut"
-	data-endspeed="500"
-	data-endeasing="Power4.easeIn"
-	>
-	<img src="images/rev-slider/s2.png" alt="">
-</div>
-
-<!-- Layer 5 -->
-<div class="tp-caption customin customout"
-data-x="723" 
-data-y="390" 
-data-customin="x:0;y:50;z:0;rotationX:0;rotationY:0;rotationZ:0;skewX:0;skewY:0;opacity:0;transformPerspective:0;transformOrigin:50% 50%;"
-data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-data-speed="400"
-data-start="2000"
-data-easing="Power4.easeOut"
-data-endspeed="500"
-data-endeasing="Power4.easeIn"
->
-<img src="images/rev-slider/s3.png" alt="">
-</div>
-
-<!-- Layer 6 -->
-<div class="tp-caption customin customout"
-data-x="780" 
-data-y="280" 
-data-customin="x:50;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;skewX:0;skewY:0;opacity:0;transformPerspective:0;transformOrigin:50% 50%;"
-data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-data-speed="400"
-data-start="1700"
-data-easing="Power4.easeOut"
-data-endspeed="500"
-data-endeasing="Power4.easeIn"
->
-<h3 class="stext h3">There are many variations of passages.</h3>
-</div>
-
-<!-- Layer 7 -->
-<div class="tp-caption customin customout"
-data-x="780" 
-data-y="335" 
-data-customin="x:50;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;skewX:0;skewY:0;opacity:0;transformPerspective:0;transformOrigin:50% 50%;"
-data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-data-speed="400"
-data-start="1850"
-data-easing="Power4.easeOut"
-data-endspeed="500"
-data-endeasing="Power4.easeIn"
->
-<h3 class="stext h3">Contrary to popular.</h3>
-</div>
-
-<!-- Layer 8 -->
-<div class="tp-caption customin customout"
-data-x="780" 
-data-y="390" 
-data-customin="x:50;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;skewX:0;skewY:0;opacity:0;transformPerspective:0;transformOrigin:50% 50%;"
-data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-data-speed="400"
-data-start="2000"
-data-easing="Power4.easeOut"
-data-endspeed="500"
-data-endeasing="Power4.easeIn"
->
-<h3 class="stext h3">popular belief, Lorem Ipsum.</h3>
-</div>
-
-
-</li>
-
 
 <!-- Slide -->
 <li class="revslide" data-transition="random" data-slotamount="7" data-masterspeed="800" >
@@ -182,7 +54,7 @@ data-endeasing="Power4.easeIn"
 	data-endspeed="500"
 	data-endeasing="Power4.easeIn"
 	data-captionhidden="on">
-	<h4 class="stext h4 fittext4">clean and responsive design</h4>
+	<h4 class="stext h4 fittext5">Eventory</h4>
 </div>
 
 <!-- Layer 2 -->
@@ -196,141 +68,7 @@ data-easing="Power4.easeOut"
 data-endspeed="500"
 data-endeasing="Power4.easeIn"
 data-captionhidden="on">
-<h5 class="stext h5">There are many variataons of passages Lorem ıpsum The standard chunk</h5>
-</div>
-
-</li>
-
-<!-- Slide -->
-<li class="revslide" data-transition="random" data-slotamount="7" data-masterspeed="800" >
-	<!-- MAIN IMAGE -->
-	<img src="images/rev-slider/slide3.jpg"  alt="slidebg3"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
-	<!-- LAYERS -->
-
-	<!-- Layer 1 -->
-	<div class="tp-caption sfl customout"
-	data-x="0"
-	data-y="185"
-	data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-	data-speed="900"
-	data-start="1200"
-	data-easing="Power4.easeOut"
-	data-endspeed="500"
-	data-endeasing="Power4.easeIn"
-	data-captionhidden="on">
-	<h6 class="stext h6">it’s <span>wisten</span> time</h6>
-</div>
-
-<!-- Layer 2 -->
-<div class="tp-caption sfl customout"
-data-x="0"
-data-y="245"
-data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-data-speed="900"
-data-start="1500"
-data-easing="Power4.easeOut"
-data-endspeed="500"
-data-endeasing="Power4.easeIn"
-data-captionhidden="on">
-<p class="stext p5">super responsive, clean creative theme</p>
-</div>
-
-<!-- Layer 3 -->
-<div class="tp-caption sfb customout"
-data-x="0"
-data-y="275"
-data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-data-speed="900"
-data-start="1800"
-data-easing="Power4.easeOut"
-data-endspeed="500"
-data-endeasing="Power4.easeIn"
-data-captionhidden="on">
-<p class="stext p6">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praes<br/>entium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi<br/>sint occaecati</p>
-</div>
-
-<!-- Layer 4 -->
-<div class="tp-caption sfb customout not-mobile"
-data-x="0"
-data-y="345"
-data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-data-speed="900"
-data-start="2100"
-data-easing="Power4.easeOut"
-data-endspeed="500"
-data-endeasing="Power4.easeIn"
-data-captionhidden="on">
-<img src="images/rev-slider/check.png" alt="check"/>
-</div>
-
-<!-- Layer 5 -->
-<div class="tp-caption sfb customout not-mobile"
-data-x="20"
-data-y="345"
-data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-data-speed="900"
-data-start="2150"
-data-easing="Power4.easeOut"
-data-endspeed="500"
-data-endeasing="Power4.easeIn"
-data-captionhidden="on">
-<p class="stext p6">Parallax Efect</p>
-</div>
-
-<!-- Layer 6 -->
-<div class="tp-caption sfb customout not-mobile"
-data-x="118"
-data-y="345"
-data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-data-speed="900"
-data-start="2200"
-data-easing="Power4.easeOut"
-data-endspeed="500"
-data-endeasing="Power4.easeIn"
-data-captionhidden="on">
-<img src="images/rev-slider/check.png" alt="check"/>
-</div>
-
-<!-- Layer 7 -->
-<div class="tp-caption sfb customout not-mobile"
-data-x="138"
-data-y="345"
-data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-data-speed="900"
-data-start="2250"
-data-easing="Power4.easeOut"
-data-endspeed="500"
-data-endeasing="Power4.easeIn"
-data-captionhidden="on">
-<p class="stext p6">Professional Look</p>
-</div>
-
-<!-- Layer 8 -->
-<div class="tp-caption sfb customout not-mobile"
-data-x="260"
-data-y="345"
-data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-data-speed="900"
-data-start="2300"
-data-easing="Power4.easeOut"
-data-endspeed="500"
-data-endeasing="Power4.easeIn"
-data-captionhidden="on">
-<img src="images/rev-slider/check.png" alt="check"/>
-</div>
-
-<!-- Layer 9 -->
-<div class="tp-caption sfb customout not-mobile"
-data-x="280"
-data-y="345"
-data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-data-speed="900"
-data-start="2350"
-data-easing="Power4.easeOut"
-data-endspeed="500"
-data-endeasing="Power4.easeIn"
-data-captionhidden="on">
-<p class="stext p6">One Page Design</p>
+<h5 class="stext h5">The right place for event sponsorship</h5>
 </div>
 
 </li>
@@ -343,15 +81,7 @@ data-captionhidden="on">
 <!-- Text Area -->
 <section id="text-area">
 	<div class="inner text-area">
-		<h1>welcome to <span>wisten.</span> The standard chunk of Lorem Ipsum</h1>
-
-		<a href="#" class="button purchase">
-			Purchase
-		</a>
-
-		<a href="#about" class="button more scroll">
-			Read More
-		</a>
+		<h1>Find Sponsors to kick-start your event today</h1>
 
 	</div>
 </section>
@@ -372,8 +102,8 @@ data-captionhidden="on">
 				<i class="fa fa-check "></i>
 			</div>
 
-			<div class="content-header text">easy customıze</div>
-			<div class="content-desc text">Lorem Ipsum not simply random text. tronda literature, making over maybe 2000 years old. Richard McClintock.</div>
+			<div class="content-header text">Higher chances</div>
+			<div class="content-desc text">Our sponsorship process increases your chances of securing sponsorships</div>
 
 			<div class="icon bottom">
 				<i class="fa fa-plus "></i>
@@ -388,8 +118,8 @@ data-captionhidden="on">
 				<i class="fa fa-compress "></i>
 			</div>
 
-			<div class="content-header text">retina ready</div>
-			<div class="content-desc text">Lorem Ipsum not simply random text. tronda literature, making over maybe 2000 years old. Richard McClintock.</div>
+			<div class="content-header text">Assurance</div>
+			<div class="content-desc text">We protect your interests in the sponsorship</div>
 
 			<div class="icon bottom">
 				<i class="fa fa-plus "></i>
@@ -404,8 +134,8 @@ data-captionhidden="on">
 				<i class="fa fa-rocket "></i>
 			</div>
 
-			<div class="content-header text">creative layout</div>
-			<div class="content-desc text">Lorem Ipsum not simply random text. tronda literature, making over maybe 2000 years old. Richard McClintock.</div>
+			<div class="content-header text">Effort-less</div>
+			<div class="content-desc text">Reach out to many sponsors by introducing your event once</div>
 
 			<div class="icon bottom">
 				<i class="fa fa-plus "></i>
@@ -420,8 +150,8 @@ data-captionhidden="on">
 				<i class="fa fa-mobile "></i>
 			</div>
 
-			<div class="content-header text">super responsıve</div>
-			<div class="content-desc text">Lorem Ipsum not simply random text. tronda literature, making over maybe 2000 years old. Richard McClintock.</div>
+			<div class="content-header text">Less worries</div>
+			<div class="content-desc text">We will bring sponsors to you while you focus on organising your Eventory</div>
 
 			<div class="icon bottom">
 				<i class="fa fa-plus "></i>
@@ -434,6 +164,84 @@ data-captionhidden="on">
 	</div><!-- End Inner div -->
 
 </section><!-- End About Section -->
+
+
+<!-- History Section -->
+<section id="history" class="contain parallax1 ">
+
+	<div class="inner">
+
+		<!-- History Top Icon -->
+		<div class="contain-logo br">
+			<i class="fa fa-clock-o "></i>
+		</div>
+
+		<!-- Header -->
+		<div class="header white">
+			Get Sponsors in 4 easy steps
+		</div>
+
+		<ul class="timeline list-unstyled">
+
+			<!-- History Year -->
+			<li class="year">Sign Up</li>
+
+			<li class="note animated" data-animation="fadeInRight" data-animation-delay="50">
+				<h4>
+					Tell us about your event
+				</h4>
+				<p class="desc">
+					Simply fill up a creation form to let us know about your event
+				</p>
+
+				<span class="arrow fa fa-play"></span>
+
+			</li>
+
+			<li class="note animated" data-animation="fadeInLeft" data-animation-delay="50">
+				<h4>
+					We connect you to sponsors
+				</h4>
+				<p class="desc">
+					Using our matching algorithm we match you to the most relevant sponsors in our database
+				</p>
+
+				<span class="arrow fa fa-play"></span>
+
+			</li>
+
+			<li class="note animated" data-animation="fadeInRight" data-animation-delay="100">
+				<h4>
+					Finalise sponsorship deal
+				</h4>
+				<p class="desc">
+					Create packages for your event and communicate with your sponsor easily
+				</p>
+
+				<span class="arrow fa fa-play"></span>
+
+			</li>
+
+			<li class="note animated" data-animation="fadeInLeft" data-animation-delay="100">
+				<h4>
+					Hold an awesome event
+				</h4>
+				<p class="desc">
+					Focus on planning and don't worry about sponsorship deals
+				</p>
+
+				<span class="arrow fa fa-play"></span>
+
+			</li>
+
+			<!-- History Year -->
+			<li class="year">Done</li>
+
+		</ul><!-- End Timeline ul -->
+
+	</div><!-- End inner div -->
+
+</section><!-- End History Section -->
 
 
 <!-- Features Section -->
@@ -672,140 +480,6 @@ data-captionhidden="on">
 	</div><!-- End Inner div -->
 	
 </section><!-- End Features Section -->
-
-
-
-
-
-<!-- History Section -->
-<section id="history" class="contain parallax1 ">
-
-	<div class="inner">
-
-		<!-- History Top Icon -->
-		<div class="contain-logo br">
-			<i class="fa fa-clock-o "></i>
-		</div>
-
-		<!-- Header -->
-		<div class="header white">
-			company history
-		</div>
-
-		<!-- Second Header -->
-		<div class="page-desc white">
-			Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
-		</div>
-
-		<ul class="timeline list-unstyled">
-
-			<!-- History Year -->
-			<li class="year">2013</li>
-
-			<li class="note animated" data-animation="fadeInRight" data-animation-delay="50">
-				<h4>
-					The standard chunk
-				</h4>
-				<p class="desc">
-					This is Photoshop's version  Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat.
-				</p>
-				<span class="date">
-					20 DEC 2013
-				</span>
-
-				<span class="arrow fa fa-play"></span>
-
-			</li>
-
-			<li class="note animated" data-animation="fadeInLeft" data-animation-delay="50">
-				<h4>
-					There are many variations of passages
-				</h4>
-				<p class="desc">
-					This is Photoshop's version  Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor.
-				</p>
-				<span class="date">
-					11 JUN 2013
-				</span>
-
-				<span class="arrow fa fa-play"></span>
-
-			</li>
-
-			<li class="note animated" data-animation="fadeInRight" data-animation-delay="100">
-				<h4>
-					Sed ut perspiciatis.
-				</h4>
-				<p class="desc">
-					This is Photoshop's version  Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit a consequat.Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, quis bibendum auctor, nisi elit consequat.
-				</p>
-				<span class="date">
-					15 MAY 2013
-				</span>
-
-				<span class="arrow fa fa-play"></span>
-
-			</li>
-
-			<li class="note animated" data-animation="fadeInLeft" data-animation-delay="100">
-				<h4>
-					Finibus Bonorum et
-				</h4>
-				<p class="desc">
-					This is Photoshop's version  Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat.
-				</p>
-				<span class="date">
-					08 FEB 2013
-				</span>
-
-				<span class="arrow fa fa-play"></span>
-
-			</li>
-
-			<!-- History Year -->
-			<li class="year">2012</li>
-
-			<li class="note animated" data-animation="fadeInLeft" data-animation-delay="150">
-				<h4>
-					1914 translation by H. Rackham
-				</h4>
-				<p class="desc">
-					This is Photoshop's version  Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
-				</p>
-				<span class="date">
-					18 NOV 2012
-				</span>
-
-				<span class="arrow fa fa-play"></span>
-
-			</li>
-
-			<li class="note animated" data-animation="fadeInRight" data-animation-delay="150">
-				<h4>
-					At vero eos et accusamus et iusto
-				</h4>
-				<p class="desc">
-					This is Photoshop's version  Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
-				</p>
-				<span class="date">
-					20 AUG 2012
-				</span>
-
-				<span class="arrow fa fa-play"></span>
-
-			</li>
-
-			<!-- Start icon -->
-			<li class="start fa fa-bookmark"></li>
-
-			<li class="clear"></li>
-
-		</ul><!-- End Timeline ul -->
-
-	</div><!-- End inner div -->
-
-</section><!-- End History Section -->
-
 
 
 <!-- Our Team Section -->
@@ -1277,26 +951,6 @@ data-captionhidden="on">
 
 	</div><!-- End Services Inner 2 -->
 </section>	<!-- End Services Section -->
-
-
-<!-- Video Section -->
-<section id="video" class="contain">
-	
-	<!-- Video Top Icon -->
-	<div class="contain-logo video-logo">
-		<i class="fa fa-youtube-play "></i>
-	</div>
-
-	<div class="video-pattern">
-		<div class="video-text"></div>
-	</div>
-
-	<!-- Video -->
-	<div id="P2" class="player video-container" data-property="{videoURL:'V6_85cSOIcE',containment:'#video',autoPlay:true, mute:true, startAt:0, opacity:1}"></div>
-	<!-- End Video -->
-
-</section><!-- End Video Section -->
-
 
 <section id="prices" class="contain ">
 

@@ -260,59 +260,20 @@ class EventsController extends \BaseController {
 	}
 
 	public function findRelevantSponsor($currentEvent){
-		$sponsors = DB::table('sponsor') -> get();
 
-		$currentEventId = $currentEvent -> id;
+		/*$currentEventId = $currentEvent -> id;
 
-		$eventType = $currentEvent -> event_type;
-		$eventTypeArray = explode(',', $eventType);
+		$eventTypes = DB::('events_type')
+					  -> where('event_id', $currentEventId)
+					  -> select('event_type_id')
+					  -> get();
 
-		$turnout = $currentEvent -> turnout;
+		$eventAudiences = DB::('events_audience')
+						  -> where('event_id', $currentEventId)
+						  -> select('event_type_id')
+						  -> get();
 
-		$targetAudience = $currentEvent -> target_audience;
-		$targetAudienceArray = explode(',', $targetAudience);
-
-		$relevantSponsor = "";
-
-		foreach($sponsors as $sponsor){
-			$score = 0;
-			$sponsorId = $sponsor -> sponsor_id;
-			$sponsorEventType = $sponsor -> event_type;
-			$sponsorExpectedTurnOut = $sponsor -> minimum_turnout;
-			$sponsorTargetAudience = $sponsor -> target_audience;
-
-			$eventTypeArraySponsor = explode(',', $sponsorEventType);
-			$targetAudienceArraySponsor = explode(',', $sponsorTargetAudience);
-
-			foreach($eventTypeArraySponsor as $eventTypeSponsor){
-				foreach($eventTypeArray as $event){
-					if($event == $eventTypeSponsor){
-						$score = $score + 5;
-					}
-				}
-			}
-
-			if($targetAudience >= $sponsorExpectedTurnOut){
-				$score = $score + 25;
-			}
-
-			foreach($targetAudienceArraySponsor as $targetAudienceSponsor){
-				foreach($targetAudienceArray as $audience){
-					if($audience == $targetAudienceSponsor){
-						$score = $score + 5;
-					}
-				}
-			}
-
-			if($score >= 50){
-				$relevantSponsor .= $sponsorId ;
-				$relevantSponsor .= ',';
-			}
-
-			DB::table('event') -> where('id', $currentEventId)
-			                   -> update(array('relevant_sponsor' => $relevantSponsor));
-		}
-		return $eventTypeArray;
+		$eventTurnOut = $currentEvent -> turnout;*/
 	}
 
 	public function success(){
