@@ -389,7 +389,7 @@ data-captionhidden="on">
 				<div class="form-group">
 					<input type="email" class="subscribe-mail"  required="required" name="email" placeholder="Your mail adress" />
 					<input type="text" class="subscribe-mail"  required="required" name="details" placeholder="What's your upcoming event about" />
-					<input type="text" class="subscribe-mail"  required="required" name="event_date" placeholder="Your event date" />
+					<input type="date" class="subscribe-mail"  required="required" name="event_date" placeholder="Your event date" />
 				</div>
 				<!--Subscribe Button -->
 				<div class="form-group form-actions">
