@@ -301,7 +301,7 @@ class EventsController extends \BaseController {
 						  $eventTurnOut = $currentEvent -> turnout;*/
 						}
 
-						public function success(){
-							return View::make('events.success');
-						}
-					}	
+	public function success(){
+		return View::make('events.success');
+		}
+	}	
