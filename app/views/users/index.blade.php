@@ -384,7 +384,7 @@ data-captionhidden="on">
 
 		<!--Subscribe Right -->
 		<div class="col-xs-5 subs right">
-			<form id="subscribe-mail" method="post" action="http://wisten.goldeyestheme.com/">
+			{{ Form::open(array('route' => array('interest.store'), 'method' => 'post')) }}
 				<!--Subscribe input -->
 				<div class="form-group">
 					<input type="email" class="subscribe-mail"  required="required" name="email" placeholder="Your mail adress" />
@@ -395,7 +395,7 @@ data-captionhidden="on">
 				<div class="form-group form-actions">
 					<button type="submit" class="subscribe-btn subs">SIGN ME UP!</button>
 				</div>
-			</form>
+			{{ Form::close() }}
 		</div>
 
 		<div class="clear"></div>

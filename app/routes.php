@@ -30,6 +30,8 @@ Route::get('/sponsorProfile', array('as' => 'sponsorProfile', 'uses' => 'UsersCo
 Route::get('sponsor_category', array('as' => 'sponsor_category', 'uses' => 'SponsorController@sponsorCategory')); //route for Sponsors to add their categories
 Route::resource('sponsor', 'SponsorController');
 
+Route::resource('interest', 'InterestController');
+
 Route::get('successEvent', array('as' => 'successEvent', 'uses' => 'EventsController@success'));
 
 Route::get('/eventOrganiserProfile', array('as' => 'eventOrganiserProfile', 'uses' => 'UsersController@eventOrganiserProfile')); //route to display Event Organiser Profile
