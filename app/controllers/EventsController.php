@@ -36,7 +36,7 @@ class EventsController extends \BaseController {
 
 		$data = Input::only(['title','location','start_date','end_date','start_time','end_time','event_types','target_audience',
 			'banner', 'turnout','desc', 'org_name', 'logo', 'orgInfo', 'facebook', 'facebook_event', 'twitter',
-		 'instagram', 'website']); //retrieve all the inputs by the user
+		 'instagram', 'website', 'presence', 'description', 'price', 'slot']); //retrieve all the inputs by the user
 
 		$newEvent = [ //create instance of a new event with current user id and all the inputs by the user
 		[
@@ -87,23 +87,37 @@ class EventsController extends \BaseController {
        		}
        	}
 
+       	$presence = $data['presence'];
+       	$description = $data['description'];
+       	$price = $data['price'];
+       	$slot = $data['slot'];
+
+ 		$noOfPresence = sizeof($data['presence']);
+
+ 		for($x = 0; $x < $noOfPresence; $x++){
+ 			$presenceId = $presence[$x];
+ 			$currentDescription = $description[$x];
+ 			$currentPrice = $price[$x];
+ 			$currentSlot = $slot[$x];
+
+ 			$newPresence = [
+ 						   [
+ 						   		'presence_type_id' => $presenceId,
+ 						   		'description' => $currentDescription,
+ 						   		'price' => $currentPrice,
+ 						   		'slot' => $currentSlot,
+ 						   		'event_id' => $eventId
+ 						   ]
+ 						   ];
+ 			if($newPresence != null){
+ 				DB::table('presence') -> insert($newPresence);
+ 			}
+ 		}
+
        	return View::make('events.success');
 
        	//$event = DB::table('event') -> where('event_name', $data['event_name']) -> first();
 
-       	/*$eventId = DB::table('event') -> where('event_name', $data['event_name']) -> pluck('id');
-       	$eventType = DB::table('event') -> where('event_name', $data['event_name']) -> pluck('event_type');
-
-       	$eventTypeId = DB::table('list_event_type') -> where('type', $eventType) -> pluck('id');
-
-       	$newEventType = [
-       		[
-       			'event_id' => $eventId,
-       			'event_type_id' => $eventTypeId
-       		]
-       		];
-
-       		DB::table('event_type') -> insert($newEventType);*/
        	//return $this -> findRelevantSponsor($event);	    
        	}
 
