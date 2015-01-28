@@ -18,7 +18,7 @@
 		<!-- Live Feed Widget -->
 		<div class="widget">
 			<div class="widget-content widget-content-mini themed-background-info text-light-op">
-				<span class="pull-right text-dark-op">5 People</span>
+				<span class="pull-right text-dark-op"></span>
 				<i class="fa fa-fw fa-users"></i> Live Feed
 			</div>
 			<div class="widget-content widget-content-full">
@@ -29,8 +29,8 @@
 								<img src="images/avatar13.jpg" alt="User Image" class="img-circle">
 							</td>
 							<td>
-								<a href="javascript:void(0)" class="text-info">Sarah Hart</a><br>
-								<a href="javascript:void(0)" class="text-muted"><small>5 common friends</small></a>
+								<a href="javascript:void(0)" class="text-info">New Sponsorship Request from XXX!</a><br>
+								<a href="javascript:void(0)" class="text-muted"><small>1 hr ago</small></a>
 							</td>
 							<td class="text-center" style="width: 80px;">
 								<a href="javascript:void(0)" class="btn btn-effect-ripple btn-xs btn-success" data-toggle="tooltip" title="Friend Request"><i class="fa fa-plus"></i></a>
@@ -39,11 +39,11 @@
 						</tr>
 						<tr>
 							<td class="text-center">
-								<img src="images/avatar5.jpg" alt="User Image" class="img-circle">
+								<img src="images/avatar13.jpg" alt="User Image" class="img-circle">
 							</td>
 							<td>
-								<a href="javascript:void(0)" class="text-info">Mark Aguilar</a><br>
-								<a href="javascript:void(0)" class="text-muted"><small>2 common friends</small></a>
+								<a href="javascript:void(0)" class="text-info">New query from XXX about your XXX event</a><br>
+								<a href="javascript:void(0)" class="text-muted"><small>1 day ago</small></a>
 							</td>
 							<td class="text-center">
 								<a href="javascript:void(0)" class="btn btn-effect-ripple btn-xs btn-success" data-toggle="tooltip" title="Friend Request"><i class="fa fa-plus"></i></a>
@@ -52,37 +52,11 @@
 						</tr>
 						<tr>
 							<td class="text-center">
-								<img src="images/avatar12.jpg" alt="User Image" class="img-circle">
+								<img src="images/avatar13.jpg" alt="User Image" class="img-circle">
 							</td>
 							<td>
-								<a href="javascript:void(0)" class="text-info">Karen Jackson</a><br>
-								<a href="javascript:void(0)" class="text-muted"><small>3 common friends</small></a>
-							</td>
-							<td class="text-center">
-								<a href="javascript:void(0)" class="btn btn-effect-ripple btn-xs btn-success" data-toggle="tooltip" title="Friend Request"><i class="fa fa-plus"></i></a>
-								<a href="javascript:void(0)" class="btn btn-effect-ripple btn-xs btn-danger" data-toggle="tooltip" title="Follow"><i class="fa fa-share"></i></a>
-							</td>
-						</tr>
-						<tr>
-							<td class="text-center">
-								<img src="images/avatar1.jpg" alt="User Image" class="img-circle">
-							</td>
-							<td>
-								<a href="javascript:void(0)" class="text-info">Russell Larson</a><br>
-								<a href="javascript:void(0)" class="text-muted"><small>5 common friends</small></a>
-							</td>
-							<td class="text-center">
-								<a href="javascript:void(0)" class="btn btn-effect-ripple btn-xs btn-success" data-toggle="tooltip" title="Friend Request"><i class="fa fa-plus"></i></a>
-								<a href="javascript:void(0)" class="btn btn-effect-ripple btn-xs btn-danger" data-toggle="tooltip" title="Follow"><i class="fa fa-share"></i></a>
-							</td>
-						</tr>
-						<tr>
-							<td class="text-center">
-								<img src="images/avatar15.jpg" alt="User Image" class="img-circle">
-							</td>
-							<td>
-								<a href="javascript:void(0)" class="text-info">Howard Adams</a><br>
-								<a href="javascript:void(0)" class="text-muted"><small>5 common friends</small></a>
+								<a href="javascript:void(0)" class="text-info">XXX Event Created</a><br>
+								<a href="javascript:void(0)" class="text-muted"><small>2 days ago</small></a>
 							</td>
 							<td class="text-center">
 								<a href="javascript:void(0)" class="btn btn-effect-ripple btn-xs btn-success" data-toggle="tooltip" title="Friend Request"><i class="fa fa-plus"></i></a>
@@ -106,10 +80,12 @@
 					<tbody>
 						<tr>
 							<td class="text-center" style="width: 100px;">
-								<img src="images/avatar14.jpg" alt="User Image" class="img-circle">
+								<img src="images/avatar13.jpg" alt="User Image" class="img-circle">
 							</td>
 							<td>
-								<a href="javascript:void(0)" class="text-muted"><small>29 years old on Friday</small></a>
+								<a href="javascript:void(0)" class="text-warning">Event name</a><br>
+								<a href="javascript:void(0)" class="text-muted"><small>Date: xxx</small></a><br/>
+								<a href="javascript:void(0)" class="text-muted"><small>No. of Sponsors: xx</small></a>
 							</td>
 							<td class="text-center" style="width: 80px;">
 								<a href="javascript:void(0)" class="btn btn-effect-ripple btn-xs btn-info" data-toggle="tooltip" title="Send a gift"><i class="fa fa-gift"></i></a>
@@ -117,11 +93,12 @@
 						</tr>
 						<tr>
 							<td class="text-center" style="width: 100px;">
-								<img src="images/avatar15.jpg" alt="User Image" class="img-circle">
+								<img src="images/avatar13.jpg" alt="User Image" class="img-circle">
 							</td>
 							<td>
-								<a href="javascript:void(0)" class="text-warning">Phillip Peters</a><br>
-								<a href="javascript:void(0)" class="text-muted"><small>34 years old tomorrow</small></a>
+								<a href="javascript:void(0)" class="text-warning">Event name</a><br>
+								<a href="javascript:void(0)" class="text-muted"><small>Date: xxx</small></a><br/>
+								<a href="javascript:void(0)" class="text-muted"><small>No. of Sponsors: xx</small></a>
 							</td>
 							<td class="text-center" style="width: 80px;">
 								<a href="javascript:void(0)" class="btn btn-effect-ripple btn-xs btn-info" data-toggle="tooltip" title="Send a gift"><i class="fa fa-gift"></i></a>
