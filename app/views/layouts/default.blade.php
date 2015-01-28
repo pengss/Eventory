@@ -50,7 +50,6 @@
                 <a href="/profile">{{ Auth::user()->first_name }}</a>
                 @else
                 <a href="#modal-login" class="btn btn-xs btn-effect-ripple btn-primary" data-toggle="modal">Login</a>
-                <a href="/Eventory/public/user/create" class ="btn btn-xs btn-effect-ripple btn-primary">Signup</button></a>
                 @endif
             </div>
             

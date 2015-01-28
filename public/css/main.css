@@ -27,12 +27,12 @@
 a.btn.btn-effect-ripple.btn-default.dropdown-toggle.enable-tooltip {
 margin-top: -8px;
 }
-
+/*
 .emptydiv {
 height: 60px;
 }
 
-
+*/
 /* Preloader */
 #page-wrapper.page-loading {
     overflow: hidden;
@@ -3166,6 +3166,7 @@ p, .table, .alert, .carousel {
 
     #page-content {
         padding: 20px 20px 20px;
+        margin-top: 60px;
     }
 
     #page-container.header-fixed-top #page-content {

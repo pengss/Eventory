@@ -3,36 +3,21 @@
 
 
 <div id="page-content">
+    <div class="emptydiv"></div>
     <div class="row">
-       <div class="col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-2 col-lg-8 col-lg-offset-2">
+     <div class="col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-2 col-lg-8 col-lg-offset-2">
         <!-- Clickable Wizard Block -->
         <div class="block">
             <!-- Clickable Wizard Title -->
             <div class="block-title">
-                <div class="block-options pull-right">
-                    <a href="javascript:void(0)" class="btn btn-effect-ripple btn-default" data-toggle="tooltip" title="Settings"><i class="fa fa-cog"></i></a>
-                </div>
-                <h2>Create an event with us!</h2>
+                <h2>Edit Event - {{$editEvent -> event_name}}</h2>
             </div>
-            <div id="status">
-            </div>
-            <div id="fb_login">
-                Have a Facebook event already?
-                <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
-                to Facebook to import it to Eventory<br/><br/>
-            </div>
-
-            <div id = "fb_event" style="display:none;">
-                <form action = "event-create.php" method="post">
-                    <input type ="text" name ="eventID" value="360959057387474"/>
-                    <button type="submit" class="btn btn-effect-ripple btn-primary" id="next">Grab Event Details</button>
-                </form>
-            </div>
+            
 
             <!-- END Clickable Wizard Title -->
+            {{ Form::model($editEvent, array('route' => array('event.store'), 'method' => 'post', 'id' => 'clickable-wizard', 'class' => 'form-horizontal form-bordered', 'enctype' => 'multipart/form-data')) }}
 
             <!-- Clickable Wizard Content -->
-            {{ Form::model($editEvent, array('route' => array('event.store'), 'method' => 'post', 'id' => 'clickable-wizard', 'class' => 'form-horizontal form-bordered', 'enctype' => 'multipart/form-data')) }}
             <!-- First Step -->
             <div id="clickable-first" class="step">
                 <!-- Step Info -->
@@ -70,7 +55,7 @@
                 <div class="form-group">
                     <label class="col-md-3 control-label">Location</label>
                     <div class="col-md-9">
-                        <input type="text" id="location" name="location" class="form-control ui-wizard-content" value = "" placeholder="Where is your event location?">
+                        {{Form::text('location', null,array('class' => 'form-control','required' => 'required'))}}
                     </div>
                 </div>
 
@@ -78,9 +63,9 @@
                     <label class="col-md-3 control-label">Event Date</label>
                     <div class="col-md-9">
                         <div class="input-group input-daterange" data-date-format="dd M yyyy">
-                            <input type="text" id="start_date" name="start_date" class="form-control" value = "" placeholder="From">
+                            <input type="text" id="start_date" name="start_date" class="form-control" value = "{{$editEvent->start_date}}" placeholder="From">
                             <span class="input-group-addon"><i class="fa fa-chevron-right"></i></span>
-                            <input type="text" id="end_date" name="end_date" class="form-control" value = "" placeholder="To">
+                            <input type="text" id="end_date" name="end_date" class="form-control" value = "{{$editEvent->end_date}}" placeholder="To">
                         </div>
                     </div>
                 </div>
@@ -88,7 +73,7 @@
                     <label class="col-md-3 control-label">Start Time</label>
                     <div class="col-md-9">
                         <div class="input-group bootstrap-timepicker">
-                            <input type="text" id="start_time" name="start_time" class="form-control input-timepicker text-center" value = "">
+                            <input type="text" id="start_time" name="start_time" class="form-control input-timepicker text-center" value = "{{$editEvent->start_time}}">
                             <span class="input-group-btn">
                                 <a href="javascript:void(0)" class="btn btn-effect-ripple btn-primary"><i class="fa fa-clock-o"></i></a>
                             </div>
@@ -98,7 +83,7 @@
                         <label class="col-md-3 control-label">End Time</label>
                         <div class="col-md-9">
                             <div class="input-group bootstrap-timepicker">
-                                <input type="text" id="end_time" name="end_time" class="form-control input-timepicker text-center" value = "" >
+                                <input type="text" id="end_time" name="end_time" class="form-control input-timepicker text-center" value = "{{$editEvent->end_time}}" >
                                 <span class="input-group-btn">
                                     <a href="javascript:void(0)" class="btn btn-effect-ripple btn-primary"><i class="fa fa-clock-o"></i></a>
                                 </div>
@@ -111,11 +96,18 @@
                                     <ul class="checkbox">
                                         <?php
                                         $event_types = DB::table('type_of_events')->get();
-                                        foreach ($event_types as $type)
-                                        {
-                                            ?>
-                                            <li><input type="checkbox" id="event_types" name="event_types[]" value="<?=$type->id?>"> <?=$type->type?></li>
 
+                                        foreach ($event_types as $type)
+                                        {   ?>
+                                            @foreach($event_types as $eventType)
+                                                @if ($eventType -> id == $editEvent -> id)
+                                                    @if ($editEvent -> id == $type->id)
+                                                    <li><input type="checkbox" id="event_types" name="event_types[]" value="<?=$type->id?>" checked> <?=$type->type?></li>
+                                                    @else  
+                                                    <li><input type="checkbox" id="event_types" name="event_types[]" value="<?=$type->id?>" > <?=$type->type?></li>
+                                                    @endif
+                                                @endif  
+                                        @endforeach
                                             <?php
                                         }
                                         ?>
@@ -134,7 +126,12 @@
                                             foreach ($event_audience as $aud)
                                             {
                                                 ?>
-                                                <li><input type="checkbox" id="target_audience" name="target_audience[]" value="<?=$aud->id?>"> <?=$aud->type?></li>
+                                                
+                                                        @if ($editEvent -> id == $aud->id)
+                                                            <li><input type="checkbox" id="target_audience" name="target_audience[]" value="<?=$aud->id?>" checked> <?=$aud->type?></li>
+                                                        @else
+                                                            <li><input type="checkbox" id="target_audience" name="target_audience[]" value="<?=$aud->id?>"> <?=$aud->type?></li>
+                                                        @endif
                                                 <?php
                                             }
                                             ?>
@@ -170,8 +167,7 @@
                             <label class="col-md-3 control-label">Estimated Turnout <span class="text-danger">*</span></label>
                             <div class="col-md-9">
                                 <div class="input-group">
-                                    <input type="text" id="turnout" name="turnout" class="form-control" value = "">
-                                    <span class="input-group-addon"><i class="fa fa-asterisk fa-fw"></i></span>
+                                    {{Form::text('turnout', null,array('class' => 'form-control','required' => 'required'))}}
                                 </div>
                             </div>
                         </div>
@@ -179,26 +175,27 @@
                             <label class="col-md-3 control-label">Event Details<span class="text-danger">*</span></label>
                             <div class="col-md-9">
                                 <div class="col-xs-12">
-                                    <textarea id="desc" name="desc" rows="10" class="form-control textarea-editor" value = "" placeholder="Tell your potential sponsors more about your event!" style="cursor: auto;"></textarea>
+                                    <textarea id="desc" name="desc" rows="10" class="form-control textarea-editor" value = "{{$editEvent->description}}" style="cursor: auto;"></textarea>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-md-3 control-label">Organization Name<span class="text-danger">*</span></label>
                             <div class="col-md-9">
-                                <input type="text" id="org_name" name="org_name" class="form-control">
+                                <input type="text" id="org_name" name="org_name" class="form-control" value ="">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-md-3 control-label">Org Logo</label>
                             <div class="col-md-9">
-                                <input type="File" id="logo" name="logo" class="form-control">
+                                {{Form::file('logo', null,array('class' => 'form-control'))}}
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-md-3 control-label">Organisation Info</label>
                             <div class="col-md-9">
-                                <textarea id="orgInfo" name="orgInfo" rows="6" class="form-control textarea-elastic ui-wizard-content" placeholder="Tell us more about your organising team!" style="overflow: hidden; height: 136px;"></textarea>
+                                <textarea id="orgInfo" name="orgInfo" rows="6" class="form-control textarea-elastic ui-wizard-content" value="" style="overflow: hidden; height: 136px;"></textarea>
+                                {{Form::text('organisation_info', null,array('class' => 'form-control textarea-elastic ui-wizard-content','required' => 'required'))}}
                             </div>
                         </div>
                         <div class="form-group">
@@ -208,23 +205,23 @@
                             <div class="col-md-9">
                                 <div class="social input-group">
                                     <label class ="" for="social" id="facebook_title"><i class="fa fa-facebook-square"></i> facebook.com/</label>
-                                    <input type="text" id="facebook" name="facebook" class="form-control">
+                                    {{Form::text('facebook', null,array('class' => 'form-control'))}}
                                 </div>
                                 <div class="social input-group">
                                     <label class ="" for="social" id="facebook_event_title"><i class="fa fa-facebook"></i> facebook.com/events/</label>
-                                    <input type="text" id="facebook_event" name="facebook_event" class="form-control">
+                                    {{Form::text('facebook_event', null,array('class' => 'form-control'))}}
                                 </div>
                                 <div class="social input-group">
                                     <label class ="" for="social" id="twitter_title"><i class="fa fa-twitter"></i> twitter.com/</label>
-                                    <input type="text" id="twitter" name="twitter" class="form-control">
+                                    {{Form::text('twitter', null,array('class' => 'form-control'))}}
                                 </div>
                                 <div class="social input-group">
                                     <label class ="" for="social" id="instagram_title"><i class="fa fa-instagram"></i> instagram.com/</label>
-                                    <input type="text" id="instagram" name="instagram" class="form-control">
+                                    {{Form::text('instagram', null,array('class' => 'form-control'))}}
                                 </div>
                                 <div class="social input-group">
                                     <label class ="" for="social" id="website_title" ><i class="fa fa-globe"></i> Website http://</label>
-                                    <input type="text" id="website" name="website" class="form-control">
+                                    {{Form::text('website', null,array('class' => 'form-control'))}}
                                 </div>
                             </div>
                         </div>
@@ -288,68 +285,6 @@
     {{ HTML::script('js/jquery.appendGrid-1.5.1.js'); }}
     {{ HTML::script('js/jquery-ui.js'); }}
     {{ HTML::script('js/custom/addpresence.js'); }}
-</div>
-<div class="row">
-    <div class="col-md-4 col-md-offset-4">
-        <h2>Edit this event</h2>
-        {{ Form::model($editEvent) }}
-       
-      
-        <div class="form-group">
-            {{Form::label('location','Location')}}
-            {{Form::text('location', null,array('class' => 'form-control','required' => 'required'))}}
-        </div>
-        <div class="form-group">
-            {{Form::label('turnout','Turnout')}}
-            {{Form::text('turnout', null,array('class' => 'form-control','required' => 'required'))}}
-        </div>
-        <div class="form-group">
-            {{Form::label('description','Description')}}
-            {{Form::text('description', null,array('class' => 'form-control','required' => 'required'))}}
-        </div>
-        <div class="form-group">
-            {{Form::label('organisation_info','Information about your organisation')}}
-            {{Form::text('organisation_info', null,array('class' => 'form-control','required' => 'required'))}}
-        </div>
-        <div class="form-group">
-            {{Form::label('start_date','Start Date')}}
-            {{Form::text('start_date', null,array('class' => 'form-control','required' => 'required'))}}
-        </div>
-        <div class="form-group">
-            {{Form::label('end_date','End Date')}}
-            {{Form::text('end_date', null,array('class' => 'form-control','required' => 'required'))}}
-        </div>
-        <div class="form-group">
-            {{Form::label('start_time','Start Time')}}
-            {{Form::text('start_time', null,array('class' => 'form-control','required' => 'required'))}}
-        </div>
-        <div class="form-group">
-            {{Form::label('end_time','End Time')}}
-            {{Form::text('end_time', null,array('class' => 'form-control','required' => 'required'))}}
-        </div>
-        <div class="form-group">
-            {{Form::label('facebook','Facebook')}}
-            {{Form::text('facebook', null,array('class' => 'form-control'))}}
-        </div>
-        <div class="form-group">
-            {{Form::label('facebook_event','Facebook Event')}}
-            {{Form::text('facebook_event', null,array('class' => 'form-control'))}}
-        </div>
-        <div class="form-group">
-            {{Form::label('twitter','Twitter')}}
-            {{Form::text('twitter', null,array('class' => 'form-control'))}}
-        </div>
-        <div class="form-group">
-            {{Form::label('instagram','Instagram')}}
-            {{Form::text('instagram', null,array('class' => 'form-control'))}}
-        </div>
-        <div class="form-group">
-            {{Form::label('website','Website')}}
-            {{Form::text('website', null,array('class' => 'form-control'))}}
-        </div>
-        {{Form::submit('Update', array('class' => 'btn btn-primary'))}}
-        {{ Form::close() }}
-    </div>
 </div>
 </div>
 @stop

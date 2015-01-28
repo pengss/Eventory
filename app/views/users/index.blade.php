@@ -288,7 +288,7 @@ data-captionhidden="on">
 			<!-- Second Package -->
 			<div class="package animated" data-animation="flipInY" data-animation-delay="300">
 				<!-- Package Header -->
-				<h1>Standart</h1>
+				<h1>Standard</h1>
 				<!-- Package Price -->
 				<div class="circle">
 					<h2>$39 <span>.00</span></h2>
@@ -373,10 +373,10 @@ data-captionhidden="on">
 			<!--Subscribe Head and Texts -->
 			<div class="text">
 				<h1>
-					subscribe to our <span> newsletter ?</span>
+					Need <span> sponsors</span> for your event?
 				</h1>
 				<p>
-					This is Photoshop's version  of Lorem Ipsum. Proin gravida.
+					Register your interest with us to take part in our ALPHA launch
 				</p>
 			</div>
 			<div class="clear"></div>
@@ -386,9 +386,15 @@ data-captionhidden="on">
 		<div class="col-xs-5 subs right">
 			<form id="subscribe-mail" method="post" action="http://wisten.goldeyestheme.com/">
 				<!--Subscribe input -->
-				<input type="email" class="subscribe-mail"  required="required" id="e-mail" placeholder="Your mail adress" />
+				<div class="form-group">
+					<input type="email" class="subscribe-mail"  required="required" name="email" placeholder="Your mail adress" />
+					<input type="text" class="subscribe-mail"  required="required" name="details" placeholder="What's your upcoming event about" />
+					<input type="text" class="subscribe-mail"  required="required" name="event_date" placeholder="Your event date" />
+				</div>
 				<!--Subscribe Button -->
-				<button type="submit" class="subscribe-btn subs">subscribe</button>
+				<div class="form-group form-actions">
+					<button type="submit" class="subscribe-btn subs">SIGN ME UP!</button>
+				</div>
 			</form>
 		</div>
 
@@ -396,43 +402,5 @@ data-captionhidden="on">
 	</div><!-- End Subscribe inner -->
 	
 </section><!-- End Subscribe Section -->
-
-<!--Contact Section -->
-<section id="contact" class="contain ">
-
-
-	<!--Contact Form -->
-	<div class="contact-form">
-
-		<form id="contact-us" method="post" action="http://wisten.goldeyestheme.com/">
-
-			<!--Contact Header -->
-			<h1 class="contact-us">Contact Us</h1>
-			<!-- Name Input -->
-			<input type="text" name="name" id="name" required="required" class="form" placeholder="Name" />
-			<!-- Email Input -->
-			<input type="email" name="email" id="email" required="required" class="form" placeholder="Email" />
-			<!-- Subject Input -->
-			<input type="text" name="subject" id="subject" class="form" placeholder="Subject" />
-			<!-- Message Area -->
-			<textarea name="message" id="message" class="form textarea"  placeholder="Message"></textarea>
-			<!-- Send Button -->
-			<button type="submit" id="submit" name="submit" class="form-btn"><i class="fa fa-envelope"></i></button> 
-
-		</form>
-
-	</div><!-- End Contact Form -->
-
-	<!-- Contact Top Icon -->
-	<div class="contain-logo contact-logo">
-		<i class="fa fa-map-marker "></i>
-	</div>
-
-	<!-- Google Map -->
-	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-	<div id="map"></div>
-	<!-- End Google Map -->
-
-</section><!-- End Contact Section -->
 
 @stop

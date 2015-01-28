@@ -9,9 +9,6 @@
         <div class="block">
             <!-- Clickable Wizard Title -->
             <div class="block-title">
-                <div class="block-options pull-right">
-                    <a href="javascript:void(0)" class="btn btn-effect-ripple btn-default" data-toggle="tooltip" title="Settings"><i class="fa fa-cog"></i></a>
-                </div>
                 <h2>Create an event with us!</h2>
             </div>
             <div id="status">
