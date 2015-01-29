@@ -43,7 +43,7 @@ Route::filter('auth', function()
 		}
 		else
 		{
-			return Redirect::guest('login');
+			return Redirect::guest('index');
 		}
 	}
 });
@@ -96,7 +96,7 @@ Route::filter('onlyAllowSponsor', function(){
 });
 
 Route::filter('onlyAllowEventOrganiser', function(){
-	if(Auth::user()->user_type != "Event Organiser") {
+	if(Auth::user()->user_type != "Event Organizer") {
 		return Redirect::guest('sponsorProfile');
 	}
 });

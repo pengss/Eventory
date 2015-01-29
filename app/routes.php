@@ -26,33 +26,17 @@ Route::post('/create_organisation', array('as' => 'create_organisation', 'uses' 
 
 Route::resource('user', 'UsersController');
 
-Route::get('/sponsorProfile', array('as' => 'sponsorProfile', 'uses' => 'UsersController@sponsorProfile')); //route to display Sponsor Profile
-Route::get('sponsor_category', array('as' => 'sponsor_category', 'uses' => 'SponsorController@sponsorCategory')); //route for Sponsors to add their categories
-Route::resource('sponsor', 'SponsorController');
-
 Route::resource('interest', 'InterestController');
 
-Route::get('successEvent', array('as' => 'successEvent', 'uses' => 'EventsController@success'));
-
-Route::get('/eventOrganiserProfile', array('as' => 'eventOrganiserProfile', 'uses' => 'UsersController@eventOrganiserProfile')); //route to display Event Organiser Profile
-Route::get('create_event', array('as' => 'create_event', 'uses' => 'EventsController@createEvent')); //route to create event page
-Route::get('create_presence/{myEvent}', array('as' => 'create_presence', 'uses' => 'EventsController@createPresence')); //route to create presence page
-Route::post('/create_presence/{myEvent}', array('as' => 'create_presence', 'uses' => 'EventsController@handleCreatePresence')); //route to process created presence
-Route::get('view_events', array('as' => 'view_events', 'uses' => 'EventsController@viewAllEvents' )); //route to view all events
-Route::get('view_my_event/{myEvent}', array('as' => 'view_my_event', 'uses' => 'EventsController@viewMyEvent' )); //route to view specific event
-Route::get('edit_my_event/{myEvent}', array('as' => 'edit_my_event', 'uses' => 'EventsController@editMyEvent')); //route to edit specific event with form filled
-Route::post('/edit_my_event/{myEvent}', array('as' => 'edit_my_event', 'uses' => 'EventsController@handleEditMyEvent'));
-Route::resource('event', 'EventsController');
-Route::get('/success', array('as' => 'success', 'uses' => 'EventsController@createPresence')); //display success page after creating event
-
-Route::get('send_email', array('as' => 'send_email', 'uses' => 'SponsorController@sendEmail'));
-
-Route::get('/logout', array('as' => 'logout', 'uses' => 'UsersController@logout')); //route to process logout
-/*Route::group(array('before' => 'auth'), function()
+Route::group(array('before' => 'auth'), function()
 {
 	Route::group(array('before' => 'onlyAllowSponsor'), function(){
 		Route::get('/sponsorProfile', array('as' => 'sponsorProfile', 'uses' => 'UsersController@sponsorProfile')); //route to display Sponsor Profile
+		
 		Route::get('sponsor_category', array('as' => 'sponsor_category', 'uses' => 'SponsorController@sponsorCategory')); //route for Sponsors to add their categories
+		
+		Route::get('send_email', array('as' => 'send_email', 'uses' => 'SponsorController@sendEmail'));
+
 		Route::resource('sponsor', 'SponsorController');
 	});
 
@@ -73,8 +57,12 @@ Route::get('/logout', array('as' => 'logout', 'uses' => 'UsersController@logout'
 
 		Route::post('/edit_my_event/{myEvent}', array('as' => 'edit_my_event', 'uses' => 'EventsController@handleEditMyEvent'));
 
+		Route::get('/success', array('as' => 'success', 'uses' => 'EventsController@createPresence')); //display success page after creating event
+
+		Route::get('successEvent', array('as' => 'successEvent', 'uses' => 'EventsController@success'));
+
 		Route::resource('event', 'EventsController');
 	});
 
 	Route::get('/logout', array('as' => 'logout', 'uses' => 'UsersController@logout')); //route to process logout
-});*/
+});
