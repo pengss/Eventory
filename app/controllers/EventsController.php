@@ -114,11 +114,9 @@ class EventsController extends \BaseController {
  			}
  		}
 
-       	return View::make('events.success');
+       	$event = DB::table('event') -> where('event_name', $data['title']) -> first();
 
-       	//$event = DB::table('event') -> where('event_name', $data['event_name']) -> first();
-
-       	//return $this -> findRelevantSponsor($event);	    
+       	return $this -> findRelevantSponsor($event);	    
        	}
 
 	/**
@@ -173,7 +171,7 @@ class EventsController extends \BaseController {
 		return View::make('events.create'); //redirect to create.blade.php
 	}
 
-	public function viewMyEvents(){ //redirect EO to view his  listed events
+	public function viewAllEvents(){ //redirect users to view all the listed events
 		$id = Auth::user() -> id; //checks for current user's id
 
 		$events = DB::table('event')->where('creator_id', '=', $id)->get(); //retrieve all events with the user's id from the database
@@ -198,8 +196,7 @@ class EventsController extends \BaseController {
 		View::share('event_types', $event_types);
 		View::share('event_audiences', $event_audiences);
 
-		return View::make('events.view_all_events');//return to page with all events listed
-		return View::make('sponsor.find_events'); 
+		return View::make('events.view_all_events'); //return to page with all events listed
 		//return $events;
 	}
 
@@ -287,57 +284,92 @@ class EventsController extends \BaseController {
 
 	public function findRelevantSponsor($currentEvent){
 
-		/*$currentEventId = $currentEvent -> id;
+		$currentEventId = $currentEvent -> id;
 
-		$eventTypes = DB::('events_type')
+		$eventTypes = DB::table('events_type')
 					  -> where('event_id', $currentEventId)
 					  -> select('event_type_id')
 					  -> get();
 
-		$eventAudiences = DB::('events_audience')
+		$eventAudiences = DB::table('events_audience')
 						  -> where('event_id', $currentEventId)
-						  -> select('event_type_id')
+						  -> select('audience_id')
 						  -> get();
 
-						  $eventTurnOut = $currentEvent -> turnout;*/
-						}
+		$eventTurnOut = $currentEvent -> turnout;
+
+		$presence = DB::table('presence') -> where('id', $currentEventId) -> pluck('description');
+
+		$sponsorshipType = '';
+
+		if($presence != null){
+			$sponsorshipType = 'Cash';
+		}
+		else{
+			$sponsorshipType = 'In Kind';
+		}
+
+		$sponsorshipTypeId = DB::table('type_of_sponsorship') -> where('sponsorship_type', $sponsorshipType ) -> pluck('id');
+
+		$sponsorArr = DB::table('users') -> where('user_type', 'Sponsor') -> get(); 
+		$sponsorEventTypeCriteria = DB::table('users')->join('sponsor_event_type', 'users.id', '=', 'sponsor_event_type.sponsor_id')
+			->where('id', $sponsorArr[0] -> id)
+			->select('id','event_type_id')
+			->get();
+
+		foreach($sponsorArr as $sponsor){
+			$relevancyScore = 0;
+			
+			$sponsorId = $sponsor -> id;
+			$sponsorEventTypeCriteria = DB::table('users')->join('sponsor_event_type', 'users.id', '=', 'sponsor_event_type.sponsor_id')
+			->where('id', $sponsorId)
+			->select('event_type_id')
+			->get();
+			
+			$sponsorAudienceCriteria = DB::table('users')->join('sponsor_audience', 'users.id', '=', 'sponsor_audience.sponsor_id')
+			->where('id', $sponsorId)
+			->select('audience_id')
+			->get();
+
+			$sponsorTurnoutCriteria = DB::table('sponsor_turnout') -> where('sponsor_id', $sponsorId) -> pluck('expected_turnout');
+
+			$sponsorSponsorshipCriteria = DB::table('sponsor_sponsorship_type') -> where('sponsor_id', $sponsorId) -> pluck('sponsorship_type_id');
+			
+			foreach($eventTypes as $eventType){
+				if(in_array($eventType,$sponsorEventTypeCriteria)){
+					$relevancyScore += 5;
+				}
+			}
+			
+			foreach($eventAudiences as $eventAudience){
+				if(in_array($eventAudience, $sponsorAudienceCriteria)){
+					$relevancyScore += 5;
+				}
+			}
+			
+			if($eventTurnOut >= $sponsorTurnoutCriteria){
+				$relevancyScore += 25;
+			}
+			
+			if($sponsorshipTypeId == $sponsorSponsorshipCriteria){
+				$relevancyScore += 25;
+			}
+
+			if($relevancyScore >= 30){
+				$relevantSponsor = [
+								   [
+								   		'sponsor_id' => $sponsorId,
+								   		'event_id' => $currentEventId,
+								   		'relevancyScore' => $relevancyScore
+								   ]
+								   ];
+				DB::table('relevant_sponsor') -> insert('$relevantSponsor');
+			}
+		} 
+		return View::make('events.success');
+	}
 
 	public function success(){
 		return View::make('events.success');
-		}
-
-
-	public function viewAllEvents(){ //redirect sponsors to view all the listed events
-		$id = Auth::user() -> id; //checks for current user's id
-
-		$events = DB::table('event')->get(); //retrieve all events with the user's id from the database
-
-		$event_types = array();
-
-		$event_audiences = array();
-
-		foreach($events as $current){
-			$currentEventId = $current -> id;
-			$event_types = DB::table('event')->join('events_type', 'event.id', '=', 'events_type.event_id')
-			->join('type_of_events', 'events_type.event_type_id', '=', 'type_of_events.id')
-			->select('event.id', 'type')
-			->get();
-			$event_audiences = DB::table('event')->join('events_audience', 'event.id', '=', 'events_audience.event_id')
-			->join('target_audience', 'events_audience.audience_id', '=', 'target_audience.id')
-			->select('event.id', 'type')
-			->get();
-		}
-
-		View::share('events', $events); //share the variable accross all views, such that there is direct access to this variable
-		View::share('event_types', $event_types);
-		View::share('event_audiences', $event_audiences);
-
-		return View::make('sponsor.find_events'); 
-		//return $events;
 	}
-
 }	
-
-
-
-	
