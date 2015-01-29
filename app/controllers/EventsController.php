@@ -171,7 +171,7 @@ class EventsController extends \BaseController {
 		return View::make('events.create'); //redirect to create.blade.php
 	}
 
-	public function viewAllEvents(){ //redirect users to view all the listed events
+	public function viewMyEvents(){ //redirect users to view all the listed events
 		$id = Auth::user() -> id; //checks for current user's id
 
 		$events = DB::table('event')->where('creator_id', '=', $id)->get(); //retrieve all events with the user's id from the database
@@ -335,6 +335,8 @@ class EventsController extends \BaseController {
 
 			$sponsorSponsorshipCriteria = DB::table('sponsor_sponsorship_type') -> where('sponsor_id', $sponsorId) -> pluck('sponsorship_type_id');
 			
+			$relevantSponsor = array();
+
 			foreach($eventTypes as $eventType){
 				if(in_array($eventType,$sponsorEventTypeCriteria)){
 					$relevancyScore += 5;
@@ -360,10 +362,11 @@ class EventsController extends \BaseController {
 								   [
 								   		'sponsor_id' => $sponsorId,
 								   		'event_id' => $currentEventId,
-								   		'relevancyScore' => $relevancyScore
+								   		'relevancy_score' => $relevancyScore
 								   ]
 								   ];
-				DB::table('relevant_sponsor') -> insert('$relevantSponsor');
+				DB::table('relevant_sponsor') -> insert($relevantSponsor);
+
 			}
 		} 
 		return View::make('events.success');
