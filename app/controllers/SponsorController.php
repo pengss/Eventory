@@ -149,4 +149,8 @@ class SponsorController extends \BaseController {
 			$message->to($email, $username)->subject('Welcome to Eventory!');
 		});
 	}
+
+	public function findEvents(){
+		return View::make('sponsor.find_events');
+	}
 }

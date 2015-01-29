@@ -37,9 +37,11 @@ Route::group(array('before' => 'auth'), function()
 		
 		Route::get('send_email', array('as' => 'send_email', 'uses' => 'SponsorController@sendEmail'));
 
-		Route::get('find_events', array('as' => 'find_events', 'uses' => 'EventsController@viewAllEvents' )); //route to view all events
+		Route::get('find_events', array('as' => 'find_events', 'uses' => 'SponsorController@findEvents' )); //route to view all events
 
-		Route::get('view_my_event/{myEvent}', array('as' => 'view_my_event', 'uses' => 'EventsController@viewMyEvent' )); //route to view specific event
+		Route::post('/find_events', array('as' => 'find_events', 'uses' => 'SearchController@sponsorSearchByType'));
+
+		Route::get('view_this_event/{myEvent}', array('as' => 'view_this_event', 'uses' => 'SearchController@viewThisEvent' )); //route to view specific event
 
 		Route::resource('sponsor', 'SponsorController');
 	});
