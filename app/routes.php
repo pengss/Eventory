@@ -43,6 +43,8 @@ Route::group(array('before' => 'auth'), function()
 
 		Route::get('view_this_event/{myEvent}', array('as' => 'view_this_event', 'uses' => 'SearchController@viewThisEvent' )); //route to view specific event
 
+		Route::get('relevant_events', array('as' => 'relevant_events', 'uses' => 'SponsorController@getRelevantEvents'));
+
 		Route::resource('sponsor', 'SponsorController');
 	});
 

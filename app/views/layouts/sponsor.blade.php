@@ -61,7 +61,7 @@
 
                     <li class="active"><a class="scroll" href="/Eventory/public/sponsorProfile">My Dashboard</a></li>
                     <li><a class="scroll" href="/Eventory/public/find_events">Find Events</a></li>
-                    <li><a class="scroll" href="#features">Sponsorship Requests</a></li>
+                    <li><a class="scroll" href="/Eventory/public/relevant_events">Show me relevant events</a></li>
                     <li><a class="scroll" href="#history">Chats</a></li>
                     <li><a class="scroll" href="#team">Events History</a></li>
 

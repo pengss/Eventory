@@ -153,4 +153,34 @@ class SponsorController extends \BaseController {
 	public function findEvents(){
 		return View::make('sponsor.find_events');
 	}
+
+	public function getRelevantEvents(){
+		$id = Auth::user() -> id;
+
+		$eventsId = DB::table('relevant_sponsor') -> where('sponsor_id', $id) -> select('event_id') -> get();
+
+		$relevantEvents = array();
+
+		$relevantEventTypes = array();
+
+		$relevantAudience = array();
+
+		foreach($eventsId as $eventId){
+			$wantedEventId = $eventId -> event_id;
+			$wantedEvent = DB::table('event') -> where('id', $wantedEventId) -> get();
+			array_push($relevantEvents, $wantedEvent);
+		}
+
+	 	foreach($relevantEvents as $relevantEvent){
+	 		$currentEventId = $relevantEvent -> event_id;
+			$relevantEventTypes = DB::table('event')->join('events_type', 'event.id', '=', 'events_type.event_id')
+			->join('type_of_events', 'events_type.event_type_id', '=', 'type_of_events.id')
+			->select('event.id', 'type')
+			->get();
+			$relevantAudience = DB::table('event')->join('events_audience', 'event.id', '=', 'events_audience.event_id')
+			->join('target_audience', 'events_audience.audience_id', '=', 'target_audience.id')
+			->select('event.id', 'type')
+			->get();
+	 	}
+	}
 }
