@@ -37,6 +37,10 @@ Route::group(array('before' => 'auth'), function()
 		
 		Route::get('send_email', array('as' => 'send_email', 'uses' => 'SponsorController@sendEmail'));
 
+		Route::get('find_events', array('as' => 'find_events', 'uses' => 'EventsController@viewAllEvents' )); //route to view all events
+
+		Route::get('view_my_event/{myEvent}', array('as' => 'view_my_event', 'uses' => 'EventsController@viewMyEvent' )); //route to view specific event
+
 		Route::resource('sponsor', 'SponsorController');
 	});
 
@@ -49,7 +53,7 @@ Route::group(array('before' => 'auth'), function()
 
 		Route::post('/create_presence/{myEvent}', array('as' => 'create_presence', 'uses' => 'EventsController@handleCreatePresence')); //route to process created presence
 
-		Route::get('view_events', array('as' => 'view_events', 'uses' => 'EventsController@viewAllEvents' )); //route to view all events
+		Route::get('view_events', array('as' => 'view_events', 'uses' => 'EventsController@viewMyEvents' )); //route to view all events
 
 		Route::get('view_my_event/{myEvent}', array('as' => 'view_my_event', 'uses' => 'EventsController@viewMyEvent' )); //route to view specific event
 
@@ -62,6 +66,8 @@ Route::group(array('before' => 'auth'), function()
 		Route::get('successEvent', array('as' => 'successEvent', 'uses' => 'EventsController@success'));
 
 		Route::resource('event', 'EventsController');
+
+
 	});
 
 	Route::get('/logout', array('as' => 'logout', 'uses' => 'UsersController@logout')); //route to process logout

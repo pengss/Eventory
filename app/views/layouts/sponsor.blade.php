@@ -7,7 +7,7 @@
     
     {{ HTML::style('/css/bootstrap.min.css') }}
     {{ HTML::style('/css/font-awesome.css') }}
-    {{ HTML::style('/css/plugin.css') }}
+    {{ HTML::style('/css/plugins.css') }}
     {{ HTML::style('/css/style.css') }}
     {{ HTML::style('/css/main.css') }}
     {{ HTML::style('/css/responsive.css') }}
@@ -59,12 +59,11 @@
 
                 <ul class="nav main-nav">
 
-                    <li class="active"><a class="scroll" href="/Eventory/public/eventOrganiserProfile">My Dashboard</a></li>
-                    <li><a class="scroll" href="/Eventory/public/create_event">Create An Event</a></li>
-                    <li><a class="scroll" href="/Eventory/public/view_events">View My Events</a></li>
+                    <li class="active"><a class="scroll" href="/Eventory/public/sponsorProfile">My Dashboard</a></li>
+                    <li><a class="scroll" href="/Eventory/public/find_events">Find Events</a></li>
                     <li><a class="scroll" href="#features">Sponsorship Requests</a></li>
                     <li><a class="scroll" href="#history">Chats</a></li>
-                    <li><a class="scroll" href="#team">Manage Profile</a></li>
+                    <li><a class="scroll" href="#team">Events History</a></li>
 
                 </ul>
 
