@@ -171,7 +171,7 @@ class SponsorController extends \BaseController {
 			array_push($relevantEvents, $wantedEvent);
 		}
 
-	 	foreach($relevantEvents as $relevantEvent){
+	 	/*foreach($relevantEvents as $relevantEvent){
 	 		$currentEventId = $relevantEvent -> event_id;
 			$relevantEventTypes = DB::table('event')->join('events_type', 'event.id', '=', 'events_type.event_id')
 			->join('type_of_events', 'events_type.event_type_id', '=', 'type_of_events.id')
@@ -181,6 +181,7 @@ class SponsorController extends \BaseController {
 			->join('target_audience', 'events_audience.audience_id', '=', 'target_audience.id')
 			->select('event.id', 'type')
 			->get();
-	 	}
+	 	}*/
+	 	return $relevantEvents[0];
 	}
 }
