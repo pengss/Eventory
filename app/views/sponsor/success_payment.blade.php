@@ -1,0 +1,1 @@
+C:\xampp\htdocs\Eventory\app/views/sponsor/success_payment.blade.php
