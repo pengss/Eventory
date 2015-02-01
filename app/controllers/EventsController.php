@@ -209,8 +209,14 @@ class EventsController extends \BaseController {
 		->join('type_of_events', 'events_type.event_type_id', '=', 'type_of_events.id')
 		->select('event.id', 'type')
 		->get();
+		
 		$event_audiences = DB::table('event')->join('events_audience', 'event.id', '=', 'events_audience.event_id')
 		->join('target_audience', 'events_audience.audience_id', '=', 'target_audience.id')
+		->select('event.id', 'type')
+		->get();
+
+		$event_presences = DB::table('event')->join('presence', 'event.id', '=', 'presence.event_id')
+		->join('presence_type', 'presence.presence_type_id', '=', 'presence_types.id')
 		->select('event.id', 'type')
 		->get();
 
@@ -221,6 +227,7 @@ class EventsController extends \BaseController {
 		View::share('selectedEvent', $selectedEvent); //share the selectedEvent accross the Views 
 		View::share('event_types', $event_types);
 		View::share('event_audiences', $event_audiences);
+		View::share('event_presences', $event_presences);
 		//View::share('selectedOrganisation', $selectedOrganisation);
 
 
