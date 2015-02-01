@@ -76,13 +76,13 @@
                 <ul class="nav main-nav">
 
                     <li class="active"><a class="scroll" href="#home">home</a></li>
-                    <li><a class="scroll" href="#about">about</a></li>
+                    <li><a class="scroll" href="#about">benefits</a></li>
                     <!--<li><a class="scroll" href="#features">features</a></li>-->
                     <li><a class="scroll" href="#history">how we work</a></li>
                     <!--<li><a class="scroll" href="#team">team</a></li>
                     <li><a class="scroll" href="#portfolio">portfolio</a></li>
-                    <li><a class="scroll" href="#services">services</a></li>
-                    <li><a class="scroll" href="#prices">prices</a></li>-->
+                    <li><a class="scroll" href="#services">services</a></li>-->
+                    <li><a class="scroll" href="#prices">prices</a></li>
                     <li><a class="scroll" href="#subscribe">register</a></li>
 
                 </ul>

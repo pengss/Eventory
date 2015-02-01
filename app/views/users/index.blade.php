@@ -68,7 +68,7 @@
 			data-endspeed="500"
 			data-endeasing="Power4.easeIn"
 			data-captionhidden="on">
-			<h5 class="stext h5">The right place for event sponsorship</h5>
+			<h5 class="stext h5">Secure sponsorship deals to kickstart your events today</h5>
 		</div>
 
 	</li>
@@ -81,7 +81,7 @@
 <!-- Text Area -->
 <section id="text-area">
 	<div class="inner text-area">
-		<h1>Find Sponsors to kick-start your event today</h1>
+		<h1>The place for event sponsorship</h1>
 
 	</div>
 </section>
@@ -102,8 +102,8 @@
 				<i class="fa fa-check "></i>
 			</div>
 
-			<div class="content-header text">Higher chances</div>
-			<div class="content-desc text">Our sponsorship process increases your chances of securing sponsorships</div>
+			<div class="content-header text">Get Sponsored</div>
+			<div class="content-desc text">We maximise your chances to secure sponsorship deals by connecting you to relevant sponsors</div>
 
 			<div class="icon bottom">
 				<i class="fa fa-plus "></i>
@@ -118,8 +118,8 @@
 				<i class="fa fa-compress "></i>
 			</div>
 
-			<div class="content-header text">Assurance</div>
-			<div class="content-desc text">We protect your interests in the sponsorship</div>
+			<div class="content-header text">Save Time</div>
+			<div class="content-desc text">We optimised the sponsorship process to eliminate repeated effort in contacting sponsors</div>
 
 			<div class="icon bottom">
 				<i class="fa fa-plus "></i>
@@ -134,8 +134,8 @@
 				<i class="fa fa-rocket "></i>
 			</div>
 
-			<div class="content-header text">Effort-less</div>
-			<div class="content-desc text">Reach out to many sponsors by introducing your event once</div>
+			<div class="content-header text">Win-win</div>
+			<div class="content-desc text">We facilitate a successful partnership between you and the sponsors</div>
 
 			<div class="icon bottom">
 				<i class="fa fa-plus "></i>
@@ -150,8 +150,8 @@
 				<i class="fa fa-mobile "></i>
 			</div>
 
-			<div class="content-header text">Less worries</div>
-			<div class="content-desc text">We will bring sponsors to you while you focus on organising your Eventory</div>
+			<div class="content-header text">Free Sign-up</div>
+			<div class="content-desc text">We invite you to join us and publish your events at no charge</div>
 
 			<div class="icon bottom">
 				<i class="fa fa-plus "></i>
@@ -254,12 +254,12 @@
 
 		<!-- Header -->
 		<div class="header ">
-			price packages
+			pricing
 		</div>
 
 		<!-- Second Header -->
 		<div class="page-desc ">
-			Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+			We are still in beta stage, hence there will be no fees imposed at the moment
 		</div>
 
 	</div><!-- End inner div -->
@@ -287,6 +287,10 @@
 					Register your interest with us to take part in our ALPHA launch
 				</p>
 			</div>
+			<div class="text" style="padding-top: 10%">
+				<p>Feel free to contact us if you have further questions</p>
+				hello@eventory.com.sg
+			</div>	
 			<div class="clear"></div>
 		</div>
 
@@ -302,7 +306,7 @@
 			</div>
 			<div class="form-group">
 				<div class="col-md-12">
-					<textarea id="details" name="details" rows="7" class="form-control" placeholder="Tell us more of your event.. Eg. What's your event about? What is your estimate turnout and target audience? What sponsorship are you seeking?"></textarea>
+					<textarea id="details	" name="details" rows="7" class="form-control" placeholder="Tell us more of your event.. Eg. What's your event about? What is your estimate turnout and target audience? What sponsorship are you seeking?"></textarea>
 				</div>
 			</div>
 			<div class="form-group">
