@@ -831,8 +831,10 @@ a.sidebar-title:focus {
 .block-title h4 small,
 .block-title h5 small,
 .block-title h6 small {
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 16px;
+    text-transform: none;
+    font-weight: 400;
+
 }
 
 .block-title .nav-tabs {
