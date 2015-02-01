@@ -62,7 +62,6 @@
                     <span class="text-muted">expected turnout</span>
                 </div>
             </div>
-            <button type="button" class="btn btn-effect-ripple btn-success sponsorBtn"><h4><strong>Sponsor this Event!</strong></h4></button>
 
             <br>
             <div class="widget">
@@ -73,20 +72,20 @@
 
                     <h4 class="widget-heading">
                         <?php
-                            $str = '';
-                            ?>
-                            @foreach($event_audiences as $eventAudience)
-                            @if($eventAudience -> id == $selectedEvent -> id)
-                            <?php
-                            $str .= $eventAudience -> type;
-                            $str .= '<br/>';
-                            ?>
-                            @endif  
-                            @endforeach
-                            <?php
-                            $str = substr($str, 0, strlen($str) - 0);
-                            echo $str;
-                            ?>
+                        $str = '';
+                        ?>
+                        @foreach($event_audiences as $eventAudience)
+                        @if($eventAudience -> id == $selectedEvent -> id)
+                        <?php
+                        $str .= $eventAudience -> type;
+                        $str .= '<br/>';
+                        ?>
+                        @endif  
+                        @endforeach
+                        <?php
+                        $str = substr($str, 0, strlen($str) - 0);
+                        echo $str;
+                        ?>
                     </h4>
 
                 </div>
@@ -154,119 +153,8 @@
     <div class="col-md-1"></div>
 </div>
 
-<!--Single Sponsorship Presence -->
-<div class="block">
-    <!-- Mini Pricing Tables Title -->
-    <div class="block-title">
-        <h2>Marketing Presence (single item)</h2>
-    </div>
-    <!-- END Mini Pricing Tables Title -->
-
-    <!-- Mini Pricing Tables Content -->
-    <div class="row">
-        <div class="col-sm-3">
-            <table class="table table-pricing table-borderless">
-                <thead>
-                    <tr>
-                        <th>Emcee Shoutout</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <h2>$100<br></h2>
-                            <h4>Our emcee will give a shoutout about your brand</h4>
-                        </td>
-                    </tr>
-                    <tr class="active">
-                        <td>
-                            <a href="javascript:void(0)" class="btn btn-effect-ripple  btn-success"><i class="fa fa-arrow-right"></i> Register Today</a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="col-sm-3">
-            <table class="table table-pricing table-borderless">
-                <thead>
-                    <tr>
-                        <th>Goodies</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <h2>$200<br></h2>
-                            <h4>We'll pack distribute your products to our participants</h4>
-                        </td>
-                    </tr>
-                    <tr class="active">
-                        <td>
-                            <a href="javascript:void(0)" class="btn btn-effect-ripple  btn-success"><i class="fa fa-arrow-right"></i> Register Today</a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="col-sm-3">
-            <table class="table table-pricing table-borderless">
-                <thead>
-                    <tr>
-                        <th>Banner Placement</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <h2>$1000<br></h2>
-                            <h4>Your brand logo will be on our mega event banner</h4>
-                        </td>
-                    </tr>
-                    <tr class="active">
-                        <td>
-                            <a href="javascript:void(0)" class="btn btn-effect-ripple  btn-success"><i class="fa fa-arrow-right"></i> Register Today</a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="col-sm-3">
-            <table class="table table-pricing table-borderless">
-                <thead>
-                    <tr>
-                        <th>Participants Engagement</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <h2>$2000<br></h2>
-                            <h4>We'll have our partipants to come to your store and to learn more about your brand.</h4>
-                        </td>
-                    </tr>
-                    <tr class="active">
-                        <td>
-                            <a href="javascript:void(0)" class="btn btn-effect-ripple  btn-success"><i class="fa fa-arrow-right"></i> Register Today</a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-    <!-- END single Presence Items -->
-</div>
-
-<div class="block full">
-    <ul class="pager">
-        <button type="button" class="btn btn-block btn-success">Confirm Sponsoring Selection</button>
-
-        <button type="button" class="btn btn-block btn-warning">Propose an Offer</button>
-    </ul>
-</div>
-
 
 </div>
 <!-- END Page Content -->
 
-</div>
 @stop

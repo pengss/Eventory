@@ -62,7 +62,7 @@
                     <span class="text-muted">expected turnout</span>
                 </div>
             </div>
-            <button type="button" class="btn btn-effect-ripple btn-success sponsorBtn"><h4><strong>Sponsor this Event!</strong></h4></button>
+            <a href ="#sponsor" class="btn btn-effect-ripple btn-success sponsorBtn"><h4><strong>Sponsor this Event!</strong></h4></a>
 
             <br>
             <div class="widget">
@@ -151,6 +151,7 @@
 <div class="block">
     <!-- Mini Pricing Tables Title -->
     <div class="block-title">
+        <a name="sponsor"></a>
         <h2>Marketing Presence (single item)</h2>
     </div>
     <!-- END Mini Pricing Tables Title -->

@@ -50,9 +50,9 @@
 
             <!-- Logo Img -->
             <div class="logo">
-                <!--<a class="scroll" href="#home"><img src="images/logo.png" alt="Logo"/></a>-->
-                <a class="navbar-brand" href="/">Eventory</a>
+                <a class="scroll" href="/Eventory/public/sponsorProfile"><img src="/Eventory/public/images/logo.png" alt="Logo"/></a>
             </div>
+
 
             <!-- Nav Menu -->
             <div class="nav-menu">

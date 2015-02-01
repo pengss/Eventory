@@ -10,8 +10,8 @@
         <div id="error-container">
             <div class="row text-center">
                 <div class="col-md-8 col-md-offset-2">
-                    <h1 class="text-light animation-fadeInQuick"><strong>You're matched with <br/>10 Sponsors!</strong></h1>
-                    <h2 class="text-muted animation-fadeInQuickInv"><em>Now all you'll have to do is to wait for their interest if they are willing to partner with you</em></h2>
+                    <h1 class="text-light animation-fadeInQuick"><strong>Your event has been <br/>successfully created!</strong></h1>
+                    <h2 class="text-muted animation-fadeInQuickInv"><em>Now you'll just have to wait while we're actively seeking suitable sponsors for your event.</em></h2>
                 </div>
                 <div class="row gallery2">
                             <div class="col-sm-3">

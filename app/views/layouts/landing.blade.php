@@ -66,8 +66,7 @@
 
             <!-- Logo Img -->
             <div class="logo">
-                <!--<a class="scroll" href="#home"><img src="images/logo.png" alt="Logo"/></a>-->
-                <a class="navbar-brand" href="/">Eventory</a>
+                <a class="scroll" href="#home"><img src="/Eventory/public/images/logo.png" alt="Logo"/></a>
             </div>
 
             <!-- Nav Menu -->
@@ -79,11 +78,11 @@
                     <li><a class="scroll" href="#about">about</a></li>
                     <!--<li><a class="scroll" href="#features">features</a></li>-->
                     <li><a class="scroll" href="#history">how we work</a></li>
-                    <li><a class="scroll" href="#team">team</a></li>
+                    <!--<li><a class="scroll" href="#team">team</a></li>
                     <li><a class="scroll" href="#portfolio">portfolio</a></li>
                     <li><a class="scroll" href="#services">services</a></li>
-                    <li><a class="scroll" href="#prices">prices</a></li>
-                    <li><a class="scroll" href="#contact">contact</a></li>
+                    <li><a class="scroll" href="#prices">prices</a></li>-->
+                    <li><a class="scroll" href="#subscribe">register</a></li>
 
                 </ul>
 
@@ -96,13 +95,13 @@
                 <ul class="nav dropdown-menu fullwidth" role="menu" >
                     <li><a class="scroll" href="#home">home</a></li>
                     <li><a class="scroll" href="#about">about</a></li>
-                    <li><a class="scroll" href="#features">features</a></li>
-                    <li><a class="scroll" href="#history">history</a></li>
-                    <li><a class="scroll" href="#team">team</a></li>
+                   <!-- <li><a class="scroll" href="#features">features</a></li>-->
+                    <li><a class="scroll" href="#history">how we work</a></li>
+                    <!--<li><a class="scroll" href="#team">team</a></li>
                     <li><a class="scroll" href="#portfolio">portfolio</a></li>
                     <li><a class="scroll" href="#services">services</a></li>
-                    <li><a class="scroll" href="#prices">prices</a></li>
-                    <li><a class="scroll" href="#contact">contact</a></li>
+                    <li><a class="scroll" href="#prices">prices</a></li>-->
+                    <li><a class="scroll" href="#subscribe">register</a></li>
                 </ul>
             </div>
 
