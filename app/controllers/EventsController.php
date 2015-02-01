@@ -216,7 +216,7 @@ class EventsController extends \BaseController {
 		->get();
 
 		$event_presences = DB::table('event')->join('presence', 'event.id', '=', 'presence.event_id')
-		->join('presence_type', 'presence.presence_type_id', '=', 'presence_types.id')
+		->join('presence_types', 'presence.presence_type_id', '=', 'presence_types.id')
 		->select('event.id', 'type')
 		->get();
 
