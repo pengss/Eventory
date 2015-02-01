@@ -138,13 +138,6 @@
                             </a>
                         </div>
                     </div>
-
-                    <div class ="widget-content">
-                        <div class="col-xs-3 social-links"><a href="{{$selectedEvent -> facebook}}" data-toggle="tooltip" data-original-title="facebook page"><i class="fa fa-facebook-square"></i></a></div>
-                        <div class="col-xs-3 social-links"><a href="{{$selectedEvent -> facebook_event}}" data-toggle="tooltip" data-original-title="facebook event page"><i class="fa fa-facebook"></i></a></div>
-                        <div class="col-xs-3 social-links"><a href="{{$selectedEvent -> instagram}}" data-toggle="tooltip" data-original-title="instagram"><i class="fa fa-instagram"></i></a></div>
-                        <div class="col-xs-3 social-links"><a href="{{$selectedEvent -> website}}" data-toggle="tooltip" data-original-title="website"><i class="gi gi-global"></i></a></div>
-                    </div>
                 </div>
                 <!-- END Stats User Widget -->
             </div>

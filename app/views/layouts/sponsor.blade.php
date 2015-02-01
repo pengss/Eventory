@@ -62,8 +62,6 @@
                     <li class="active"><a class="scroll" href="/Eventory/public/sponsorProfile">My Dashboard</a></li>
                     <li><a class="scroll" href="/Eventory/public/find_events">Find Events</a></li>
                     <li><a class="scroll" href="/Eventory/public/relevant_events">Show me relevant events</a></li>
-                    <li><a class="scroll" href="#history">Chats</a></li>
-                    <li><a class="scroll" href="#team">Events History</a></li>
 
                 </ul>
 
@@ -74,15 +72,9 @@
             <div class="dropdown mobile-drop">
                 <a data-toggle="dropdown" class="mobile-menu" href="#"><i class="fa fa-bars"></i></a>
                 <ul class="nav dropdown-menu fullwidth" role="menu" >
-                    <li><a class="scroll" href="#home">home</a></li>
-                    <li><a class="scroll" href="#about">about</a></li>
-                    <li><a class="scroll" href="#features">features</a></li>
-                    <li><a class="scroll" href="#history">history</a></li>
-                    <li><a class="scroll" href="#team">team</a></li>
-                    <li><a class="scroll" href="#portfolio">portfolio</a></li>
-                    <li><a class="scroll" href="#services">services</a></li>
-                    <li><a class="scroll" href="#prices">prices</a></li>
-                    <li><a class="scroll" href="#contact">contact</a></li>
+                    <li class="active"><a class="scroll" href="/Eventory/public/sponsorProfile">My Dashboard</a></li>
+                    <li><a class="scroll" href="/Eventory/public/find_events">Find Events</a></li>
+                    <li><a class="scroll" href="/Eventory/public/relevant_events">Show me relevant events</a></li>
                 </ul>
             </div>
 
