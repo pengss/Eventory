@@ -132,10 +132,14 @@ class UsersController extends \BaseController {
 	}
 
 	public function eventOrganiserProfile(){
+		$name = Auth::user()->name;
+		View::share('nameOfEventOrganiser', $name);
 		return View::make('users.event_organiser_profile'); //Links to the Event Organiser Page
 	}
 
 	public function sponsorProfile(){
+		$name = Auth::user()->name;
+		View::share('nameOfSponsor', $name);
 		return View::make('users.sponsor_profile'); //Links to Sponsor Page
 	}
 

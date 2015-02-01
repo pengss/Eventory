@@ -7,7 +7,7 @@
 			<div class="row">
 				<div class="col-sm-7 col-md-8 col-lg-9 content-float-hor push-bit-top-bottom clearfix">
 					<img src="images/avatar9.jpg" alt="User Image" class="img-circle img-thumbnail img-thumbnail-avatar pull-left">
-					<h1>Welcome!</h1>
+					<h1>Welcome {{$nameOfEventOrganiser}}!</h1>
 				</div>
 			</div>
 		</div>
