@@ -205,14 +205,22 @@
     <script>!window.jQuery && document.write(decodeURI('%3Cscript src="js/vendor/jquery-2.1.1.min.js"%3E%3C/script%3E'));</script>
     {{ HTML::script('js/vendor/bootstrap.min.js'); }}
     {{ HTML::script('js/app.js'); }}
-
-
-    
     {{ HTML::script('js/plugins2.js'); }}
     {{ HTML::script('js/pages/formsWizard.js'); }}
     <script>$(function(){ FormsWizard.init(); });</script>
     {{ HTML::script('js/pages/formsComponents.js'); }}
 
+
+
+
+    {{ HTML::script('js/jquery.appear.js'); }}
+    {{ HTML::script('js/jquery.prettyPhoto.js'); }}
+    {{ HTML::script('js/jquery.parallax-1.1.3.js'); }}
+    {{ HTML::script('js/jquery.superslides.js'); }}
+    {{ HTML::script('js/owl.carousel.js'); }}
+    {{ HTML::script('js/jquery.isotope.js'); }}
+    {{ HTML::script('js/jquery.mb.YTPlayer.js'); }}
+    {{ HTML::script('js/plugins.js'); }}
 
     @show
 </body>

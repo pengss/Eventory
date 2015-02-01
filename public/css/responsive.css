@@ -569,4 +569,8 @@
 		font-size:40px;
 	}
 
+
+label.col-md-3.control-label.eventdate {
+}
+	float:left !important;
 }

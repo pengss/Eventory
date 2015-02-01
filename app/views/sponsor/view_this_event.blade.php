@@ -67,26 +67,46 @@
             <br>
             <div class="widget">
                 <div class="widget-content widget-content-mini themed-background-muted">
+                    <i class="gi gi-group"></i>  <strong class="text-dark"> Ask the Organizer</strong>
+                </div>
+                <div class="widget-content">
+                    {{ Form::open(array('route' => array('interest.store'), 'method' => 'post', 'class' => 'form-horizontal form-bordered')) }}
+                    <div class="form-group">
+                        <div class="col-lg-12">
+                            <textarea id="example-textarea-input" name="example-textarea-input" rows ="6" class="form-control" placeholder="Ask the event organizer anything!"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group form-actions">
+                        <div class="col-md-4 col-md-offset-8">
+                            <button type="submit" class="btn btn-effect-ripple btn-primary">Submit</button>
+                        </div>
+                    </div>
+                    {{ Form::close() }}
+                </div>
+            </div>
+
+            <div class="widget">
+                <div class="widget-content widget-content-mini themed-background-muted">
                     <i class="gi gi-group"></i>  <strong class="text-dark">Target Audience</strong>
                 </div>
                 <div class="widget-content">
 
                     <h4 class="widget-heading">
                         <?php
-                            $str = '';
-                            ?>
-                            @foreach($event_audiences as $eventAudience)
-                            @if($eventAudience -> id == $selectedEvent -> id)
-                            <?php
-                            $str .= $eventAudience -> type;
-                            $str .= '<br/>';
-                            ?>
-                            @endif  
-                            @endforeach
-                            <?php
-                            $str = substr($str, 0, strlen($str) - 0);
-                            echo $str;
-                            ?>
+                        $str = '';
+                        ?>
+                        @foreach($event_audiences as $eventAudience)
+                        @if($eventAudience -> id == $selectedEvent -> id)
+                        <?php
+                        $str .= $eventAudience -> type;
+                        $str .= '<br/>';
+                        ?>
+                        @endif  
+                        @endforeach
+                        <?php
+                        $str = substr($str, 0, strlen($str) - 0);
+                        echo $str;
+                        ?>
                     </h4>
 
                 </div>

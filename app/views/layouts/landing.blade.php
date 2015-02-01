@@ -3,6 +3,7 @@
 <head>
     <title>Eventory</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="UvM_NZeKXm_As2V6kelmV6_APyhw2r9-pqvvyW1KSuA" />
     
     {{ HTML::style('/css/reset.css') }}
     {{ HTML::style('/css/bootstrap.min.css') }}

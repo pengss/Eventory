@@ -1,15 +1,15 @@
 @extends('layouts.landing')
 @section('body')
 
-    {{ HTML::style('/css/main.css') }}
-    {{ HTML::style('/css/animate.min.css') }}
-    {{ HTML::style('/css/flexslider.css') }}
-    {{ HTML::style('/css/font-awesome.css') }}
-    {{ HTML::style('/css/owl.carousel.css') }}
-    {{ HTML::style('/css/settings.css') }}
-    {{ HTML::style('/css/prettyPhoto.css') }}
-    {{ HTML::style('/css/style.css') }}
-    {{ HTML::style('/css/responsive.css') }}
+{{ HTML::style('/css/main.css') }}
+{{ HTML::style('/css/animate.min.css') }}
+{{ HTML::style('/css/flexslider.css') }}
+{{ HTML::style('/css/font-awesome.css') }}
+{{ HTML::style('/css/owl.carousel.css') }}
+{{ HTML::style('/css/settings.css') }}
+{{ HTML::style('/css/prettyPhoto.css') }}
+{{ HTML::style('/css/style.css') }}
+{{ HTML::style('/css/responsive.css') }}
 
 <!--
 <div class="row">
@@ -37,41 +37,41 @@
 
 		<ul>
 
-<!-- Slide -->
-<li class="revslide" data-transition="random" data-slotamount="7" data-masterspeed="800" >
-	<!-- MAIN IMAGE -->
-	<img src="images/rev-slider/slide2.jpg"  alt="slidebg2"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
-	<!-- LAYERS -->
+			<!-- Slide -->
+			<li class="revslide" data-transition="random" data-slotamount="7" data-masterspeed="800" >
+				<!-- MAIN IMAGE -->
+				<img src="images/rev-slider/slide2.jpg"  alt="slidebg2"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+				<!-- LAYERS -->
 
-	<!-- Layer 1 -->
-	<div class="tp-caption sft customout"
-	data-x="0"
-	data-y="220"
-	data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-	data-speed="900"
-	data-start="1400"
-	data-easing="Power4.easeOut"
-	data-endspeed="500"
-	data-endeasing="Power4.easeIn"
-	data-captionhidden="on">
-	<h4 class="stext h4 fittext5">Eventory</h4>
-</div>
+				<!-- Layer 1 -->
+				<div class="tp-caption sft customout"
+				data-x="0"
+				data-y="220"
+				data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+				data-speed="900"
+				data-start="1400"
+				data-easing="Power4.easeOut"
+				data-endspeed="500"
+				data-endeasing="Power4.easeIn"
+				data-captionhidden="on">
+				<h4 class="stext h4 fittext5">Eventory</h4>
+			</div>
 
-<!-- Layer 2 -->
-<div class="tp-caption sfb customout"
-data-x="10"
-data-y="320"
-data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-data-speed="900"
-data-start="1700"
-data-easing="Power4.easeOut"
-data-endspeed="500"
-data-endeasing="Power4.easeIn"
-data-captionhidden="on">
-<h5 class="stext h5">The right place for event sponsorship</h5>
-</div>
+			<!-- Layer 2 -->
+			<div class="tp-caption sfb customout"
+			data-x="10"
+			data-y="320"
+			data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+			data-speed="900"
+			data-start="1700"
+			data-easing="Power4.easeOut"
+			data-endspeed="500"
+			data-endeasing="Power4.easeIn"
+			data-captionhidden="on">
+			<h5 class="stext h5">The right place for event sponsorship</h5>
+		</div>
 
-</li>
+	</li>
 
 </ul>
 </div>
@@ -243,7 +243,27 @@ data-captionhidden="on">
 
 </section><!-- End History Section -->
 
+<section id="prices" class="contain ">
 
+	<div class="inner prices">
+
+		<!-- History Top Icon -->
+		<div class="contain-logo br">
+			<i class="fa fa-table "></i>
+		</div>
+
+		<!-- Header -->
+		<div class="header ">
+			price packages
+		</div>
+
+		<!-- Second Header -->
+		<div class="page-desc ">
+			Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+		</div>
+
+	</div><!-- End inner div -->
+</section><!-- End Prices Section -->
 
 <!-- Subscribe Section -->
 <section id="subscribe" class="contain">
@@ -272,18 +292,31 @@ data-captionhidden="on">
 
 		<!--Subscribe Right -->
 		<div class="col-xs-5 subs right">
-			{{ Form::open(array('route' => array('interest.store'), 'method' => 'post')) }}
-				<!--Subscribe input -->
-				<div class="form-group">
-					<input type="email" class="subscribe-mail"  required="required" name="email" placeholder="Your mail adress" />
-					<input type="text" class="subscribe-mail"  required="required" name="details" placeholder="What's your upcoming event about" />
-					<input type="date" class="subscribe-mail"  required="required" name="event_date" placeholder="Your event date" />
+			{{ Form::open(array('route' => array('interest.store'), 'method' => 'post', 'class' => 'form-horizontal form-bordered')) }}
+			<!--Subscribe input -->
+			
+			<div class="form-group">
+				<div class="col-md-12">
+					<input type="email" id="example-email" name="example-email" class="form-control" placeholder="Your Email address to contact">
 				</div>
-				<!--Subscribe Button -->
-				<div class="form-group form-actions">
-					<button type="submit" class="subscribe-btn subs">SIGN ME UP!</button>
+			</div>
+			<div class="form-group">
+				<div class="col-md-12">
+					<textarea id="example-textarea-input" name="example-textarea-input" rows="7" class="form-control" placeholder="Tell us more of your event.. Eg. What's your event about? What is your estimate turnout and target audience? What sponsorship are you seeking?"></textarea>
 				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-md-3 control-label eventdate">Your Event Date</label>
+				<div class="col-md-7">
+					<input type="date" class="subscribe-mail input-datepicker form-control"  required="required" name="event_date" placeholder="Your event date" data-date-format="dd-mm-yyyy" />
+				</div>
+			</div>
+
+			<!--Subscribe Button -->
+			<button type="submit" class="subscribe-btn subs">SIGN ME UP!</button>
 			{{ Form::close() }}
+			<br/>
+			<br/>
 		</div>
 
 		<div class="clear"></div>
