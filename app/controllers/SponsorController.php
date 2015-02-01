@@ -190,7 +190,7 @@ class SponsorController extends \BaseController {
 	 	View::share('relevantEventTypes', $relevantEventTypes);
 	 	View::share('relevantAudiences', $relevantAudience);
 
-	 	return $relevantEvents;
+	 	return View::make('sponsor.relevant_events');
 	}
 
 	public function successPayment(){
