@@ -297,12 +297,12 @@
 			
 			<div class="form-group">
 				<div class="col-md-12">
-					<input type="email" id="example-email" name="example-email" class="form-control" placeholder="Your Email address to contact">
+					<input type="email" id="email" name="email" class="form-control" placeholder="Your Email address to contact">
 				</div>
 			</div>
 			<div class="form-group">
 				<div class="col-md-12">
-					<textarea id="example-textarea-input" name="example-textarea-input" rows="7" class="form-control" placeholder="Tell us more of your event.. Eg. What's your event about? What is your estimate turnout and target audience? What sponsorship are you seeking?"></textarea>
+					<textarea id="details" name="details" rows="7" class="form-control" placeholder="Tell us more of your event.. Eg. What's your event about? What is your estimate turnout and target audience? What sponsorship are you seeking?"></textarea>
 				</div>
 			</div>
 			<div class="form-group">
