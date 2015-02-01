@@ -139,13 +139,15 @@ class SearchController extends \BaseController {
 		->select('event.id', 'type')
 		->get();
 
-		//$selectedUser = DB::table('users')->where('id', $selectedId) -> pluck('organization');
-
-		//$selectedOrganisation = DB::table('organization')->where('name', $selectedUser)->first();
+		$event_presences = DB::table('event')->join('presence', 'event.id', '=', 'presence.event_id')
+		->join('presence_types', 'presence.presence_type_id', '=', 'presence_types.id')
+		->select('event.id', 'type', 'price', 'presence.description')
+		->get();
 
 		View::share('selectedEvent', $selectedEvent); //share the selectedEvent accross the Views 
 		View::share('event_types', $event_types);
 		View::share('event_audiences', $event_audiences);
+		View::share('event_presences', $event_presences);
 		//View::share('selectedOrganisation', $selectedOrganisation);
 
 

@@ -177,96 +177,34 @@
     <!-- END Mini Pricing Tables Title -->
 
     <!-- Mini Pricing Tables Content -->
+    @foreach($event_presences as $presence)
+    @if($presence -> id == $selectedEvent -> id)
     <div class="row">
         <div class="col-sm-3">
             <table class="table table-pricing table-borderless">
                 <thead>
                     <tr>
-                        <th>Emcee Shoutout</th>
+                        <th>{{$presence -> type}}</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>
-                            <h2>$100<br></h2>
-                            <h4>Our emcee will give a shoutout about your brand</h4>
+                            <h2>{{$presence -> price}}<br></h2>
+                            <h4>{{$presence -> description}}</h4>
                         </td>
                     </tr>
                     <tr class="active">
                         <td>
-                            <a href="javascript:void(0)" class="btn btn-effect-ripple  btn-success"><i class="fa fa-arrow-right"></i> Register Today</a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="col-sm-3">
-            <table class="table table-pricing table-borderless">
-                <thead>
-                    <tr>
-                        <th>Goodies</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <h2>$200<br></h2>
-                            <h4>We'll pack distribute your products to our participants</h4>
-                        </td>
-                    </tr>
-                    <tr class="active">
-                        <td>
-                            <a href="javascript:void(0)" class="btn btn-effect-ripple  btn-success"><i class="fa fa-arrow-right"></i> Register Today</a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="col-sm-3">
-            <table class="table table-pricing table-borderless">
-                <thead>
-                    <tr>
-                        <th>Banner Placement</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <h2>$1000<br></h2>
-                            <h4>Your brand logo will be on our mega event banner</h4>
-                        </td>
-                    </tr>
-                    <tr class="active">
-                        <td>
-                            <a href="javascript:void(0)" class="btn btn-effect-ripple  btn-success"><i class="fa fa-arrow-right"></i> Register Today</a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="col-sm-3">
-            <table class="table table-pricing table-borderless">
-                <thead>
-                    <tr>
-                        <th>Participants Engagement</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <h2>$2000<br></h2>
-                            <h4>We'll have our partipants to come to your store and to learn more about your brand.</h4>
-                        </td>
-                    </tr>
-                    <tr class="active">
-                        <td>
-                            <a href="javascript:void(0)" class="btn btn-effect-ripple  btn-success"><i class="fa fa-arrow-right"></i> Register Today</a>
+                            <a href="javascript:void(0)" class="btn btn-effect-ripple  btn-success"><i class="fa fa-arrow-right"></i> Purchase this presence</a>
                         </td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
+    @endif
+    @endforeach
     <!-- END single Presence Items -->
 </div>
 
