@@ -60,6 +60,7 @@
                 <ul class="nav main-nav">
 
                     <li class="active"><a class="scroll" href="/Eventory/public/sponsorProfile">My Dashboard</a></li>
+                    <li><a class="scroll" href="/Eventory/public/sponsor_category">List my sponsoring criterias</a></li>
                     <li><a class="scroll" href="/Eventory/public/find_events">Find Events</a></li>
                     <li><a class="scroll" href="/Eventory/public/relevant_events">Show me relevant events</a></li>
 
@@ -73,6 +74,7 @@
                 <a data-toggle="dropdown" class="mobile-menu" href="#"><i class="fa fa-bars"></i></a>
                 <ul class="nav dropdown-menu fullwidth" role="menu" >
                     <li class="active"><a class="scroll" href="/Eventory/public/sponsorProfile">My Dashboard</a></li>
+                    <li><a class="scroll" href="/Eventory/public/sponsor_category">List my sponsoring criterias</a></li>
                     <li><a class="scroll" href="/Eventory/public/find_events">Find Events</a></li>
                     <li><a class="scroll" href="/Eventory/public/relevant_events">Show me relevant events</a></li>
                 </ul>
