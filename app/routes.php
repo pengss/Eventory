@@ -45,7 +45,13 @@ Route::group(array('before' => 'auth'), function()
 
 		Route::get('relevant_events', array('as' => 'relevant_events', 'uses' => 'SponsorController@getRelevantEvents'));
 
+		Route::post('discuss/{id}', array('as' => 'discuss', 'uses' => 'DiscussController@storeDiscussion' )); 
+
+		Route::get('success_payment', array('as' => 'success_payment', 'uses' => 'SponsorController@successPayment'));
+
 		Route::resource('sponsor', 'SponsorController');
+
+		Route::resource('discuss', 'DiscussController');
 	});
 
 	Route::group(array('before' => 'onlyAllowEventOrganiser'), function(){

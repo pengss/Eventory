@@ -192,4 +192,8 @@ class SponsorController extends \BaseController {
 
 	 	return $relevantEvents;
 	}
+
+	public function successPayment(){
+		return View::make('sponsor.success_payment');
+	}
 }
