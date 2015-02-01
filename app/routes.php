@@ -49,6 +49,8 @@ Route::group(array('before' => 'auth'), function()
 
 		Route::get('success_payment', array('as' => 'success_payment', 'uses' => 'SponsorController@successPayment'));
 
+		Route::get('/process_interest/{presence}', array('as' => 'process_interest', 'uses' => 'InterestController@processInterest'));
+
 		Route::resource('sponsor', 'SponsorController');
 
 		Route::resource('discuss', 'DiscussController');

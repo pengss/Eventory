@@ -99,4 +99,26 @@ class InterestController extends \BaseController {
 		//
 	}
 
+	public function processInterest($presence){
+		$id = Auth::user() -> id;
+
+		$presenceId = $presence;
+
+		$eventId = DB::table('presence') -> where('id', $presenceId) -> pluck('event_id');
+
+		$newPresenceSponsor = [
+							  [
+							  	'sponsor_id' => $id,
+							  	'presence_id' => $presenceId,
+							  	'event_id' => $eventId
+							  ]
+							  ];
+
+		if($newPresenceSponsor != null){
+			DB::table('presence_sponsor')->insert($newPresenceSponsor);
+			return View::make('sponsor.success_payment');
+		}
+		return View::make('sponsor.success_payment');
+	}
+
 }

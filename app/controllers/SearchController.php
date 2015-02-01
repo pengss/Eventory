@@ -141,7 +141,7 @@ class SearchController extends \BaseController {
 
 		$event_presences = DB::table('event')->join('presence', 'event.id', '=', 'presence.event_id')
 		->join('presence_types', 'presence.presence_type_id', '=', 'presence_types.id')
-		->select('event.id', 'type', 'price', 'presence.description')
+		->select('event.id as Event_ID', 'presence.id', 'type', 'price', 'presence.description')
 		->get();
 
 		View::share('selectedEvent', $selectedEvent); //share the selectedEvent accross the Views 

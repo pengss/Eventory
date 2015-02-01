@@ -18,7 +18,6 @@
                         </div>
                         <!-- END Gallery Items -->
                         <a href="{{ URL::to('sponsorProfile') }}" class="btn btn-effect-ripple btn-primary"><i class="fa fa-arrow-left"></i>Dashboard</a>
-                        <a href="javascript:history.back()" class="btn btn-warning" style="margin-left: 48px;"><i class="gi gi-kiosk"></i> Back to Event page</a>
                  
             </div>
         </div>

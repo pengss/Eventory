@@ -178,7 +178,7 @@
 
     <!-- Mini Pricing Tables Content -->
     @foreach($event_presences as $presence)
-    @if($presence -> id == $selectedEvent -> id)
+    @if($presence -> Event_ID == $selectedEvent -> id)
     <div class="row">
         <div class="col-sm-3">
             <table class="table table-pricing table-borderless">
@@ -196,7 +196,7 @@
                     </tr>
                     <tr class="active">
                         <td>
-                            <a href="javascript:void(0)" class="btn btn-effect-ripple  btn-success"><i class="fa fa-arrow-right"></i> Purchase this presence</a>
+                            <a href="{{URL::to('process_interest', $presence -> id)}}" class="btn btn-effect-ripple  btn-success"><i class="fa fa-arrow-right"></i> Interested in this presence</a>
                         </td>
                     </tr>
                 </tbody>
