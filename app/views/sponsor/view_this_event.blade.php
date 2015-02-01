@@ -70,10 +70,10 @@
                     <i class="gi gi-group"></i>  <strong class="text-dark"> Ask the Organizer</strong>
                 </div>
                 <div class="widget-content">
-                    {{ Form::open(array('route' => array('interest.store'), 'method' => 'post', 'class' => 'form-horizontal form-bordered')) }}
+                    {{ Form::open(array('action' => array('DiscussController@storeDiscussion', $selectedEvent -> id), 'method' => 'post', 'class' => 'form-horizontal form-bordered')) }}
                     <div class="form-group">
                         <div class="col-lg-12">
-                            <textarea id="example-textarea-input" name="example-textarea-input" rows ="6" class="form-control" placeholder="Ask the event organizer anything!"></textarea>
+                            <textarea id="example-textarea-input" name="discuss_content" rows ="6" class="form-control" placeholder="Ask the event organizer anything!"></textarea>
                         </div>
                     </div>
                     <div class="form-group form-actions">
