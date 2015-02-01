@@ -7,7 +7,7 @@
     
     {{ HTML::style('/css/bootstrap.min.css') }}
     {{ HTML::style('/css/font-awesome.css') }}
-    {{ HTML::style('/css/plugin.css') }}
+    {{ HTML::style('/css/plugins.css') }}
     {{ HTML::style('/css/style.css') }}
     {{ HTML::style('/css/main.css') }}
     {{ HTML::style('/css/responsive.css') }}

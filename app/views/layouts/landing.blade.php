@@ -29,6 +29,7 @@
             
             <div class="col-xs-6 right">
 
+                <!-- Social media 
                 <a href="mailto:support@goldeyestheme.com">
                     <i class="fa fa-envelope"></i>
                 </a>
@@ -43,7 +44,7 @@
                 </a>
                 <a href="#">
                     <i class="fa fa-instagram"></i>
-                </a>
+                </a>-->
 
                 @if (Auth::check())
                 <a href="/Eventory/public/logout"><button type="button" class="btn btn-xs btn-square btn-primary">Logout</button></a>
@@ -76,8 +77,8 @@
 
                     <li class="active"><a class="scroll" href="#home">home</a></li>
                     <li><a class="scroll" href="#about">about</a></li>
-                    <li><a class="scroll" href="#features">features</a></li>
-                    <li><a class="scroll" href="#history">history</a></li>
+                    <!--<li><a class="scroll" href="#features">features</a></li>-->
+                    <li><a class="scroll" href="#history">how we work</a></li>
                     <li><a class="scroll" href="#team">team</a></li>
                     <li><a class="scroll" href="#portfolio">portfolio</a></li>
                     <li><a class="scroll" href="#services">services</a></li>

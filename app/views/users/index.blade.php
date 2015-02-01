@@ -1,4 +1,4 @@
-@extends('layouts.default')
+@extends('layouts.landing')
 @section('body')
 
     {{ HTML::style('/css/main.css') }}
