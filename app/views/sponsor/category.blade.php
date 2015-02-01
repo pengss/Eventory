@@ -20,15 +20,14 @@
                     <div class="col-md-9">
                         <fieldset class="group"> 
                             <ul class="checkbox">
-                                <?php
-                                $event_types = DB::table('type_of_events')->get();
-                                foreach ($event_types as $type)
-                                {
-                                    ?>
-                                    <li><input type="checkbox" id="event_types" name="event_types[]" value="<?=$type->id?>"> <?=$type->type?></li>
-
-                                    <?php
-                                }
+                                 <?php
+                                    $event_audience = DB::table('target_audience')->get();
+                                    foreach ($event_audience as $aud)
+                                        {
+                                            ?>
+                                            <li><input type="checkbox" id="target_audience" name="target_audience[]" value="<?=$aud->id?>"> <?=$aud->type?></li>
+                                        <?php
+                                    }
                                 ?>
                             </ul>
                         </fieldset>
@@ -56,16 +55,16 @@
                 <div class="form-group">
                     <label class="col-md-3 control-label" for="val-digits">Preferred Audience Turnout <span class="text-danger">*</span></label>
                     <div class="col-md-6">
-                        <input type="text" id="val-digits" name="val-digits" class="form-control" placeholder="">
+                        <input type="text" id="turnout" name="turnout" class="form-control" placeholder="">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-3 control-label" for="val-skill">Preferred Type of Sponsorship <span class="text-danger">*</span></label>
                     <div class="col-md-6">
-                        <select id="val-skill" name="val-skill" class="form-control">
+                        <select id="sponsorship" name="sponsorship" class="form-control">
                             <option value="">Please select</option>
-                            <option value="html">Cash</option>
-                            <option value="css">CSS</option>
+                            <option value="Cash">Cash</option>
+                            <option value="In Kind">In Kind</option>
                         </select>
                     </div>
                 </div>

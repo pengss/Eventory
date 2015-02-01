@@ -79,13 +79,15 @@ class SponsorController extends \BaseController {
 							 ]
 							 ];
 			DB::table('sponsor_turnout') -> insert($newSponsorTurnout);
-			return View::make('users.sponsor_profile');
+
+			$name = Auth::user()->name;
+			View::share('nameOfSponsor', $name);
+			return View::make('users.sponsor_profile'); //Links to Sponsor Page
 		}
 		else{
 			return 'Error';
 		}
 	}
-
 	/**
 	 * Display the specified resource.
 	 * GET /sponsor/{id}
@@ -167,12 +169,13 @@ class SponsorController extends \BaseController {
 
 		foreach($eventsId as $eventId){
 			$wantedEventId = $eventId -> event_id;
-			$wantedEvent = DB::table('event') -> where('id', $wantedEventId) -> get();
+			$wantedEvent = DB::table('event') -> where('id', $wantedEventId) -> select('*') -> get();
+			
 			array_push($relevantEvents, $wantedEvent);
 		}
 
-	 	/*foreach($relevantEvents as $relevantEvent){
-	 		$currentEventId = $relevantEvent -> event_id;
+	 	foreach($relevantEvents as $relevantEvent){
+	 		$currentEventId = $relevantEvent[0] -> id;
 			$relevantEventTypes = DB::table('event')->join('events_type', 'event.id', '=', 'events_type.event_id')
 			->join('type_of_events', 'events_type.event_type_id', '=', 'type_of_events.id')
 			->select('event.id', 'type')
@@ -181,7 +184,12 @@ class SponsorController extends \BaseController {
 			->join('target_audience', 'events_audience.audience_id', '=', 'target_audience.id')
 			->select('event.id', 'type')
 			->get();
-	 	}*/
-	 	return $relevantEvents[0];
+	 	}
+
+	 	View::share('relevantEvents', $relevantEvents);
+	 	View::share('relevantEventTypes', $relevantEventTypes);
+	 	View::share('relevantAudiences', $relevantAudience);
+
+	 	return $relevantEvents;
 	}
 }
