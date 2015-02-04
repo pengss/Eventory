@@ -25,7 +25,7 @@
         <div class="inner pagetop">
 
             <div class="col-xs-6 left">
-                Sponsorships made easy
+                Powering Sponsorships
             </div>
             
             <div class="col-xs-6 right">
@@ -142,53 +142,33 @@
 
                 <!-- Phone -->
                 <div class="col-xs-4 animated footer-box" data-animation="flipInY" data-animation-delay="0">
-                    <a class="footer-links">
+                    <!--<a class="footer-links">
                         <i class="fa fa-mobile"></i>
                     </a>
 
                     <p class="footer-text">
                         <span>Phone</span>:<span>(123) 456-7890</span>
-                    </p>
+                    </p>-->
                 </div>
 
                 <!-- Socials and Mail -->
                 <div class="col-xs-4 animated footer-box" data-animation="flipInY" data-animation-delay="0">
 
-                    <!-- Social 1 -->
-                    <a class="footer-links">
-                        <i class="fa fa-facebook"></i>
-                    </a>
-
-                    <!-- Social 2 -->
-                    <a class="footer-links">
-                        <i class="fa fa-twitter"></i>
-                    </a>
-
-                    <!-- Social 3 -->
-                    <a class="footer-links">
-                        <i class="fa fa-google-plus"></i>
-                    </a>
-
-                    <!-- Social 4 -->
-                    <a class="footer-links">
-                        <i class="fa fa-pinterest"></i>
-                    </a>
-
                     <!-- Mail -->
                     <p class="footer-text">
-                        <span>Mail</span>:<span><a href="mailto:support@goldeyestheme.com">support@goldeyestheme.com</a></span>
+                        <span>Mail</span>:<span><a href="mailto:support@eventory.com">support@eventory.com</a></span>
                     </p>
 
                     <!-- Copyright -->
-                    <p class="footer-text copyright">
-                        ©2014 wisten. all rights reserved.
+                    <p class="footer-text copyright" style="font-size: 0.99rem; padding-top: 5%" >
+                        Copyright 2015 Eventory Pte. Ltd. Business Registration No. 201429745H. All rights reserved.
                     </p>
                 </div>
 
                 <!-- Adress -->
-                <div class="col-xs-4 animated footer-box" data-animation="flipInY" data-animation-delay="0">
+                <!--<div class="col-xs-4 animated footer-box" data-animation="flipInY" data-animation-delay="0">
 
-                    <!-- Icon -->
+                    <!-- Icon -
                     <a class="footer-links">
                         <i class="fa fa-map-marker"></i>
                     </a>
@@ -196,7 +176,7 @@
                     <p class="footer-text">
                         1234 Street Name, City Name
                     </p>
-                </div>
+                </div>-->
 
                 <div class="clear"></div>
             </div> <!-- End Footer inner -->

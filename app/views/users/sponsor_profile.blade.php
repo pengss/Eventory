@@ -15,14 +15,15 @@
 		<img src="images/socialnet_header.jpg" alt="Header Image" class="animation-pulseSlow">
 	</div>
 	<div class="col-lg-7">
+		<H2> Coming Soon </H2>
 		<!-- Live Feed Widget -->
 		<div class="widget">
-			<div class="widget-content widget-content-mini themed-background-info text-light-op">
+			<!--<div class="widget-content widget-content-mini themed-background-info text-light-op">
 				<span class="pull-right text-dark-op"></span>
 				<i class="fa fa-fw fa-users"></i> Live Feed
-			</div>
+			</div>-->
 			<div class="widget-content widget-content-full">
-				<table class="table table-borderless table-striped table-vcenter">
+				<!--<table class="table table-borderless table-striped table-vcenter">
 					<tbody>
 						<tr>
 							<td class="text-center" style="width: 100px;">
@@ -64,7 +65,7 @@
 							</td>
 						</tr>
 					</tbody>
-				</table>
+				</table>-->
 			</div>
 		</div>
 	</div>
@@ -72,11 +73,11 @@
 	<div class="col-lg-5">
 		<!-- My Events Widget -->
 		<div class="widget">
-			<div class="widget-content widget-content-mini themed-background-warning text-light-op">
-				<i class="gi gi-cake fa-fw"></i> My Events
+			<!--<div class="widget-content widget-content-mini themed-background-warning text-light-op">
+				<i class="gi gi-cake fa-fw"></i> My Events-->
 			</div>
 			<div class="widget-content widget-content-full">
-				<table class="table table-borderless table-striped table-vcenter">
+				<!--<table class="table table-borderless table-striped table-vcenter">
 					<tbody>
 						<tr>
 							<td class="text-center" style="width: 100px;">
@@ -105,7 +106,7 @@
 							</td>
 						</tr>
 					</tbody>
-				</table>
+				</table>-->
 			</div>
 		</div>
 		<!-- END My Events Widget -->
