@@ -65,6 +65,7 @@
                             <option value="">Please select</option>
                             <option value="Cash">Cash</option>
                             <option value="In Kind">In Kind</option>
+                            <option value="Cash and In Kind"> Cash and In Kind</option>
                         </select>
                     </div>
                 </div>
