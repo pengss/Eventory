@@ -128,14 +128,14 @@
                         {{$selectedEvent -> org_info}}
                     </div>
                     <div class="widget-content">
-                        <div class="row text-center">
+                        <!--<div class="row text-center">
                             <a href="javascript:void(0)" class="col-xs-6">
                                 <h4 class="widget-heading"><i class="gi gi-nameplate_alt text-info push-bit"></i> <br><small>View Organizer</small></h4>
                             </a>
                             <a href="javascript:void(0)" class="col-xs-6">
                                 <h4 class="widget-heading"><i class="gi gi-pizza text-success push-bit"></i> <br><small>Discuss with me!</small></h4>
                             </a>
-                        </div>
+                        </div>-->
                     </div>
 
                     <div class ="widget-content">
