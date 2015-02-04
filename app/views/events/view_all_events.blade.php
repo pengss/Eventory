@@ -7,13 +7,13 @@
 	</div>
 	<!-- END Gallery Header -->
 	<div class="header-section text-center">
-		<div class="btn-group gallery-filter">
+		<!--<div class="btn-group gallery-filter">
 			<a href="javascript:void(0)" class="btn btn-effect-ripple btn-primary" data-category="preferred">My Preferred</a>
 			<a href="javascript:void(0)" class="btn btn-effect-ripple btn-primary active" data-category="all">All</a>
 			<a href="javascript:void(0)" class="btn btn-effect-ripple btn-primary" data-category="new">New</a>
 			<a href="javascript:void(0)" class="btn btn-effect-ripple btn-primary" data-category="popular">Popular</a>
 			<a href="javascript:void(0)" class="btn btn-effect-ripple btn-primary" data-category="soon">Happening Soon!</a>
-		</div>
+		</div>-->
 	</div>
 	<!-- Gallery Items -->
 	<div class="row gallery">
