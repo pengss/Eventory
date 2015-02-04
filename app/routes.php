@@ -24,6 +24,8 @@ Route::get('create_organisation', array('as' => 'create_organisation', 'uses' =>
 
 Route::post('/create_organisation', array('as' => 'create_organisation', 'uses' => 'UsersController@handleCreateOrganisation')); //route to process create Organisation
 
+Route::get('sponsor_signup', array('as' => 'sponsor_signup', 'uses' => 'UsersController@sponsorSignup')); //route to display log in form
+
 Route::resource('user', 'UsersController');
 
 Route::resource('interest', 'InterestController');

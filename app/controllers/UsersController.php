@@ -173,4 +173,8 @@ class UsersController extends \BaseController {
 
 		return Redirect::to('create_organisation');
 	}
+
+	public function sponsorSignup(){
+		return View::make('users.sponsor_sign_up');
+	}
 }
