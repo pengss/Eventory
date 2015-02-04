@@ -191,7 +191,6 @@
 					Tell us about your event
 				</h4>
 				<p class="desc">
-					Simply fill up a creation form to let us know about your event
 				</p>
 
 				<span class="arrow fa fa-play"></span>
@@ -203,7 +202,6 @@
 					We connect you to sponsors
 				</h4>
 				<p class="desc">
-					Using our matching algorithm we match you to the most relevant sponsors in our database
 				</p>
 
 				<span class="arrow fa fa-play"></span>
@@ -215,7 +213,6 @@
 					Finalise sponsorship deal
 				</h4>
 				<p class="desc">
-					Create packages for your event and communicate with your sponsor easily
 				</p>
 
 				<span class="arrow fa fa-play"></span>
@@ -227,7 +224,6 @@
 					Hold an awesome event
 				</h4>
 				<p class="desc">
-					Focus on planning and don't worry about sponsorship deals
 				</p>
 
 				<span class="arrow fa fa-play"></span>
@@ -284,12 +280,12 @@
 					Need <span> sponsors</span> for your event?
 				</h1>
 				<p>
-					Register your interest with us to take part in our ALPHA launch
+					Register your interest with us to take part in our BETA launch
 				</p>
 			</div>
 			<div class="text" style="padding-top: 10%">
 				<p>Feel free to contact us if you have further questions</p>
-				hello@eventory.com.sg
+				<a href = "hello@eventory.com.sg"> hello@eventory.com.sg </a>
 			</div>	
 			<div class="clear"></div>
 		</div>
@@ -317,10 +313,16 @@
 			</div>
 
 			<!--Subscribe Button -->
-			<button type="submit" class="subscribe-btn subs">SIGN ME UP!</button>
+			<button type="submit" class="subscribe-btn subs">Register</button>
 			{{ Form::close() }}
 			<br/>
 			<br/>
+		</div>
+
+		<div style = "text-align: center">
+			<p style="font-size: 0.90rem">
+				Copyright 2015 Eventory Pte. Ltd. Business Registration No. 201429745H. All rights reserved.
+			</p>
 		</div>
 
 		<div class="clear"></div>

@@ -96,18 +96,11 @@
                                     <ul class="checkbox">
                                         <?php
                                         $event_types = DB::table('type_of_events')->get();
-
                                         foreach ($event_types as $type)
-                                        {   ?>
-                                            @foreach($event_types as $eventType)
-                                                @if ($eventType -> id == $editEvent -> id)
-                                                    @if ($editEvent -> id == $type->id)
-                                                    <li><input type="checkbox" id="event_types" name="event_types[]" value="<?=$type->id?>" checked> <?=$type->type?></li>
-                                                    @else  
-                                                    <li><input type="checkbox" id="event_types" name="event_types[]" value="<?=$type->id?>" > <?=$type->type?></li>
-                                                    @endif
-                                                @endif  
-                                        @endforeach
+                                        {
+                                            ?>
+                                            <li><input type="checkbox" id="event_types" name="event_types[]" value="<?=$type->id?>"> <?=$type->type?></li>
+
                                             <?php
                                         }
                                         ?>
