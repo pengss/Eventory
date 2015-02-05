@@ -104,11 +104,6 @@
 
 			<div class="content-header text">Get Sponsored</div>
 			<div class="content-desc text">We maximise your chances to secure sponsorship deals by connecting you to relevant sponsors</div>
-
-			<div class="icon bottom">
-				<i class="fa fa-plus "></i>
-			</div>
-
 		</div>
 
 		<!-- Second Content -->
@@ -121,10 +116,6 @@
 			<div class="content-header text">Save Time</div>
 			<div class="content-desc text">We optimised the sponsorship process to eliminate repeated effort in contacting sponsors</div>
 
-			<div class="icon bottom">
-				<i class="fa fa-plus "></i>
-			</div>
-
 		</div>
 
 		<!-- Third Content -->
@@ -136,11 +127,6 @@
 
 			<div class="content-header text">Win-win</div>
 			<div class="content-desc text">We facilitate a successful partnership between you and the sponsors</div>
-
-			<div class="icon bottom">
-				<i class="fa fa-plus "></i>
-			</div>
-
 		</div>
 
 		<!-- Fourth Content -->
@@ -152,10 +138,6 @@
 
 			<div class="content-header text">Free Sign-up</div>
 			<div class="content-desc text">We invite you to join us and publish your events at no charge</div>
-
-			<div class="icon bottom">
-				<i class="fa fa-plus "></i>
-			</div>
 
 		</div>
 
