@@ -32,8 +32,15 @@
 									Edit
 								</a>
 							</li>
+							<li>
+								<a href="#delete-event" data-toggle="delete-modal">
+									<i class="fa fa-times-circle pull-right"></i>
+									Delete
+								</a>
+							</li>
 						</ul>
 					</div>
+					
 					<i class="fa fa-fw fa-file-text"></i> <strong>
 					<?php
 					$str = '';
@@ -105,7 +112,23 @@
 <!-- END Gallery Items -->
 </div>
 <!-- END Page Content -->
-
+<div id="delete-event" class="modal" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h3 class="modal-title"><strong>Delete Event Confirmation</strong></h3>
+			</div>
+			<div class="modal-body">
+				Are you sure you want to delete your event?
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-effect-ripple btn-primary">Confirm</button>
+				<button type="button" class="btn btn-effect-ripple btn-danger" data-dismiss="modal">Back</button>
+			</div>
+		</div>
+	</div>
+</div>
 {{ HTML::script('js/pages/compGallery.js'); }}
 {{ HTML::script('js/custom/viewallevents.js'); }}
 @stop
