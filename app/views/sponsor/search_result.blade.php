@@ -3,10 +3,42 @@
 
 <!-- Page content -->
 <div id="page-content">
-	<div class ="emptydiv">
+	<div class="header-section text-center">
+		<div class="block">
+			{{ Form::open(array('route' => array('find_events'), 'method' => 'post', 'class' => 'form-horizontal form-bordered')) }}
+			<!-- Chosen plugin (class is initialized in js/app.js -> uiInit()), for extra usage examples you can check out http://harvesthq.github.io/chosen/ -->
+			<div class="form-group">
+				<label class="col-md-3 control-label" for="example-chosen">Search Events by:</label>
+				<div class="col-md-5">
+					<select id="example-chosen" name="example-chosen" class="select-chosen" data-placeholder="Choose a category.." style="width: 250px;">
+						<option></option><!-- Required for data-placeholder attribute to work with Chosen plugin -->
+						<option value="select all">Select All</option>
+						<?php
+						$event_types = DB::table('type_of_events')->get();
+						foreach ($event_types as $type)
+						{
+							?>
+							<option value="{{$type -> id}}">{{$type -> type}}</option>
+							<?php
+						}
+						?>
+					</select>
+				</div>
+				<div class="col-md-1">
+					<button type="submit" class="btn btn-effect-ripple btn-primary">Search</button>
+				</div>
+			</div>
+
+			{{ Form::close() }}
+			<!-- END Select Component Content -->
+		</div>
 	</div>
+	
 	<!-- Gallery Items -->
 	<div class="row gallery">
+
+		<!-- //check if got events anot-->
+		@if (count($wantedEvents) > 1)
 		@foreach($wantedEvents as $event)
 
 		<div class="col-sm-4">
@@ -69,7 +101,7 @@
 							echo $str;
 							?>
 						</h6>
-						
+
 					</div>
 				</div>
 			</a>
@@ -77,6 +109,17 @@
 	</div>
 
 	@endforeach
+
+	<!-- tell them no event-->
+	@else
+
+	<div class="block ">
+		<!-- Get Started Title -->
+		<div class="block-title text-center">
+			<h2>Sorry, there are no events for this category at the moment</h2>
+		</div>
+	</div>
+	@endif
 	<!--end-->
 
 </div>
