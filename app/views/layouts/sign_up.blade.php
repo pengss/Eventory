@@ -3,20 +3,20 @@
 <head>
     <title>Eventory</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="google-site-verification" content="UvM_NZeKXm_As2V6kelmV6_APyhw2r9-pqvvyW1KSuA" />
     
-    {{ HTML::style('/css/reset.css') }}
+    
     {{ HTML::style('/css/bootstrap.min.css') }}
+    {{ HTML::style('/css/font-awesome.css') }}
+    {{ HTML::style('/css/plugins.css') }}
+    {{ HTML::style('/css/style.css') }}
     {{ HTML::style('/css/main.css') }}
+    {{ HTML::style('/css/responsive.css') }}
+
+    {{ HTML::script('js/vendor/jquery-2.1.1.min.js'); }}
 
 </head>
 <body data-spy="scroll" data-target=".nav-menu" data-offset="50">
 
-    <div id="pageloader">   
-        <div class="loader-item">
-          <img src="/Eventory/public/images/loading.gif" alt='loader' />
-      </div>
-  </div>
   <section id="home" class="">
 
 
@@ -29,23 +29,6 @@
             </div>
             
             <div class="col-xs-6 right">
-
-                <!-- Social media 
-                <a href="mailto:support@goldeyestheme.com">
-                    <i class="fa fa-envelope"></i>
-                </a>
-                <a href="#">
-                    <i class="fa fa-twitter"></i>
-                </a>
-                <a href="#">
-                    <i class="fa fa-vimeo-square"></i>
-                </a>
-                <a href="#">
-                    <i class="fa fa-rss"></i>
-                </a>
-                <a href="#">
-                    <i class="fa fa-instagram"></i>
-                </a>-->
 
                 @if (Auth::check())
                 <a href="/Eventory/public/logout"><button type="button" class="btn btn-xs btn-square btn-primary">Logout</button></a>
@@ -67,15 +50,24 @@
 
             <!-- Logo Img -->
             <div class="logo">
-                <a class="scroll" href="#home"><img src="/Eventory/public/images/logo.png" alt="Logo"/></a>
+                <a class="scroll" href="/Eventory/public/eventOrganiserProfile"><img src="/Eventory/public/images/logo.png" alt="Logo"/></a>
             </div>
+
 
             <!-- Nav Menu -->
             <div class="nav-menu">
 
                 <ul class="nav main-nav">
 
-                    <li class="active"><a class="scroll" href="/Eventory/public/index">home</a></li>
+                    <li class="active"><a class="scroll" href="#home">home</a></li>
+                    <li><a class="scroll" href="#about">benefits</a></li>
+                    <!--<li><a class="scroll" href="#features">features</a></li>-->
+                    <li><a class="scroll" href="#history">how we work</a></li>
+                    <!--<li><a class="scroll" href="#team">team</a></li>
+                    <li><a class="scroll" href="#portfolio">portfolio</a></li>
+                    <li><a class="scroll" href="#services">services</a></li>-->
+                    <li><a class="scroll" href="#prices">prices</a></li>
+                    <li><a class="scroll" href="#subscribe">register</a></li>
 
                 </ul>
 
@@ -126,26 +118,26 @@
                     </div>
                     <div class="modal-body">
                         {{ Form::open(array('url' => 'index', 'method' => 'post', 'class' => 'form-horizontal form-bordered')) }}
-                            <div class="form-group">
-                                <label class="col-md-3 control-label">{{Form::label('username','Username')}}</label>
-                                <div class="col-md-6">
-                                    {{Form::text('username', null,array('class' => 'form-control','required' => 'required','class' => 'form-control'))}}
-                                </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">{{Form::label('username','Username')}}</label>
+                            <div class="col-md-6">
+                                {{Form::text('username', null,array('class' => 'form-control','required' => 'required','class' => 'form-control'))}}
                             </div>
-                            <div class="form-group">
-                                <label class="col-md-3 control-label">{{Form::label('password','Password')}}</label>
-                                <div class="col-md-6">
-                                    {{Form::password('password',array('class' => 'form-control','required' => 'required','class' => 'form-control'))}}
-                                </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">{{Form::label('password','Password')}}</label>
+                            <div class="col-md-6">
+                                {{Form::password('password',array('class' => 'form-control','required' => 'required','class' => 'form-control'))}}
                             </div>
-                            <div class="form-group form-actions">
-                                <div class="col-md-9 col-md-offset-3">
-                                    {{Form::submit('Login', array('class' => 'btn btn-effect-ripple btn-primary'))}}
-                                    <button type="reset" class="btn btn-effect-ripple btn-danger">Reset</button>
-                                </div>
+                        </div>
+                        <div class="form-group form-actions">
+                            <div class="col-md-9 col-md-offset-3">
+                                {{Form::submit('Login', array('class' => 'btn btn-effect-ripple btn-primary'))}}
+                                <button type="reset" class="btn btn-effect-ripple btn-danger">Reset</button>
                             </div>
+                        </div>
                         {{ Form::close() }}
-                      
+
                     </div>
                 </div>
             </div>
@@ -154,27 +146,86 @@
         <!-- END Login Modal -->
         @yield('body')
         <!-- Footer Section -->
-        
+        <section id="footer">
+
+            <div class="inner footer">
+
+                <!-- Phone -->
+                <div class="col-xs-4 animated footer-box" data-animation="flipInY" data-animation-delay="0">
+                    <a class="footer-links">
+                        <i class="fa fa-mobile"></i>
+                    </a>
+
+                    <p class="footer-text">
+                        <span>Phone</span>:<span>(123) 456-7890</span>
+                    </p>
+                </div>
+
+                <!-- Socials and Mail -->
+                <div class="col-xs-4 animated footer-box" data-animation="flipInY" data-animation-delay="0">
+
+                    <!-- Social 1 -->
+                    <a class="footer-links">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+
+                    <!-- Social 2 -->
+                    <a class="footer-links">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+
+                    <!-- Social 3 -->
+                    <a class="footer-links">
+                        <i class="fa fa-google-plus"></i>
+                    </a>
+
+                    <!-- Social 4 -->
+                    <a class="footer-links">
+                        <i class="fa fa-pinterest"></i>
+                    </a>
+
+                    <!-- Mail -->
+                    <p class="footer-text">
+                        <span>Mail</span>:<span><a href="mailto:support@goldeyestheme.com">support@goldeyestheme.com</a></span>
+                    </p>
+
+                    <!-- Copyright -->
+                    <p class="footer-text copyright">
+                        ©2014 wisten. all rights reserved.
+                    </p>
+                </div>
+
+                <!-- Adress -->
+                <div class="col-xs-4 animated footer-box" data-animation="flipInY" data-animation-delay="0">
+
+                    <!-- Icon -->
+                    <a class="footer-links">
+                        <i class="fa fa-map-marker"></i>
+                    </a>
+
+                    <p class="footer-text">
+                        1234 Street Name, City Name
+                    </p>
+                </div>
+
+                <div class="clear"></div>
+            </div> <!-- End Footer inner -->
+
+        </section><!-- End Footer Section -->
     </div>
-    {{ HTML::script('js/jquery-1.10.2.min.js'); }}
-    {{ HTML::script('js/bootstrap.js'); }}
-    {{ HTML::script('js/jquery.appear.js'); }}
-    {{ HTML::script('js/waypoints.min.js'); }}
-    {{ HTML::script('js/jquery.prettyPhoto.js'); }}
-    {{ HTML::script('js/modernizr-latest.js'); }}
-    {{ HTML::script('js/SmoothScroll.js'); }}
-    {{ HTML::script('js/jquery.parallax-1.1.3.js'); }}
-    {{ HTML::script('js/jquery.easing.1.3.js'); }}
-    {{ HTML::script('js/jquery.superslides.js'); }}
-    {{ HTML::script('js/jquery.flexslider.js'); }}
-    {{ HTML::script('js/jquery.sticky.js'); }}
-    {{ HTML::script('js/owl.carousel.js'); }}
-    {{ HTML::script('js/jquery.isotope.js'); }}
-    {{ HTML::script('js/rev-slider/jquery.themepunch.plugins.min.js'); }}
-    {{ HTML::script('js/rev-slider/jquery.themepunch.revolution.min.js'); }}
-    {{ HTML::script('js/jquery.mb.YTPlayer.js'); }}
-    {{ HTML::script('js/jquery.fitvids.js'); }}
-    {{ HTML::script('js/plugins.js'); }}
+    
+    <script>!window.jQuery && document.write(decodeURI('%3Cscript src="js/vendor/jquery-2.1.1.min.js"%3E%3C/script%3E'));</script>
+    {{ HTML::script('js/vendor/bootstrap.min.js'); }}
+    {{ HTML::script('js/app.js'); }}
+
+
+    
+    {{ HTML::script('js/plugins2.js'); }}
+    {{ HTML::script('js/pages/formsWizard.js'); }}
+    <script>$(function(){ FormsWizard.init(); });</script>
+    {{ HTML::script('js/pages/formsComponents.js'); }}
+
+
     @show
 </body>
 </html>
