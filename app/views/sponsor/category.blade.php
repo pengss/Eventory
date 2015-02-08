@@ -16,7 +16,7 @@
                 <!-- Form Validation Form -->
                 {{ Form::open(array('route' => array('sponsor.store'), 'method' => 'post', 'class' => 'form-horizontal form-bordered', 'id' => 'form-validation')) }}
                 <div class="form-group">
-                    <label class="col-md-3 control-label">Preferred Target Audience<span class="text-danger">*</span> </label>
+                    <label class="col-md-3 control-label">Preferred Target Audience<span class="text-danger">*</span> <br><small>(max 3)</small></label>
                     <div class="col-md-9">
                         <fieldset class="group"> 
                             <ul class="checkbox">
@@ -34,7 +34,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-md-3 control-label">Preferred Event Type<span class="text-danger">*</span></label>
+                    <label class="col-md-3 control-label">Preferred Event Type<span class="text-danger">*</span> <br><small>(max 3)</small></label>
                     <div class="col-md-9">
                         <fieldset class="group"> 
                             <ul class="checkbox">
@@ -83,5 +83,6 @@
     </div>
 </div>
 
+{{ HTML::script('js/custom/createevent.js'); }}
 {{ HTML::script('js/jquery-ui.js'); }}
 @stop

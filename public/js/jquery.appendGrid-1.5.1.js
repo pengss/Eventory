@@ -144,7 +144,7 @@
         moveUp: 'Move Up',
         moveDown: 'Move Down',
         rowDrag: 'Sort Row',
-        rowEmpty: 'At least 1 Presence is needed'
+        rowEmpty: 'This Grid Is Empty'
     };
     var _defaultButtonClasses = { append: null, removeLast: null, insert: null, remove: null, moveUp: null, moveDown: null, rowDrag: null };
     var _defaultSectionClasses = { caption: null, header: null, body: null, subPanel: null, footer: null };

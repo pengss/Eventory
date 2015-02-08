@@ -34,20 +34,10 @@
                 {{ HTML::linkRoute('create_organisation', 'Create An Organisation') }}
             </div>
             <div class="form-group">
-                <label>What kind of user are you?</label>
-                    <select id="example-select" name="example-select" class="form-control" size="1">
-                        <option value="0">Please select</option>
-                        <option value="sponsor">Sponsor</option>
-                        <option value="eo">Event Organizer</option>
-                    </select>
-            
+                {{Form::label('user_type','What kind of user are you')}}
+                {{Form::text('user_type', null,array('class' => 'form-control','required' => 'required'))}}
             </div>
-            <div class="form-group form-actions">
-                <div class="col-md-9 col-md-offset-3">
-                    <button type="submit" class="btn btn-effect-ripple btn-primary">Register</button>
-                    <button type="reset" class="btn btn-effect-ripple btn-danger">Reset</button>
-                </div>
-            </div>
+            {{Form::submit('Register', array('class' => 'btn btn-primary'))}}
             {{ Form::close() }}
         </div>
     </div>

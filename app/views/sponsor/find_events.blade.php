@@ -32,7 +32,5 @@
 				<!-- END Select Component Content -->
 		</div>
 	</div>
-
-	
 </div>
 @stop

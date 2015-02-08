@@ -187,7 +187,6 @@
                                 <input type="text" id="org_name" name="org_name" class="form-control">
                             </div>
                         </div>
-                        <!--
                         <div class="form-group">
                             <label class="col-md-3 control-label">Org Logo</label>
                             <div class="col-md-9">
@@ -199,30 +198,30 @@
                             <div class="col-md-9">
                                 <textarea id="orgInfo" name="orgInfo" rows="6" class="form-control textarea-elastic ui-wizard-content" placeholder="Tell us more about your organising team!" style="overflow: hidden; height: 136px;"></textarea>
                             </div>
-                        </div>-->
+                        </div>
                         <div class="form-group">
                             <label class="col-md-3 control-label">Your Event's Social Media Sites</label>
 
                             <label class="col-md-3"></label>
                             <div class="col-md-9">
                                 <div class="social input-group">
-                                    <label class ="" for="social" id="facebook_title"><i class="fa fa-facebook-square"></i> Facebook Page</label>
+                                    <label class ="" for="social" id="facebook_title"><i class="fa fa-facebook-square"></i> facebook.com/</label>
                                     <input type="text" id="facebook" name="facebook" class="form-control">
                                 </div>
                                 <div class="social input-group">
-                                    <label class ="" for="social" id="facebook_event_title"><i class="fa fa-facebook"></i> Facebook Event Page</label>
+                                    <label class ="" for="social" id="facebook_event_title"><i class="fa fa-facebook"></i> facebook.com/events/</label>
                                     <input type="text" id="facebook_event" name="facebook_event" class="form-control">
                                 </div>
                                 <div class="social input-group">
-                                    <label class ="" for="social" id="twitter_title"><i class="fa fa-twitter"></i> Twitter</label>
+                                    <label class ="" for="social" id="twitter_title"><i class="fa fa-twitter"></i> twitter.com/</label>
                                     <input type="text" id="twitter" name="twitter" class="form-control">
                                 </div>
                                 <div class="social input-group">
-                                    <label class ="" for="social" id="instagram_title"><i class="fa fa-instagram"></i> Instagram</label>
+                                    <label class ="" for="social" id="instagram_title"><i class="fa fa-instagram"></i> instagram.com/</label>
                                     <input type="text" id="instagram" name="instagram" class="form-control">
                                 </div>
                                 <div class="social input-group">
-                                    <label class ="" for="social" id="website_title" ><i class="fa fa-globe"></i> Website </label>
+                                    <label class ="" for="social" id="website_title" ><i class="fa fa-globe"></i> Website http://</label>
                                     <input type="text" id="website" name="website" class="form-control">
                                 </div>
                             </div>
