@@ -73,7 +73,7 @@
 					<div class="g-row">
 
 						<span class="pull-right"><i class="fa fa-users"></i> {{$event->turnout}}</span>
-						<h6 class="widget-heading event-footer"><i class="fa fa-tags"></i> 
+						<h6 class="widget-heading"><i class="fa fa-tags"></i> 
 							<?php
 							$str = '';
 							?>

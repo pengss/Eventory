@@ -254,9 +254,6 @@
 
                                         </table>
                                     </div>
-
-
-       
                                 </div>
                             </div>
                         </div>
@@ -285,8 +282,6 @@
 
 
     {{ HTML::script('js/custom/createevent.js'); }}
-    {{ HTML::script('js/vendor/uiTables.js'); }}
-    <script>$(function(){ UiTables.init(); });</script>
     {{ HTML::script('js/jquery.appendGrid-1.5.1.min.js'); }}
     {{ HTML::script('js/jquery.appendGrid-1.5.1.js'); }}
     {{ HTML::script('js/jquery-ui.js'); }}

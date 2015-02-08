@@ -1009,7 +1009,7 @@
                 // Add standard buttons
      
                 if (!settings.hideButtons.remove) {
-                    createGridButton(settings.customGridButtons.remove)
+                    createGridButton(settings.customGridButtons.remove, 'fa fa-trash')
 						.attr({ id: settings.idPrefix + '_Delete_' + uniqueIndex, title: settings._i18n.remove, tabindex: -1 })
 						.addClass('fa fa-trash-o').data('appendGrid', { uniqueIndex: uniqueIndex })
                         .click(function (evt) {

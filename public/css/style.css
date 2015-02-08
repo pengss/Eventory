@@ -375,13 +375,13 @@ ol, ul{
 /* Page Top (only Rev Slider Version) */
 
 #pagetop{
-	background:#fff;
+	background:#232323;
 	padding:8px 0;
 }
 
 .pagetop{
 	padding:0;
-	color:#383838;
+	color:#a4a4a4;
 	font-weight:300;
 }
 
@@ -411,10 +411,10 @@ ol, ul{
 
 #navigation{
 	width:100%;
-	/*border-bottom:1px solid #e2e2e2;*/
+	border-bottom:1px solid #e2e2e2;
 	position:absolute;
 	z-index:10;
-	background:#121212;
+	background:#fff;
 	height:78px;
 }
 
@@ -478,7 +478,7 @@ ol, ul{
 	text-transform:uppercase;
 	font-size:14px;
 	text-align:center;
-	color:#f7f7f7;
+	color:#464646;
 }
 
 .nav-menu ul li:first-child a{
@@ -678,11 +678,10 @@ a.mobile-menu{
 #about .about-content{
 	width:25%;
 	height:auto;
+	min-height:276px;
 	background:#fff;
 	float:left;
-	/*
-	min-height:276px;
-	cursor:pointer;*/
+	cursor:pointer;
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
 	transition: all 0.3s;
@@ -751,7 +750,7 @@ a.mobile-menu{
 	font-weight:100;
 }
 
-/* About Content Hover Styles 
+/* About Content Hover Styles */
 
 #about .about-content:hover{
 	background:#3c3c3c;
@@ -783,7 +782,7 @@ a.mobile-menu{
 	border:1px solid #fff;
 	color:#fff;
 }
-*/
+
 /* Features */
 
 #features{
