@@ -96,12 +96,19 @@ class SearchController extends \BaseController {
 
 		$event_audiences = array();
 
-		foreach($selectedEventArray as $eventId){
-			$selectedEventid = $eventId -> event_id;
+		if($type['example-chosen'] = 'Select All'){
 			foreach($allEvents as $currentEvent){
-				$currentEventId = $currentEvent -> id;
-				if($currentEventId == $selectedEventid){
-					array_push($wantedEvents, $currentEvent);
+				array_push($wantedEvents, $currentEvent);
+			}
+		}
+		else{
+			foreach($selectedEventArray as $eventId){
+				$selectedEventid = $eventId -> event_id;
+				foreach($allEvents as $currentEvent){
+					$currentEventId = $currentEvent -> id;
+					if($currentEventId == $selectedEventid){
+						array_push($wantedEvents, $currentEvent);
+					}
 				}
 			}
 		}
