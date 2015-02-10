@@ -13,11 +13,11 @@
             </div>
             <div id="status">
             </div>
-            <div id="fb_login">
+            <!--<div id="fb_login">
                 Have a Facebook event already?
                 <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
                 to Facebook to import it to Eventory<br/><br/>
-            </div>
+            </div>-->
 
             <div id = "fb_event" style="display:none;">
                 <form action = "event-create.php" method="post">
@@ -29,7 +29,7 @@
             <!-- END Clickable Wizard Title -->
 
             <!-- Clickable Wizard Content -->
-            {{ Form::open(array('route' => array('event.store'), 'method' => 'post', 'id' => 'clickable-wizard', 'class' => 'form-horizontal form-bordered', 'enctype' => 'multipart/form-data')) }}
+            {{ Form::open(array('route' => array('event.store'), 'method' => 'post', 'id' => 'clickable-wizard', 'class' => 'form-horizontal form-bordered', 'enctype' => 'multipart/form-data', 'files' => true)) }}
             <!-- First Step -->
             <div id="clickable-first" class="step">
                 <!-- Step Info -->
@@ -181,13 +181,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group">
+                        <!--<div class="form-group">
                             <label class="col-md-3 control-label">Organization Name<span class="text-danger">*</span></label>
                             <div class="col-md-9">
                                 <input type="text" id="org_name" name="org_name" class="form-control">
                             </div>
                         </div>
-                        <!--
+                        
                         <div class="form-group">
                             <label class="col-md-3 control-label">Org Logo</label>
                             <div class="col-md-9">

@@ -35,18 +35,22 @@ class EventsController extends \BaseController {
 		$id = Auth::user() -> id; //get the id of the current user to be used during creation
 
 		$data = Input::only(['title','location','start_date','end_date','start_time','end_time','event_types','target_audience',
-			'banner', 'turnout','desc', 'org_name', 'logo', 'orgInfo', 'facebook', 'facebook_event', 'twitter',
+			'banner', 'turnout','desc', 'facebook', 'facebook_event', 'twitter',
 		 'instagram', 'website', 'presence', 'description', 'price', 'slot']); //retrieve all the inputs by the user
+
+		$organizationId = DB::table('users') -> where('id', $id) -> pluck('organization_id');
+		$organizationName = DB::table('organization') -> where('id', $organizationId) -> pluck('name');
+		$organizationDesc = DB::table('organization') -> where('id', $organizationId) -> pluck('description');
 
 		$newEvent = [ //create instance of a new event with current user id and all the inputs by the user
 		[
 		'creator_id' => $id,
 		'event_name' => $data['title'],
-		'logo' => $data['logo'],
 		'location' => $data['location'],
 		'turnout' => $data['turnout'],
 		'description' => $data['desc'],
-		'org_info' => $data['orgInfo'],
+		'org_name' => $organizationName,
+		'org_info' => $organizationDesc,
 		'start_date' => $data['start_date'],
 		'end_date' => $data['end_date'],
 		'start_time' => $data['start_time'],
@@ -116,7 +120,7 @@ class EventsController extends \BaseController {
 
        	$event = DB::table('event') -> where('event_name', $data['title']) -> first();
 
-       	return $this -> findRelevantSponsor($event);	    
+       	return $this -> findRelevantSponsor($event);
        	}
 
 	/**

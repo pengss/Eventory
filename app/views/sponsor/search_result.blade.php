@@ -75,7 +75,7 @@
 						<h3 class="widget-heading"><strong>{{$event->event_name}}</strong></h3>
 					</div>
 					<div class="g-row">
-						<h5 class="widget-heading"><em>by {{$event->org_info}}</em></h5>
+						<h5 class="widget-heading"><em>by {{$event->org_name}}</em></h5>
 					</div>
 					<div class="g-row">
 						<h5 class="widget-heading event-desc">{{$event->description}}</h5>

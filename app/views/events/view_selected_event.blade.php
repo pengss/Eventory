@@ -122,7 +122,7 @@
                     </div>
                     <div class="widget-content text-center">
                         <img src="{{$selectedEvent -> logo}}" class="img-circle img-thumbnail img-thumbnail-avatar-2x">
-                        <h2 class="widget-heading h3 text-muted">{{$selectedEvent -> org_info}}</h2>
+                        <h2 class="widget-heading h3 text-muted">{{$selectedEvent -> org_name}}</h2>
                     </div>
                     <div class="widget-content themed-background-muted text-dark text-left">
                         {{$selectedEvent -> org_info}}
