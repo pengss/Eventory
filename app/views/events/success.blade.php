@@ -39,7 +39,7 @@
                         </div>
                         <!-- END Gallery Items -->
                         <a href="{{ URL::to('eventOrganiserProfile') }}" class="btn btn-effect-ripple btn-primary"><i class="fa fa-arrow-left"></i>Back to Dashboard</a>
-                        <button class="btn btn-warning" style="margin-left: 48px;"><i class="gi gi-kiosk"></i> View My Event</button>
+                        <a href="{{ URL::to('view_events') }}" class="btn btn-warning" style="margin-left: 48px;"><i class="gi gi-kiosk"></i> View My Event</button>
                  
             </div>
         </div>
