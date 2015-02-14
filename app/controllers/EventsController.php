@@ -42,12 +42,31 @@ class EventsController extends \BaseController {
 		$organizationName = DB::table('organization') -> where('id', $organizationId) -> pluck('name');
 		$organizationDesc = DB::table('organization') -> where('id', $organizationId) -> pluck('description');
 
+		$file = Input::file('banner');
+		$name = $file->getClientOriginalName();
+
+		$destinationPath = 'images';
+
+		$bannerPath = '';
+
+		if($file){
+			
+			$bannerPath = 'images/'.$name;
+
+			Input::file('banner')->move($destinationPath, $name);
+		}
+		else{
+			$bannerPath = 'images/photo18.jpg';
+		}
+
+
 		$newEvent = [ //create instance of a new event with current user id and all the inputs by the user
 		[
 		'creator_id' => $id,
 		'event_name' => $data['title'],
 		'location' => $data['location'],
 		'turnout' => $data['turnout'],
+		'banner' => $bannerPath,
 		'description' => $data['desc'],
 		'org_name' => $organizationName,
 		'org_info' => $organizationDesc,
