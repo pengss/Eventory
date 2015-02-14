@@ -33,7 +33,7 @@
 
 			<a href="{{URL::to('view_this_event', $event[0]->event_name)}}">
 				<div class="widget-image widget-image-sm">
-					{{ HTML::image($event[0]->logo) }}
+					{{ HTML::image($event[0]->banner) }}
 					<div class="widget-image-content">
 					</div>
 				</div>
