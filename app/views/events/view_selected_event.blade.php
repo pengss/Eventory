@@ -16,7 +16,7 @@
 
                 <div class="block-content-full">
 
-                    {{ HTML::image($selectedEvent->logo) }}
+                    {{ HTML::image($selectedEvent->banner) }}
 
                 </div>
             </br>
