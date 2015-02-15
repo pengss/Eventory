@@ -177,9 +177,9 @@
     <!-- END Mini Pricing Tables Title -->
 
     <!-- Mini Pricing Tables Content -->
-    @foreach($event_presences as $presence)
-    @if($presence -> Event_ID == $selectedEvent -> id)
     <div class="row">
+        @foreach($event_presences as $presence)
+        @if($presence -> Event_ID == $selectedEvent -> id)
         <div class="col-sm-3">
             <table class="table table-pricing table-borderless">
                 <thead>
@@ -202,9 +202,9 @@
                 </tbody>
             </table>
         </div>
+        @endif
+        @endforeach
     </div>
-    @endif
-    @endforeach
     <!-- END single Presence Items -->
 </div>
 
