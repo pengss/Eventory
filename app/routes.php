@@ -13,7 +13,7 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+	return View::make('users.index');
 });
 
 Route::get('index', array('as' => 'index', 'uses' => 'UsersController@login')); //route to display log in form

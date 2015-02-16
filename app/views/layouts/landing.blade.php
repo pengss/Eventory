@@ -14,7 +14,7 @@
 
     <div id="pageloader">   
         <div class="loader-item">
-          <img src="/Eventory/public/images/loading.gif" alt='loader' />
+          <img src="/images/loading.gif" alt='loader' />
       </div>
   </div>
   <section id="home" class="">
@@ -67,7 +67,7 @@
 
             <!-- Logo Img -->
             <div class="logo">
-                <a class="scroll" href="#home"><img src="/Eventory/public/images/logo.png" alt="Logo"/></a>
+                <a class="scroll" href="#home"><img src="/images/logo.png" alt="Logo"/></a>
             </div>
 
             <!-- Nav Menu -->

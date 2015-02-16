@@ -31,7 +31,7 @@
             <div class="col-xs-6 right">
 
                 @if (Auth::check())
-                <a href="/Eventory/public/logout"><button type="button" class="btn btn-xs btn-square btn-primary">Logout</button></a>
+                <a href="/logout"><button type="button" class="btn btn-xs btn-square btn-primary">Logout</button></a>
                 <a href="/profile">{{ Auth::user()->first_name }}</a>
                 @else
                 <a href="#modal-login" class="btn btn-xs btn-effect-ripple btn-primary" data-toggle="modal">Login</a>
@@ -50,7 +50,7 @@
 
             <!-- Logo Img -->
             <div class="logo">
-                <a class="scroll" href="/Eventory/public/eventOrganiserProfile"><img src="/Eventory/public/images/logo.png" alt="Logo"/></a>
+                <a class="scroll" href="/eventOrganiserProfile"><img src="/Eventory/public/images/logo.png" alt="Logo"/></a>
             </div>
 
 

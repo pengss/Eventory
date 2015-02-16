@@ -31,7 +31,7 @@
             <div class="col-xs-6 right">
 
                 @if (Auth::check())
-                <a href="/Eventory/public/logout"><button type="button" class="btn btn-xs btn-square btn-primary">Logout</button></a>
+                <a href="/logout"><button type="button" class="btn btn-xs btn-square btn-primary">Logout</button></a>
                 <a href="/profile">{{ Auth::user()->first_name }}</a>
                 @else
                 <a href="#modal-login" class="btn btn-xs btn-effect-ripple btn-primary" data-toggle="modal">Login</a>
@@ -50,7 +50,7 @@
 
             <!-- Logo Img -->
             <div class="logo">
-                <a class="scroll" href="/Eventory/public/sponsorProfile"><img src="/Eventory/public/images/logo.png" alt="Logo"/></a>
+                <a class="scroll" href="/sponsorProfile"><img src="/Eventory/public/images/logo.png" alt="Logo"/></a>
             </div>
 
 
@@ -59,10 +59,10 @@
 
                 <ul class="nav main-nav">
 
-                    <li class="active"><a class="scroll" href="/Eventory/public/sponsorProfile">My Dashboard</a></li>
-                    <li><a class="scroll" href="/Eventory/public/sponsor_category">List my sponsoring criterias</a></li>
-                    <li><a class="scroll" href="/Eventory/public/find_events">Find Events</a></li>
-                    <li><a class="scroll" href="/Eventory/public/relevant_events">Show me relevant events</a></li>
+                    <li class="active"><a class="scroll" href="/sponsorProfile">My Dashboard</a></li>
+                    <li><a class="scroll" href="/sponsor_category">List my sponsoring criterias</a></li>
+                    <li><a class="scroll" href="/find_events">Find Events</a></li>
+                    <li><a class="scroll" href="/relevant_events">Show me relevant events</a></li>
 
                 </ul>
 
@@ -73,10 +73,10 @@
             <div class="dropdown mobile-drop">
                 <a data-toggle="dropdown" class="mobile-menu" href="#"><i class="fa fa-bars"></i></a>
                 <ul class="nav dropdown-menu fullwidth" role="menu" >
-                    <li class="active"><a class="scroll" href="/Eventory/public/sponsorProfile">My Dashboard</a></li>
-                    <li><a class="scroll" href="/Eventory/public/sponsor_category">List my sponsoring criterias</a></li>
-                    <li><a class="scroll" href="/Eventory/public/find_events">Find Events</a></li>
-                    <li><a class="scroll" href="/Eventory/public/relevant_events">Show me relevant events</a></li>
+                    <li class="active"><a class="scroll" href="/sponsorProfile">My Dashboard</a></li>
+                    <li><a class="scroll" href="/sponsor_category">List my sponsoring criterias</a></li>
+                    <li><a class="scroll" href="/find_events">Find Events</a></li>
+                    <li><a class="scroll" href="/relevant_events">Show me relevant events</a></li>
                 </ul>
             </div>
 
