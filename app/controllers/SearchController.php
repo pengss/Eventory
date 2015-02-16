@@ -125,11 +125,13 @@ class SearchController extends \BaseController {
 			->get();
 		}
 
-		View::share('wantedEvents', $wantedEvents);
+		/*View::share('wantedEvents', $wantedEvents);
 		View::share('event_types', $event_types);
 		View::share('event_audiences', $event_audiences);
 
-		return View::make('sponsor.search_result');
+		return View::make('sponsor.search_result');*/
+
+		return $type;
 	}
 
 	public function viewThisEvent($myEvent){
