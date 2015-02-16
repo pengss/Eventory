@@ -45,13 +45,13 @@ class EventsController extends \BaseController {
 		$file = Input::file('banner');
 		$name = $file->getClientOriginalName();
 
-		$destinationPath = 'images';
+		$destinationPath = 'public/uploads/';
 
 		$bannerPath = '';
 
 		if($file){
 			
-			$bannerPath = 'images/'.$name;
+			$bannerPath = 'public/uploads/'.$name;
 
 			Input::file('banner')->move($destinationPath, $name);
 		}
