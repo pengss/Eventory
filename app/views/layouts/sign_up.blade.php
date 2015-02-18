@@ -25,7 +25,7 @@
         <div class="inner pagetop">
 
             <div class="col-xs-6 left">
-                Sponsorships made easy
+                Powering Sponsorships
             </div>
             
             <div class="col-xs-6 right">
