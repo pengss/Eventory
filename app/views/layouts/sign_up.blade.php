@@ -53,43 +53,6 @@
                 <a class="scroll" href="/eventOrganiserProfile"><img src="/Eventory/public/images/logo.png" alt="Logo"/></a>
             </div>
 
-
-            <!-- Nav Menu -->
-            <div class="nav-menu">
-
-                <ul class="nav main-nav">
-
-                    <li class="active"><a class="scroll" href="#home">home</a></li>
-                    <li><a class="scroll" href="#about">benefits</a></li>
-                    <!--<li><a class="scroll" href="#features">features</a></li>-->
-                    <li><a class="scroll" href="#history">how we work</a></li>
-                    <!--<li><a class="scroll" href="#team">team</a></li>
-                    <li><a class="scroll" href="#portfolio">portfolio</a></li>
-                    <li><a class="scroll" href="#services">services</a></li>-->
-                    <li><a class="scroll" href="#prices">prices</a></li>
-                    <li><a class="scroll" href="#subscribe">register</a></li>
-
-                </ul>
-
-            </div>
-
-
-            <!-- Dropdown Menu For Mobile Devices-->
-            <div class="dropdown mobile-drop">
-                <a data-toggle="dropdown" class="mobile-menu" href="#"><i class="fa fa-bars"></i></a>
-                <ul class="nav dropdown-menu fullwidth" role="menu" >
-                    <li><a class="scroll" href="#home">home</a></li>
-                    <li><a class="scroll" href="#about">about</a></li>
-                   <!-- <li><a class="scroll" href="#features">features</a></li>-->
-                    <li><a class="scroll" href="#history">how we work</a></li>
-                    <!--<li><a class="scroll" href="#team">team</a></li>
-                    <li><a class="scroll" href="#portfolio">portfolio</a></li>
-                    <li><a class="scroll" href="#services">services</a></li>
-                    <li><a class="scroll" href="#prices">prices</a></li>-->
-                    <li><a class="scroll" href="#subscribe">register</a></li>
-                </ul>
-            </div>
-
             <div class="clear"></div>
         </div>
 

@@ -96,7 +96,7 @@ class SearchController extends \BaseController {
 
 		$event_audiences = array();
 
-		if($type['example-chosen'] = 'Select All'){
+		if($type['example-chosen'] == 'Select All'){
 			foreach($allEvents as $currentEvent){
 				array_push($wantedEvents, $currentEvent);
 			}
@@ -125,13 +125,11 @@ class SearchController extends \BaseController {
 			->get();
 		}
 
-		/*View::share('wantedEvents', $wantedEvents);
+		View::share('wantedEvents', $wantedEvents);
 		View::share('event_types', $event_types);
 		View::share('event_audiences', $event_audiences);
 
-		return View::make('sponsor.search_result');*/
-
-		return $type;
+		return View::make('sponsor.search_result');
 	}
 
 	public function viewThisEvent($myEvent){
