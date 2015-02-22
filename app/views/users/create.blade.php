@@ -25,7 +25,7 @@
                 <!-- END Form Validation Title -->
 
                 <!-- Form Validation Form -->
-                {{ Form::open(array('route' => array('user.store'), 'method' => 'post', 'class' => 'form-horizontal form-bordered', 'id' => 'form-validation')) }}
+                {{ Form::open(array('route' => array('user.store'), 'method' => 'post', 'class' => 'form-horizontal form-bordered', 'id' => 'form-validation', 'files' => true)) }}
                 <div class="form-group">
                     <label class="col-md-3 control-label">Name<span class="text-danger">*</span></label>
                     <div class="col-md-6">
@@ -41,15 +41,15 @@
                 <div class="form-group">
                     <label class="col-md-3 control-label">Password<span class="text-danger">*</span></label>
                     <div class="col-md-6">
-                        <input type="passowrd" id="password" name="password" class="form-control" required>
+                        <input type="password" id="password" name="password" class="form-control" required>
                     </div>
                 </div>
-                <div class="form-group">
+                <!--<div class="form-group">
                     <label class="col-md-3 control-label">Confirm Password</label>
                     <div class="col-md-6">
-                        <input type="passowrd" class="form-control"  oninput="check(this)" required>
+                        <input type="password" class="form-control"  oninput="check(this)" required>
                     </div>
-                </div>
+                </div>-->
                 <div class="form-group">
                     <label class="col-md-3 control-label">Email<span class="text-danger">*</span></label>
                     <div class="col-md-6">
