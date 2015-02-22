@@ -59,7 +59,6 @@ class EventsController extends \BaseController {
 			$bannerPath = 'images/photo18.jpg';
 		}
 
-
 		$newEvent = [ //create instance of a new event with current user id and all the inputs by the user
 		[
 		'creator_id' => $id,
@@ -140,7 +139,7 @@ class EventsController extends \BaseController {
        	$event = DB::table('event') -> where('event_name', $data['title']) -> first();
 
        	return $this -> findRelevantSponsor($event);
-       	}
+    }
 
 	/**
 	 * Display the specified resource.
