@@ -12,6 +12,7 @@
 				<div class="col-md-5">
 					<select id="example-chosen" name="example-chosen" class="select-chosen" data-placeholder="Choose a category.." style="width: 250px;">
 						<option></option><!-- Required for data-placeholder attribute to work with Chosen plugin -->
+						<option value="Select All">Select All</option>
 						<!--<option value="select all">Select All</option>-->
 						<?php
 						$event_types = DB::table('type_of_events')->get();
