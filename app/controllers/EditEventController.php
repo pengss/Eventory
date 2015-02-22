@@ -144,7 +144,7 @@ class EditEventController extends \BaseController {
 		View::share('event_types', $event_types);
 		View::share('event_audiences', $event_audiences);
 
-		return View::make('events.view_all_events'); //return to page with all events listed
+		return View::make('events.view_my_events'); //return to page with all events listed
 	}
 
 	/**

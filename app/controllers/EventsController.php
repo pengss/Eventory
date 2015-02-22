@@ -218,7 +218,7 @@ class EventsController extends \BaseController {
 		View::share('event_types', $event_types);
 		View::share('event_audiences', $event_audiences);
 
-		return View::make('events.view_all_events'); //return to page with all events listed
+		return View::make('events.view_my_events'); //return to page with all events listed
 		//return $events;
 	}
 
@@ -338,7 +338,7 @@ class EventsController extends \BaseController {
 
 		View::share('events', $events); //share the variable accross all views, such that there is direct access to this variable
 
-		return View::make('events.view_all_events'); //successfully updates the database and return to all events page
+		return View::make('events.view_my_events'); //successfully updates the database and return to all events page
 	}
 
 	public function createPresence($myEvent){
