@@ -249,7 +249,7 @@
 			</div>
 			<div class="text" style="padding-top: 10%">
 				<p>Feel free to contact us if you have further questions</p>
-				<a href = "mailto:hello@eventory.com"> hello@eventory.com.sg </a>
+				<a href = "mailto:hello@eventory.com.sg"> hello@eventory.com.sg </a>
 			</div>	
 			<div class="clear"></div>
 		</div>
