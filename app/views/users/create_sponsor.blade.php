@@ -19,13 +19,13 @@
             <div class="block">
                 <!-- Form Validation Title -->
                 <div class="block-title">
-                    <h2><strong>Event Organizer Signup</strong></h2><br/>
+                    <h2><strong>Sponsor Signup</strong></h2><br/>
                     <h6><small>Just need some details about you and your organization to get started!</small></h6>
                 </div>
                 <!-- END Form Validation Title -->
 
                 <!-- Form Validation Form -->
-                {{ Form::open(array('route' => array('user.store'), 'method' => 'post', 'class' => 'form-horizontal form-bordered', 'id' => 'form-validation', 'files' => true)) }}
+                {{ Form::open(array('route' => array('sponsorCreate.store'), 'method' => 'post', 'class' => 'form-horizontal form-bordered', 'id' => 'form-validation', 'files' => true)) }}
                 <div class="form-group">
                     <label class="col-md-3 control-label">Name<span class="text-danger">*</span></label>
                     <div class="col-md-6">

@@ -14,6 +14,8 @@
 
     {{ HTML::script('js/vendor/jquery-2.1.1.min.js'); }}
 
+    {{ HTML::script('js/custom/nav.js'); }}
+
 </head>
 <body data-spy="scroll" data-target=".nav-menu" data-offset="50">
 

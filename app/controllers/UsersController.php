@@ -36,29 +36,58 @@ class UsersController extends \BaseController {
 	public function store()
 	{
 		//
-		$data = Input::only(['name','username','password','email','organisation','user_type']);
+		$data = Input::only(['name','username','password','email','org_name','org_info']);
 
-		$organizationId = DB::table('organization')->where('name', $data['organisation'])-> pluck('id');
+		$file = Input::file('org_logo');
 
-        $newUser = [
+		$bannerPath = '';
+
+		if($file){
+
+			$name = $file->getClientOriginalName();
+
+			$destinationPath = 'public/uploads/';
+			
+			$bannerPath = 'public/uploads/'.$name;
+
+			Input::file('org_logo')->move($destinationPath, $name);
+		}
+		else{
+			$bannerPath = 'images/photo18.jpg';
+		}
+
+		$newOrganisation = [
+						   [
+						   		'name' => $data['org_name'],
+						   		'description' => $data['org_info'],
+						   		'logo' => $bannerPath
+						   ]
+						   ];
+
+        $name = DB::table('users')->where('username', $data['username']) -> pluck('name');
+   
+        if($name == null){
+        	DB::table('organization') -> insert($newOrganisation);
+			$organizationId = DB::table('organization') -> where('name', $data['org_name']) -> pluck('id');
+
+			$newUser = [
             [
                 'username' => $data['username'],
                 'password' => Hash::make($data['password']),
                 'name' => $data['name'],
                 'email' => $data['email'],
                 'organization_id' => $organizationId,
-                'user_type' => $data['user_type']
+                'user_type' => 'Event Organizer'
             ]
             ];
-        $name = DB::table('users')->where('username', $data['username']) -> pluck('name');
-   
-        if($name == null){
+
         	DB::table('users')->insert($newUser); 
         	return View::make('users.index');
         }
+		
 		else{
 			$errors = new MessageBag(['username' => ['Username is taken']]);
-        	return Redirect::back()->withErrors($errors)->withInput(Input::except('password'));
+        	return Redirect::back()->withErrors($errors)->withInput(Input::except('password', 'org_logo'));
         }
 	}
 
@@ -174,7 +203,11 @@ class UsersController extends \BaseController {
 		return Redirect::to('create_organisation');
 	}
 
+<<<<<<< HEAD
 	public function sponsorSignup(){
 		return View::make('users.sponsor_sign_up');
 	}
 }
+=======
+}
+>>>>>>> b5cdd20fb28bfda26ab1f59ded22ea10e5d4caa3

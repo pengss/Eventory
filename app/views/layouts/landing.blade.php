@@ -8,7 +8,6 @@
     {{ HTML::style('/css/reset.css') }}
     {{ HTML::style('/css/bootstrap.min.css') }}
     {{ HTML::style('/css/main.css') }}
-
 </head>
 <body data-spy="scroll" data-target=".nav-menu" data-offset="50">
 

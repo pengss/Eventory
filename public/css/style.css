@@ -443,8 +443,8 @@ ol, ul{
 
 .logo img {
 	height: auto;
-	width: 150px;
-	margin-top: -20px;
+	width: 220px;
+	margin-top: -48px;
 }
 
 /* Nav Menu */
@@ -741,14 +741,14 @@ a.mobile-menu{
 
 #about .about-content .content-header{
 	text-transform:uppercase;
-	font-size:20px;
+	font-size:24px;
 }
 
 #about .about-content .content-desc{
-	font-size:15px;
+	font-size:17px;
 	color:#717171;
 	margin-top:10px;
-	font-weight:100;
+	font-weight:300;
 }
 
 /* About Content Hover Styles 
@@ -1014,7 +1014,7 @@ ul.timeline{
 	background:url(../images/timeline-bg.jpg) center center repeat-y;
 	height:auto;
 	position:relative;
-	padding:0 0 80px;
+	padding:0 0 10px;
 }
 
 /* Year icon */
@@ -1040,9 +1040,9 @@ ul.timeline{
 	float:left;
 	padding:20px;
 	width:47.5%;
-	background: rgba(242,242,242,0.1);
+	background: rgba(242,242,242,0.3);
 	border-radius:12px;
-	margin:10px 0;
+	margin:35px 0;
 	cursor:pointer;
 	position:relative;
 	z-index:550;
@@ -1081,7 +1081,7 @@ ul.timeline{
 	color:white;
 	text-transform:uppercase;
 	font-weight:300;
-	color:#999999;
+	color:#BFBFBF;
 	margin:5px 0;
 }
 

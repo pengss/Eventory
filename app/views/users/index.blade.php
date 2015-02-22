@@ -22,7 +22,7 @@
 			<!-- Slide -->
 			<li class="revslide" data-transition="random" data-slotamount="7" data-masterspeed="800" >
 				<!-- MAIN IMAGE -->
-				<img src="images/rev-slider/slide2.jpg"  alt="slidebg2"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+				<img src="images/singapore.jpg"  alt="slidebg2"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
 				<!-- LAYERS -->
 
 				<!-- Layer 1 -->
@@ -195,7 +195,7 @@
 			</li>
 
 			<!-- History Year -->
-			<li class="year">Done</li>
+			<li class="year">$$$</li>
 
 		</ul><!-- End Timeline ul -->
 
@@ -261,12 +261,17 @@
 			
 			<div class="form-group">
 				<div class="col-md-12">
-					<input type="email" id="email" name="email" class="form-control" placeholder="Your Email address to contact">
+					<input type="text" id="name" name="name" class="form-control" required ="required" placeholder="Your Name">
 				</div>
 			</div>
 			<div class="form-group">
 				<div class="col-md-12">
-					<textarea id="details	" name="details" rows="7" class="form-control" placeholder="Tell us more of your event.. Eg. What's your event about? What is your estimate turnout and target audience? What sponsorship are you seeking?"></textarea>
+					<input type="email" id="email" name="email" class="form-control" required ="required" placeholder="Your Email address to contact">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-md-12">
+					<textarea id="details" name="details" rows="7" class="form-control" required ="required" placeholder="Tell us more of your event.. Eg. What's your event about? What is your estimate turnout and target audience? What sponsorship are you seeking?"></textarea>
 				</div>
 			</div>
 			<div class="form-group">
@@ -277,7 +282,7 @@
 			</div>
 
 			<!--Subscribe Button -->
-			<button type="submit" class="subscribe-btn subs">Register</button>
+			<button type="submit" class="subscribe-btn subs">Sign me up!</button>
 			{{ Form::close() }}
 			<br/>
 			<br/>
