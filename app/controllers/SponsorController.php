@@ -37,6 +37,11 @@ class SponsorController extends \BaseController {
 
 		$data = Input::only(['target_audience','turnout','event_types','sponsorship']);
 
+		DB::table('sponsor_audience') -> where('sponsor_id', $id) -> delete();
+		DB::table('sponsor_event_type') -> where('sponsor_id', $id) -> delete();
+		DB::table('sponsor_turnout') -> where('sponsor_id', $id) -> delete();
+		DB::table('sponsor_sponsorship_type') -> where('sponsor_id', $id) -> delete();
+
 		if($data != null){
 
 			if(count($data['target_audience']) != 0){
