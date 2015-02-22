@@ -195,7 +195,7 @@
 			</li>
 
 			<!-- History Year -->
-			<li class="year">Done</li>
+			<li class="year">$$$</li>
 
 		</ul><!-- End Timeline ul -->
 
