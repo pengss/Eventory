@@ -15,7 +15,7 @@
             
 
             <!-- END Clickable Wizard Title -->
-            {{ Form::model($editEvent, array('route' => array('event.store'), 'method' => 'post', 'id' => 'clickable-wizard', 'class' => 'form-horizontal form-bordered', 'enctype' => 'multipart/form-data')) }}
+            {{ Form::model($editEvent, array('route' => array('editEvent.store'), 'method' => 'post', 'id' => 'clickable-wizard', 'class' => 'form-horizontal form-bordered', 'enctype' => 'multipart/form-data')) }}
 
             <!-- Clickable Wizard Content -->
             <!-- First Step -->
@@ -170,25 +170,6 @@
                                 <div class="col-xs-12">
                                     <textarea id="desc" name="desc" rows="10" class="form-control textarea-editor" value = "{{$editEvent->description}}" style="cursor: auto;"></textarea>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-md-3 control-label">Organization Name<span class="text-danger">*</span></label>
-                            <div class="col-md-9">
-                                <input type="text" id="org_name" name="org_name" class="form-control" value ="">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-md-3 control-label">Org Logo</label>
-                            <div class="col-md-9">
-                                {{Form::file('logo', null,array('class' => 'form-control'))}}
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-md-3 control-label">Organisation Info</label>
-                            <div class="col-md-9">
-                                <textarea id="orgInfo" name="orgInfo" rows="6" class="form-control textarea-elastic ui-wizard-content" value="" style="overflow: hidden; height: 136px;"></textarea>
-                                {{Form::text('organisation_info', null,array('class' => 'form-control textarea-elastic ui-wizard-content','required' => 'required'))}}
                             </div>
                         </div>
                         <div class="form-group">

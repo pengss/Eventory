@@ -265,14 +265,73 @@ class EventsController extends \BaseController {
 
 	public function handleEditMyEvent($myEvent){ //updates database based on the inputs by the user
 		$data = Input::only(['title','location','start_date','end_date','start_time','end_time','event_types','target_audience',
-			'banner', 'turnout','description', 'org_name', 'logo', 'orgInfo', 'facebook', 'facebook_event', 'twitter',
-		 'instagram', 'website']); //retrieve all the inputs by the user
+			'banner', 'turnout','description', 'facebook', 'facebook_event', 'twitter', 'instagram', 'website']); //retrieve all the inputs by the user
 
 		DB::table('event') -> where('event_name', $myEvent) -> update(array('event_name' => $data['title'], 'banner' => $data['banner'], 
-			'location' => $data['location'], 'turnout' => $data['turnout'], 'description' => $data['description'], 'org_info' => $data['orgInfo'],
-			'start_date' => $data['start_date'], 'end_date' => $data['end_date'], 'start_time' => $data['start_time'], 'end_time' => $data['end_time'],
-			'facebook' => $data['facebook'], 'facebook_event' => $data['facebook_event'], 'twitter' => $data['twitter'], 'instagram' => $data['instagram'], 'website' => $data['website'])); 
+			'location' => $data['location'], 'turnout' => $data['turnout'], 'description' => $data['description'],'start_date' => $data['start_date'],
+			'end_date' => $data['end_date'], 'start_time' => $data['start_time'], 'end_time' => $data['end_time'], 'facebook' => $data['facebook'],
+			'facebook_event' => $data['facebook_event'], 'twitter' => $data['twitter'], 'instagram' => $data['instagram'], 'website' => $data['website'])); 
 			//updates the event table based on the event chosen
+
+		$eventId = DB::table('event') -> where('event_name', $myEvent) -> pluck('id');
+
+		DB::table('events_audience') -> where('event_id', $eventId) -> delete();
+
+		DB::table('events_type') -> where('event_id', $eventId) -> delete();
+
+		DB::table('presence') -> where('event_id', $eventId) -> delete();
+
+		if(count($data['event_types']) != 0){
+       		foreach($data['event_types'] as $eventType){
+       			$newEventType = [
+       			[
+       			'event_id' => $eventId,
+       			'event_type_id' => $eventType
+       			]
+       			];
+       			DB::table('events_type')->insert($newEventType);
+       		}
+       	}
+
+       	if(count($data['target_audience']) != 0){
+       		foreach($data['target_audience'] as $targetAudience){
+       			$newTargetAudience = [
+       			[
+       			'event_id' => $eventId,
+       			'audience_id' => $targetAudience
+       			]
+       			];
+       			DB::table('events_audience')->insert($newTargetAudience);
+       		}
+       	}
+
+       	$presence = $data['presence'];
+       	$description = $data['description'];
+       	$price = $data['price'];
+       	$slot = $data['slot'];
+
+ 		$noOfPresence = sizeof($data['presence']);
+
+ 		for($x = 0; $x < $noOfPresence; $x++){
+ 			$presenceId = $presence[$x];
+ 			$currentDescription = $description[$x];
+ 			$currentPrice = $price[$x];
+ 			$currentSlot = $slot[$x];
+
+ 			$newPresence = [
+ 						   [
+ 						   		'presence_type_id' => $presenceId,
+ 						   		'description' => $currentDescription,
+ 						   		'price' => $currentPrice,
+ 						   		'slot' => $currentSlot,
+ 						   		'event_id' => $eventId
+ 						   ]
+ 						   ];
+ 			if($newPresence != null){
+ 				DB::table('presence') -> insert($newPresence);
+ 			}
+ 		}
+
 
 		$id = Auth::user() -> id; //checks for current user's id
 
