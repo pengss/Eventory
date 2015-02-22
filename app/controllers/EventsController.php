@@ -43,14 +43,14 @@ class EventsController extends \BaseController {
 		$organizationDesc = DB::table('organization') -> where('id', $organizationId) -> pluck('description');
 
 		$file = Input::file('banner');
-		$name = $file->getClientOriginalName();
-
-		$destinationPath = 'public/uploads/';
 
 		$bannerPath = '';
 
 		if($file){
-			
+			$name = $file->getClientOriginalName();
+
+			$destinationPath = 'public/uploads/';	
+
 			$bannerPath = 'public/uploads/'.$name;
 
 			Input::file('banner')->move($destinationPath, $name);
