@@ -50,7 +50,7 @@
 
             <!-- Logo Img -->
             <div class="logo">
-                <a class="scroll" href="/Eventory/public/eventOrganiserProfile"><img src="/Eventory/public/images/logo.png" alt="Logo"/></a>
+                <a class="scroll" href="../index"><img src="/Eventory/public/images/logo.png" alt="Logo"/></a>
             </div>
 
             <div class="clear"></div>
