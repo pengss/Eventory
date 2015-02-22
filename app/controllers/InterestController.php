@@ -114,6 +114,13 @@ class InterestController extends \BaseController {
 							  ]
 							  ];
 
+		$check = DB::table('presence_sponsor') -> where('sponsor_id', $id) -> where('presence_id', $presenceId) -> 
+		where('event_id', $eventId) -> get();
+
+		if($check != null){
+			return View::make('sponsor.error');
+		}
+
 		if($newPresenceSponsor != null){
 			DB::table('presence_sponsor')->insert($newPresenceSponsor);
 			return View::make('sponsor.success_payment');
