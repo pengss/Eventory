@@ -203,11 +203,4 @@ class UsersController extends \BaseController {
 		return Redirect::to('create_organisation');
 	}
 
-<<<<<<< HEAD
-	public function sponsorSignup(){
-		return View::make('users.sponsor_sign_up');
-	}
 }
-=======
-}
->>>>>>> b5cdd20fb28bfda26ab1f59ded22ea10e5d4caa3

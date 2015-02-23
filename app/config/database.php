@@ -57,7 +57,7 @@ return array(
 			'host'      => 'localhost',
 			'database'  => 'eventory',
 			'username'  => 'root',
-			'password'  => 'RxHfuuYwsl',
+			'password'  => '',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

@@ -33,7 +33,7 @@
             <div class="col-xs-6 right">
 
                 @if (Auth::check())
-                <a href="/logout"><button type="button" class="btn btn-xs btn-square btn-primary">Logout</button></a>
+                <a href="/Eventory/public/logout"><button type="button" class="btn btn-xs btn-square btn-primary">Logout</button></a>
                 <a href="/profile">{{ Auth::user()->first_name }}</a>
                 @else
                 <a href="#modal-login" class="btn btn-xs btn-effect-ripple btn-primary" data-toggle="modal">Login</a>
@@ -61,9 +61,9 @@
 
                 <ul class="nav main-nav">
 
-                    <li class="active"><a class="scroll" href="/eventOrganiserProfile">My Dashboard</a></li>
-                    <li><a class="scroll" href="/create_event">Create An Event</a></li>
-                    <li><a class="scroll" href="/view_events">View My Events</a></li>
+                    <li class="active"><a class="scroll" href="/Eventory/public/eventOrganiserProfile">My Dashboard</a></li>
+                    <li><a class="scroll" href="/Eventory/public/create_event">Create An Event</a></li>
+                    <li><a class="scroll" href="/Eventory/public/view_events">View My Events</a></li>
 
                 </ul>
 
@@ -135,60 +135,39 @@
         </div>
         <!-- END Login Modal -->
         @yield('body')
-        <!-- Footer Section -->
         <section id="footer">
 
             <div class="inner footer">
 
                 <!-- Phone -->
                 <div class="col-xs-4 animated footer-box" data-animation="flipInY" data-animation-delay="0">
-                    <a class="footer-links">
+                    <!--<a class="footer-links">
                         <i class="fa fa-mobile"></i>
                     </a>
 
                     <p class="footer-text">
                         <span>Phone</span>:<span>(123) 456-7890</span>
-                    </p>
+                    </p>-->
                 </div>
 
                 <!-- Socials and Mail -->
                 <div class="col-xs-4 animated footer-box" data-animation="flipInY" data-animation-delay="0">
 
-                    <!-- Social 1 -->
-                    <a class="footer-links">
-                        <i class="fa fa-facebook"></i>
-                    </a>
-
-                    <!-- Social 2 -->
-                    <a class="footer-links">
-                        <i class="fa fa-twitter"></i>
-                    </a>
-
-                    <!-- Social 3 -->
-                    <a class="footer-links">
-                        <i class="fa fa-google-plus"></i>
-                    </a>
-
-                    <!-- Social 4 -->
-                    <a class="footer-links">
-                        <i class="fa fa-pinterest"></i>
-                    </a>
-
                     <!-- Mail -->
                     <p class="footer-text">
-                        <span>Mail</span>:<span><a href="mailto:support@goldeyestheme.com">support@goldeyestheme.com</a></span>
+                        <span>Mail</span>:<span><a href="mailto:support@eventory.com">support@eventory.com</a></span>
                     </p>
 
                     <!-- Copyright -->
-                    <p class="footer-text copyright">
-                        ©2014 wisten. all rights reserved.
+                    <p class="footer-text copyright" style="font-size: 0.99rem; padding-top: 5%" >
+                        Copyright 2015 Eventory Pte. Ltd. Business Registration No. 201429745H. All rights reserved.
                     </p>
                 </div>
 
                 <!-- Adress -->
-                <div class="col-xs-4 animated footer-box" data-animation="flipInY" data-animation-delay="0">
+                <!--<div class="col-xs-4 animated footer-box" data-animation="flipInY" data-animation-delay="0">
 
-                    <!-- Icon -->
+                    <!-- Icon -
                     <a class="footer-links">
                         <i class="fa fa-map-marker"></i>
                     </a>
@@ -196,7 +175,7 @@
                     <p class="footer-text">
                         1234 Street Name, City Name
                     </p>
-                </div>
+                </div>-->
 
                 <div class="clear"></div>
             </div> <!-- End Footer inner -->
