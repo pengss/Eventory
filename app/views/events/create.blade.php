@@ -61,7 +61,7 @@
                 <div class="form-group">
                     <label class="col-md-3 control-label">Title<span class="text-danger">*</span></label>
                     <div class="col-md-9">
-                        <input type="text" id="title" name="title" class="form-control" value = "" placeholder="Your event title">
+                        <input type="text" id="title" name="title" class="form-control" value = "" placeholder="Your event title" required>
                     </div>
                 </div>
                 <div class="form-group">
@@ -112,7 +112,7 @@
                                         foreach ($event_types as $type)
                                         {
                                             ?>
-                                            <li><input type="checkbox" id="event_types" name="event_types[]" value="<?=$type->id?>"> <?=$type->type?></li>
+                                            <li><input type="checkbox" id="event_types" name="event_types[]" value="<?=$type->id?>" > <?=$type->type?></li>
 
                                             <?php
                                         }
@@ -132,7 +132,7 @@
                                             foreach ($event_audience as $aud)
                                             {
                                                 ?>
-                                                <li><input type="checkbox" id="target_audience" name="target_audience[]" value="<?=$aud->id?>"> <?=$aud->type?></li>
+                                                <li><input type="checkbox" id="target_audience" name="target_audience[]" value="<?=$aud->id?>" > <?=$aud->type?></li>
                                                 <?php
                                             }
                                             ?>
@@ -168,7 +168,7 @@
                             <label class="col-md-3 control-label">Estimated Turnout <span class="text-danger">*</span></label>
                             <div class="col-md-9">
                                 <div class="input-group">
-                                    <input type="text" id="turnout" name="turnout" class="form-control" value = "">
+                                    <input type="text" id="turnout" name="turnout" class="form-control" value = "" required>
                                     <span class="input-group-addon"><i class="fa fa-asterisk fa-fw"></i></span>
                                 </div>
                             </div>
@@ -251,7 +251,7 @@
                                         <h4 class="danger">Offer Presence items</h4>
                                     </div>
                                     <div class="table-responsive">
-                                        <table id="presence" class="table table-borderless table-striped table-vcenter">
+                                        <table id="presence" class="table table-borderless table-striped table-vcenter" required>
 
                                         </table>
                                     </div>
