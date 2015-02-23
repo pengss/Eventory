@@ -61,7 +61,7 @@
                 <div class="form-group">
                     <label class="col-md-3 control-label">Title<span class="text-danger">*</span></label>
                     <div class="col-md-9">
-                        <input type="text" id="title" name="title" class="form-control" value = "" placeholder="Your event title" required>
+                        <input type="text" id="title" name="title" class="form-control" value = "" placeholder="Your event title">
                     </div>
                 </div>
                 <div class="form-group">
