@@ -17,7 +17,7 @@
                             
                         </div>
                         <!-- END Gallery Items -->
-                        <a href="{{ URL::to('sponsor_category') }}" class="btn btn-effect-ripple btn-primary"><i class="fa fa-arrow-left"></i>Dashboard</a>
+                        <a href="{{ URL::to('sponsor_category') }}" class="btn btn-effect-ripple btn-primary"><i class="fa fa-arrow-left"></i>Set sponsoring categories</a>
                  
             </div>
         </div>

@@ -37,6 +37,11 @@ class SponsorController extends \BaseController {
 
 		$data = Input::only(['target_audience','turnout','event_types','sponsorship']);
 
+		if(sizeof($data['target_audience']) == 0 || sizeof($data['event_types']) == 0 || $data['turnout'] == "" ||
+		$data['sponsorship'] == ""){
+			return View::make('errors.update_category_error');
+		}
+
 		DB::table('sponsor_audience') -> where('sponsor_id', $id) -> delete();
 		DB::table('sponsor_event_type') -> where('sponsor_id', $id) -> delete();
 		DB::table('sponsor_turnout') -> where('sponsor_id', $id) -> delete();
