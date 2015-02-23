@@ -59,6 +59,12 @@ class EventsController extends \BaseController {
 			$bannerPath = 'images/photo18.jpg';
 		}
 
+		if($data['title'] == "" || sizeof($data['event_types']) == 0 || sizeof($data['target_audience']) == 0 ||
+		$data['turnout'] == "" || $data['desc'] == "" || $data['presence'][0] == 0 || sizeof($data['description']) == 0 ||
+		sizeof($data['price']) == 0 || sizeof($data['slot']) == 0 ){
+			return View::make('errors.create_event_error');
+		}
+
 		$newEvent = [ //create instance of a new event with current user id and all the inputs by the user
 		[
 		'creator_id' => $id,
