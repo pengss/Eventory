@@ -38,20 +38,26 @@ class EditEventController extends \BaseController {
 			'presence', 'description', 'price', 'slot']); //retrieve all the inputs by the user
 
 		$file = Input::file('banner');
-		$name = $file->getClientOriginalName();
-
-		$destinationPath = 'public/uploads/';
 
 		$bannerPath = '';
 
 		if($file){
-			
+			$name = $file->getClientOriginalName();
+
+			$destinationPath = 'public/uploads/';
+
 			$bannerPath = 'public/uploads/'.$name;
 
 			Input::file('banner')->move($destinationPath, $name);
 		}
 		else{
 			$bannerPath = 'images/photo18.jpg';
+		}
+
+		if($data['event_name'] == "" || sizeof($data['event_types']) == 0 || sizeof($data['target_audience']) == 0 ||
+		$data['turnout'] == "" || $data['desc'] == "" || $data['presence'][0] == 0 || sizeof($data['description']) == 0 ||
+		sizeof($data['price']) == 0 || sizeof($data['slot']) == 0 ){
+			return View::make('errors.edit_event_error');
 		}
 
 		DB::table('event') -> where('event_name', $data['event_name']) -> update(array('event_name' => $data['event_name'], 'banner' => $bannerPath, 
