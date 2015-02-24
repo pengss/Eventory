@@ -13,7 +13,7 @@
 
     <div id="pageloader">   
         <div class="loader-item">
-          <img src="/Eventory/public/images/loading.gif" alt='loader' />
+          <img src="/images/loading.gif" alt='loader' />
       </div>
   </div>
   <section id="home" class="">
