@@ -4,7 +4,7 @@
 
 <div id="page-content_scenery">
     <div class="row">
-     <div class="col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-2 col-lg-8 col-lg-offset-2">
+       <div class="col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-2 col-lg-8 col-lg-offset-2">
         <!-- Clickable Wizard Block -->
         <div class="block">
             <!-- Clickable Wizard Title -->
@@ -29,9 +29,10 @@
             <!-- END Clickable Wizard Title -->
 
             <!-- Clickable Wizard Content -->
+            <!-- <form action = "" method="post" id="clickable-wizard" class="form-horizontal form-bordered" enctype ="multipart/form-data" files "true" data-parsley-validate>-->
             {{ Form::open(array('route' => array('event.store'), 'method' => 'post', 'id' => 'clickable-wizard', 'class' => 'form-horizontal form-bordered', 'enctype' => 'multipart/form-data', 'files' => true)) }}
             <!-- First Step -->
-            <div id="clickable-first" class="step">
+            <div id="clickable-first" class="step first block1 show">
                 <!-- Step Info -->
                 <div class="form-group">
                     <div class="col-xs-12">
@@ -61,13 +62,13 @@
                 <div class="form-group">
                     <label class="col-md-3 control-label">Title<span class="text-danger">*</span></label>
                     <div class="col-md-9">
-                        <input type="text" id="title" name="title" class="form-control" value = "" placeholder="Your event title">
+                        <input type="text" id="title" name="title" class="form-control" value = "" placeholder="Your event title" data-parsley-group="block1" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-3 control-label">Location</label>
                     <div class="col-md-9">
-                        <input type="text" id="location" name="location" class="form-control ui-wizard-content" value = "" placeholder="Where is your event location?">
+                        <input type="text" id="location" name="location" class="form-control ui-wizard-content" value = "" placeholder="Where is your event location?" data-parsley-group="block1" required>
                     </div>
                 </div>
 
@@ -75,9 +76,9 @@
                     <label class="col-md-3 control-label">Event Date</label>
                     <div class="col-md-9">
                         <div class="input-group input-daterange" data-date-format="dd M yyyy">
-                            <input type="text" id="start_date" name="start_date" class="form-control" value = "" placeholder="From">
+                            <input type="text" id="start_date" name="start_date" class="form-control" value = "" placeholder="From" data-parsley-group="block1" required>
                             <span class="input-group-addon"><i class="fa fa-chevron-right"></i></span>
-                            <input type="text" id="end_date" name="end_date" class="form-control" value = "" placeholder="To">
+                            <input type="text" id="end_date" name="end_date" class="form-control" value = "" placeholder="To" data-parsley-group="block1" required>
                         </div>
                     </div>
                 </div>
@@ -86,7 +87,7 @@
                     <label class="col-md-3 control-label">Start Time</label>
                     <div class="col-md-9">
                         <div class="input-group bootstrap-timepicker">
-                            <input type="text" id="start_time" name="start_time" class="form-control input-timepicker text-center" value = "">
+                            <input type="text" id="start_time" name="start_time" class="form-control input-timepicker text-center" value = "" data-parsley-group="block1" required>
                             <span class="input-group-btn">
                                 <a href="javascript:void(0)" class="btn btn-effect-ripple btn-primary"><i class="fa fa-clock-o"></i></a>
                             </div>
@@ -96,7 +97,7 @@
                         <label class="col-md-3 control-label">End Time</label>
                         <div class="col-md-9">
                             <div class="input-group bootstrap-timepicker">
-                                <input type="text" id="end_time" name="end_time" class="form-control input-timepicker text-center" value = "" >
+                                <input type="text" id="end_time" name="end_time" class="form-control input-timepicker text-center" value = ""  data-parsley-group="block1" required>
                                 <span class="input-group-btn">
                                     <a href="javascript:void(0)" class="btn btn-effect-ripple btn-primary"><i class="fa fa-clock-o"></i></a>
                                 </div>
@@ -112,7 +113,7 @@
                                         foreach ($event_types as $type)
                                         {
                                             ?>
-                                            <li><input type="checkbox" id="event_types" name="event_types[]" value="<?=$type->id?>" > <?=$type->type?></li>
+                                            <li><input type="checkbox" id="event_types" name="event_types[]" value="<?=$type->id?>"  data-parsley-group="block1" required> <?=$type->type?></li>
 
                                             <?php
                                         }
@@ -132,7 +133,7 @@
                                             foreach ($event_audience as $aud)
                                             {
                                                 ?>
-                                                <li><input type="checkbox" id="target_audience" name="target_audience[]" value="<?=$aud->id?>" > <?=$aud->type?></li>
+                                                <li><input type="checkbox" id="target_audience" name="target_audience[]" value="<?=$aud->id?>" data-parsley-group="block1" required> <?=$aud->type?></li>
                                                 <?php
                                             }
                                             ?>
@@ -141,11 +142,17 @@
                                 </fieldset>
                             </div>
                         </div>
+
+                        <div class="form-group form-actions">
+                            <div class="col-md-4 col-md-offset-6">
+                               <span class="next btn btn-effect-ripple btn-primary" data-current-block="1" data-next-block="2">Next ></span>
+                            </div>
+                        </div>
                     </div>
                     <!-- END First Step -->
 
                     <!-- Second Step -->
-                    <div id="clickable-second" class="step">
+                    <div id="clickable-second" class="step second block2 hidden">
                         <!-- Step Info -->
                         <div class="form-group">
                             <div class="col-xs-12">
@@ -168,7 +175,7 @@
                             <label class="col-md-3 control-label">Estimated Turnout <span class="text-danger">*</span></label>
                             <div class="col-md-9">
                                 <div class="input-group">
-                                    <input type="text" id="turnout" name="turnout" class="form-control" value = "" required>
+                                    <input type="text" id="turnout" name="turnout" class="form-control" value = "" data-parsley-group="block2" required>
                                     <span class="input-group-addon"><i class="fa fa-asterisk fa-fw"></i></span>
                                 </div>
                             </div>
@@ -177,7 +184,7 @@
                             <label class="col-md-3 control-label">Event Details<span class="text-danger">*</span></label>
                             <div class="col-md-9">
                                 <div class="col-xs-12">
-                                    <textarea id="desc" name="desc" rows="10" class="form-control textarea-editor" value = "" placeholder="Tell your potential sponsors more about your event!" style="cursor: auto;"></textarea>
+                                    <textarea id="desc" name="desc" rows="10" class="form-control textarea-editor" value = "" placeholder="Tell your potential sponsors more about your event!" style="cursor: auto;" data-parsley-group="block2" required></textarea>
                                 </div>
                             </div>
                         </div>
@@ -227,12 +234,19 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="form-group form-actions">
+                            <div class="col-md-3 col-md-offset-5">
+                                <span class="next btn btn-effect-ripple btn-danger" data-current-block="2" data-next-block="1">< Previous</span>
+                                <span class="next btn btn-effect-ripple btn-primary" data-current-block="2" data-next-block="3">Next ></span>
+                            </div>
+                        </div>
                     </div>
                     <!-- END Second Step -->
 
                     <!-- Third Step -->
                     <!-- Third Step -->
-                    <div id="clickable-third" class="step">
+                    <div id="clickable-third" class="step third block3 hidden">
                         <!-- Step Info -->
                         <div class="form-group">
                             <div class="col-xs-12">
@@ -257,21 +271,18 @@
                                     </div>
 
 
-       
+
                                 </div>
+                            </div>
+                        </div>
+                        <div class="form-group form-actions">
+                            <div class="col-md-3 col-md-offset-5">
+                                <span class="next btn btn-effect-ripple btn-danger" data-current-block="3" data-next-block="2">< Previous</span>
+                                <button type="submit" class="btn btn-effect-ripple btn-primary" id="next">Next</button>
                             </div>
                         </div>
                     </div>
                     <!-- END Third Step -->
-
-                    <!-- Form Buttons -->
-                    <div class="form-group form-actions">
-                        <div class="col-md-8 col-md-offset-4">
-                            <button type="reset" class="btn btn-effect-ripple btn-danger" id="back">Back</button>
-                            <button type="submit" class="btn btn-effect-ripple btn-primary" id="next">Next</button>
-                        </div>
-                    </div>
-                    <!-- END Form Buttons -->
 
 
                     {{ Form::close() }} <!-- END Clickable Wizard Content -->
@@ -285,12 +296,13 @@
     <script>document.onload = function() { FormsComponents.init(); }</script>
 
 
-    {{ HTML::script('js/custom/createevent.js'); }}
     {{ HTML::script('js/vendor/uiTables.js'); }}
     <script>$(function(){ UiTables.init(); });</script>
     {{ HTML::script('js/jquery.appendGrid-1.5.1.min.js'); }}
     {{ HTML::script('js/jquery.appendGrid-1.5.1.js'); }}
     {{ HTML::script('js/jquery-ui.js'); }}
+    {{ HTML::script('js/vendor/parsley.min.js'); }}
+    {{ HTML::script('js/custom/createevent.js'); }}
     {{ HTML::script('js/custom/addpresence.js'); }}
 </div>
 </div>
