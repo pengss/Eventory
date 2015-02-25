@@ -475,11 +475,13 @@ class EventsController extends \BaseController {
 		$eventId = DB::table('event') -> where('event_name', $myEvent) -> pluck('id');
 
 		DB::table('events_audience') -> where('event_id', $eventId) -> delete();
+		DB::table('discuss') -> where('event_id', $eventId) -> delete();
 		DB::table('events_type') -> where('event_id', $eventId) -> delete();
 		DB::table('presence_sponsor') -> where('event_id', $eventId) -> delete();
 		DB::table('relevant_sponsor') -> where('event_id', $eventId) -> delete();
 		DB::table('presence') -> where('event_id', $eventId) -> delete();
 		DB::table('event') -> where('id', $eventId) -> delete();
+
 
 		return View::make('events.delete_success');
 	}
