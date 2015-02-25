@@ -71,8 +71,9 @@
                 </div>
                 
                 <div class="form-group form-actions">
-                    <div class="col-md-4 col-md-offset-8">
+                    <div class="col-md-8 col-md-offset-3">
                         <button type="submit" class="btn btn-effect-ripple btn-primary">Submit</button>
+                        <button type="reset" class="btn btn-effect-ripple btn-danger">Reset</button>
                     </div>
                 </div>
                 {{ Form::close() }}

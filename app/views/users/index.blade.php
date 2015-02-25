@@ -22,7 +22,7 @@
 			<!-- Slide -->
 			<li class="revslide" data-transition="random" data-slotamount="7" data-masterspeed="800" >
 				<!-- MAIN IMAGE -->
-				<img src="/Eventory/public/images/singapore.jpg"  alt="slidebg2"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+				<img src="images/singapore.jpg"  alt="slidebg2"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
 				<!-- LAYERS -->
 
 				<!-- Layer 1 -->
@@ -85,7 +85,7 @@
 			</div>
 
 			<div class="content-header text">Get Sponsored</div>
-			<div class="content-desc text">We max your chances to get sponsorships by connecting you to relevant sponsors</div>
+			<div class="content-desc text">We maximise your chances to secure sponsorship deals by connecting you to relevant sponsors</div>
 		</div>
 
 		<!-- Second Content -->
@@ -96,7 +96,7 @@
 			</div>
 
 			<div class="content-header text">Save Time</div>
-			<div class="content-desc text">We optimised the sponsorship process to eliminate repeated efforts</div>
+			<div class="content-desc text">We optimised the sponsorship process to eliminate repeated effort in contacting sponsors</div>
 
 		</div>
 
@@ -174,7 +174,7 @@
 
 			<li class="note animated" data-animation="fadeInRight" data-animation-delay="100">
 				<h4>
-					Finalise sponsorship deals
+					Finalise sponsorship deal
 				</h4>
 				<p class="desc">
 				</p>
