@@ -17,6 +17,8 @@
 	</div>
 	<!-- Gallery Items -->
 	<div class="row gallery">
+		<!-- //check if got events anot-->
+		@if (count($events) >= 1)
 		@foreach($events as $event)
 
 		<div class="col-sm-4">
@@ -33,7 +35,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="#delete-event" data-toggle="delete-modal">
+								<a href="{{URL::to('delete_my_event', $event->event_name)}}">
 									<i class="fa fa-times-circle pull-right"></i>
 									Delete
 								</a>
@@ -107,7 +109,16 @@
 
 	@endforeach
 	<!--end-->
+	<!-- tell them no event-->
+	@else
 
+	<div class="block ">
+		<!-- Get Started Title -->
+		<div class="block-title text-center">
+			<h2>Seems like you have no event at the moment. Click <a href="/Eventory/public/create_event">here</a> to create your 1st event!</h2>
+		</div>
+	</div>
+	@endif
 </div>
 <!-- END Gallery Items -->
 </div>
