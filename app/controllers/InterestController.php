@@ -33,11 +33,12 @@ class InterestController extends \BaseController {
 	public function store()
 	{
 		//
-		$data = Input::only(['email', 'details', 'event_date']);
+		$data = Input::only(['name','email', 'details', 'event_date']);
 
 		if($data != null){
 			$newInterest = [
 						   [
+						   		'name' => $data['name'],
 						   		'mail' => $data['email'],
 						   		'event_name' => $data['details'],
 						   		'date' => $data['event_date']
