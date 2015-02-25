@@ -39,7 +39,7 @@
 	<div class="row gallery">
 
 		<!-- //check if got events anot-->
-		@if (count($wantedEvents) > 1)
+		@if (count($wantedEvents) >= 1)
 		@foreach($wantedEvents as $event)
 
 		<div class="col-sm-4">
