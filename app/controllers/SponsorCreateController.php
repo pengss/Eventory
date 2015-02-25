@@ -81,7 +81,7 @@ class SponsorCreateController extends \BaseController {
             ];
 
         	DB::table('users')->insert($newUser); 
-        	return View::make('users.index');
+        	return View::make('sponsor.sign_up_success');
         }
 		
 		else{
