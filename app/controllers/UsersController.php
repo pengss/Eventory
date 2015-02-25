@@ -82,7 +82,7 @@ class UsersController extends \BaseController {
             ];
 
         	DB::table('users')->insert($newUser); 
-        	return View::make('users.index');
+        	return View::make('users.sign_up_success');
         }
 		
 		else{
