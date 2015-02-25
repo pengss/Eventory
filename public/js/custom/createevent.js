@@ -19,7 +19,6 @@ $("input[id=event_types]").change(function(){
 })
 
 
- $('#clickable-wizard').parsley();
 
   $('.next').on('click', function () {
     var current = $(this).data('currentBlock'),
