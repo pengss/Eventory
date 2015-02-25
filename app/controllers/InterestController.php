@@ -45,10 +45,7 @@ class InterestController extends \BaseController {
 						   ]
 						   ];
 			DB::table('interested_event_organiser') -> insert($newInterest);
-			return View::make('users.index');
-		}
-		else{
-			return "error";
+			return View::make('users.success_interest');
 		}
 	}
 

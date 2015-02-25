@@ -73,6 +73,8 @@ Route::group(array('before' => 'auth'), function()
 
 		Route::get('edit_my_event/{myEvent}', array('as' => 'edit_my_event', 'uses' => 'EventsController@editMyEvent')); //route to edit specific event with form filled
 
+		Route::get('delete_my_event/{myEvent}', array('as' => 'delete_my_event', 'uses' => 'EventsController@deleteMyEvent'));
+
 		//Route::post('/edit_my_event/{myEvent}', array('as' => 'edit_my_event', 'uses' => 'EventsController@handleEditMyEvent'));
 
 		Route::get('/success', array('as' => 'success', 'uses' => 'EventsController@createPresence')); //display success page after creating event

@@ -33,7 +33,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="#delete-event" data-toggle="delete-modal">
+								<a href="{{URL::to('delete_my_event', $event->event_name)}}">
 									<i class="fa fa-times-circle pull-right"></i>
 									Delete
 								</a>
