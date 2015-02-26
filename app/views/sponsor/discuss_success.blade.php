@@ -11,7 +11,7 @@
             <div class="row text-center">
                 <div class="col-md-8 col-md-offset-2">
                     <h1 class="text-light animation-fadeInQuick"><strong>Thank you for the feedback</strong></h1>
-                    <h2 class="text-muted animation-fadeInQuickInv"><em>We will now contact the Event Organiser</em></h2>
+                    <h2 class="text-muted animation-fadeInQuickInv"><em>Your message has been sent to the Event Organiser</em></h2>
                 </div>
                 <!-- END Gallery Items -->
                 <a href="{{ URL::to('sponsorProfile') }}" class="btn btn-effect-ripple btn-primary"><i class="fa fa-arrow-left"></i>Back to Dashboard</a>
