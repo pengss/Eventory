@@ -81,7 +81,7 @@
                     <!--<li><a class="scroll" href="#team">team</a></li>
                     <li><a class="scroll" href="#portfolio">portfolio</a></li>
                     <li><a class="scroll" href="#services">services</a></li>-->
-                    <li><a class="scroll" href="#prices">prices</a></li>
+                    <li><a class="scroll" href="#prices">pricing</a></li>
                     <li><a class="scroll" href="#subscribe">register</a></li>
 
                 </ul>
