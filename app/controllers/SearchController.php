@@ -126,8 +126,8 @@ class SearchController extends \BaseController {
 		}
 
 		View::share('wantedEvents', $wantedEvents);
-		View::share('event_types', $event_types);
-		View::share('event_audiences', $event_audiences);
+		View::share('wanted_event_types', $event_types);
+		View::share('wanted_event_audiences', $event_audiences);
 
 		return View::make('sponsor.search_result');
 	}

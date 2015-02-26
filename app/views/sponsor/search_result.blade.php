@@ -49,7 +49,7 @@
 					<?php
 					$str = '';
 					?>
-					@foreach($event_types as $eventType)
+					@foreach($wanted_event_types as $eventType)
 					@if($eventType -> id == $event -> id)
 					<?php
 					$str .= $eventType -> type;
@@ -88,7 +88,7 @@
 							<?php
 							$str = '';
 							?>
-							@foreach($event_audiences as $eventAudience)
+							@foreach($wanted_event_audiences as $eventAudience)
 							@if($eventAudience -> id == $event -> id)
 							<?php
 							$str .= '<span class="label label-default">';
