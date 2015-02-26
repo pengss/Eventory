@@ -3,6 +3,8 @@
 <head>
     <title>Eventory</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/Eventory/public/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/Eventory/public/favicon.ico" type="image/x-icon">
     
     
     {{ HTML::style('/css/bootstrap.min.css') }}

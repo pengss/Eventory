@@ -4,6 +4,8 @@
     <title>Eventory</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google-site-verification" content="UvM_NZeKXm_As2V6kelmV6_APyhw2r9-pqvvyW1KSuA" />
+    <link rel="shortcut icon" href="/Eventory/public/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/Eventory/public/favicon.ico" type="image/x-icon">
     
     {{ HTML::style('/css/reset.css') }}
     {{ HTML::style('/css/bootstrap.min.css') }}
