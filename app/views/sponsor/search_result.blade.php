@@ -117,7 +117,7 @@
 	<div class="block ">
 		<!-- Get Started Title -->
 		<div class="block-title text-center">
-			<h2>Sorry, there are no events for this category at the moment</h2>
+			<h2>Sorry, there are no events in this category at the moment</h2>
 		</div>
 	</div>
 	@endif
