@@ -11,7 +11,7 @@
             <div class="row text-center">
                 <div class="col-md-8 col-md-offset-2">
                     <h1 class="text-light animation-fadeInQuick"><strong>Sponsorship request success!</strong></h1>
-                    <h2 class="text-muted animation-fadeInQuickInv"><em>Your sponsorship request has been sent to the event organizer and we'll be helping to liase with you shortly.</em></h2>
+                    <h2 class="text-muted animation-fadeInQuickInv"><em>Your sponsorship request has been sent to the event organizer, who will liase with you shortly.</em></h2>
                 </div>
                 <div class="row gallery2">
                             
