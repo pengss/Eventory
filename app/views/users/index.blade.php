@@ -214,7 +214,7 @@
 
 		<!-- Header -->
 		<div class="header ">
-			pricing
+			prices
 		</div>
 
 		<!-- Second Header -->
