@@ -44,7 +44,7 @@ class SponsorInterestController extends \BaseController {
 						   ]
 						   ];
 			DB::table('interested_sponsor') -> insert($newInterest);
-			return View::make('users.interest_success');
+			return View::make('sponsor.success_interest');
 		}
 	}
 
