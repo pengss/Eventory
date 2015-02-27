@@ -203,4 +203,8 @@ class UsersController extends \BaseController {
 		return Redirect::to('create_organisation');
 	}
 
+	public function sponsorHome(){
+		return View::make('users.sponsor');
+	}
+
 }
