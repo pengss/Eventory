@@ -7,6 +7,7 @@
     <link rel="icon" href="/Eventory/public/favicon.ico" type="image/x-icon">
     
     
+    
     {{ HTML::style('/css/bootstrap.min.css') }}
     {{ HTML::style('/css/font-awesome.css') }}
     {{ HTML::style('/css/plugins.css') }}
@@ -15,8 +16,6 @@
     {{ HTML::style('/css/responsive.css') }}
 
     {{ HTML::script('js/vendor/jquery-2.1.1.min.js'); }}
-
-    {{ HTML::script('js/custom/nav.js'); }}
 
 </head>
 <body data-spy="scroll" data-target=".nav-menu" data-offset="50">
@@ -54,7 +53,7 @@
 
             <!-- Logo Img -->
             <div class="logo">
-                <a class="scroll" href="/eventOrganiserProfile"><img src="/Eventory/public/images/logo.png" alt="Logo"/></a>
+                <a class="scroll" href="/sponsorProfile"><img src="/Eventory/public/images/logo.png" alt="Logo"/></a>
             </div>
 
 
@@ -137,6 +136,7 @@
         </div>
         <!-- END Login Modal -->
         @yield('body')
+        <!-- Footer Section -->
         <section id="footer">
 
             <div class="inner footer">
@@ -157,12 +157,15 @@
 
                     <!-- Mail -->
                     <p class="footer-text">
-                        <span>Mail</span>:<span><a href="mailto:support@eventory.com">support@eventory.com</a></span>
+                        <span>Mail</span>:<span><a href="mailto:support@eventory.com">support@eventory.com.sg</a></span>
                     </p>
 
                     <!-- Copyright -->
                     <p class="footer-text copyright" style="font-size: 0.99rem; padding-top: 5%" >
-                        Copyright 2015 Eventory Pte. Ltd. Business Registration No. 201429745H. All rights reserved.
+                        Copyright 2015 <br>
+                        Eventory Pte Ltd. <br>
+                        Business Registration No. 201429745H. <br>
+                        All rights reserved. <br>
                     </p>
                 </div>
 
@@ -188,14 +191,22 @@
     <script>!window.jQuery && document.write(decodeURI('%3Cscript src="js/vendor/jquery-2.1.1.min.js"%3E%3C/script%3E'));</script>
     {{ HTML::script('js/vendor/bootstrap.min.js'); }}
     {{ HTML::script('js/app.js'); }}
-
-
-    
     {{ HTML::script('js/plugins2.js'); }}
     {{ HTML::script('js/pages/formsWizard.js'); }}
     <script>$(function(){ FormsWizard.init(); });</script>
     {{ HTML::script('js/pages/formsComponents.js'); }}
 
+
+
+
+    {{ HTML::script('js/jquery.appear.js'); }}
+    {{ HTML::script('js/jquery.prettyPhoto.js'); }}
+    {{ HTML::script('js/jquery.parallax-1.1.3.js'); }}
+    {{ HTML::script('js/jquery.superslides.js'); }}
+    {{ HTML::script('js/owl.carousel.js'); }}
+    {{ HTML::script('js/jquery.isotope.js'); }}
+    {{ HTML::script('js/jquery.mb.YTPlayer.js'); }}
+    {{ HTML::script('js/plugins.js'); }}
 
     @show
 </body>

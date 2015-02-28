@@ -159,12 +159,15 @@
 
                     <!-- Mail -->
                     <p class="footer-text">
-                        <span>Mail</span>:<span><a href="mailto:support@eventory.com">support@eventory.com</a></span>
+                        <span>Mail</span>:<span><a href="mailto:support@eventory.com">support@eventory.com.sg</a></span>
                     </p>
 
                     <!-- Copyright -->
                     <p class="footer-text copyright" style="font-size: 0.99rem; padding-top: 5%" >
-                        Copyright 2015 Eventory Pte. Ltd. Business Registration No. 201429745H. All rights reserved.
+                        Copyright 2015 <br>
+                        Eventory Pte Ltd. <br>
+                        Business Registration No. 201429745H. <br>
+                        All rights reserved. <br>
                     </p>
                 </div>
 

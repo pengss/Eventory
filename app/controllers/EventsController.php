@@ -41,6 +41,7 @@ class EventsController extends \BaseController {
 		$organizationId = DB::table('users') -> where('id', $id) -> pluck('organization_id');
 		$organizationName = DB::table('organization') -> where('id', $organizationId) -> pluck('name');
 		$organizationDesc = DB::table('organization') -> where('id', $organizationId) -> pluck('description');
+		$organizationLogo = DB::table('organization') -> where('id', $organizationId) -> pluck('logo');
 
 		$file = Input::file('banner');
 
@@ -75,6 +76,7 @@ class EventsController extends \BaseController {
 		'description' => $data['desc'],
 		'org_name' => $organizationName,
 		'org_info' => $organizationDesc,
+		'org_logo' => $organizationLogo,
 		'start_date' => $data['start_date'],
 		'end_date' => $data['end_date'],
 		'start_time' => $data['start_time'],
@@ -265,7 +267,23 @@ class EventsController extends \BaseController {
 	public function editMyEvent($myEvent){ //redirect users to edit event page with all past information filled
 		$editEvent = DB::table('event')->where('event_name', $myEvent)->first(); //select the specific instance of event from database
 
-		return View::make('events.edit_my_event', compact('editEvent')); //share this variable accross views
+		$eventId = DB::table('event')->where('event_name', $myEvent)-> pluck('id');
+
+		$editEventTypes = array();
+
+		$editEventAudiences = array();
+
+		$editEventTypes = DB::table('event')->join('events_type', 'event.id', '=', 'events_type.event_id')
+		->join('type_of_events', 'events_type.event_type_id', '=', 'type_of_events.id')
+		->select('event.id', 'type')
+		->get();
+		
+		$editEventAudiences = DB::table('event')->join('events_audience', 'event.id', '=', 'events_audience.event_id')
+		->join('target_audience', 'events_audience.audience_id', '=', 'target_audience.id')
+		->select('event.id', 'type')
+		->get();
+
+		return View::make('events.edit_my_event', compact('editEvent', 'editEventTypes', 'editEventAudiences')); //share this variable accross views
 	}
 
 	public function handleEditMyEvent($myEvent){ //updates database based on the inputs by the user

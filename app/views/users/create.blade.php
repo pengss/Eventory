@@ -19,7 +19,7 @@
             <div class="block">
                 <!-- Form Validation Title -->
                 <div class="block-title">
-                    <h2><strong>Event Organizer Signup</strong></h2><br/>
+                    <h2><strong>Event Organiser Signup</strong></h2><br/>
                     <h6><small>Just need some details about you and your organization to get started!</small></h6>
                 </div>
                 <!-- END Form Validation Title -->

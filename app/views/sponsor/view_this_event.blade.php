@@ -85,7 +85,7 @@
                 </div>
             </div>
 
-            <div class="widget">
+            <div class="widget" style = "height: 200px;">
                 <div class="widget-content widget-content-mini themed-background-muted">
                     <i class="gi gi-group"></i>  <strong class="text-dark">Target Audience</strong>
                 </div>
@@ -148,7 +148,7 @@
                     <div class="widget-content themed-background-muted text-dark text-left">
                         {{$selectedEvent -> org_info}}
                     </div>
-                    <div class="widget-content">
+                    <!--<div class="widget-content">
                         <div class="row text-center">
                             <a href="javascript:void(0)" class="col-xs-6">
                                 <h4 class="widget-heading"><i class="gi gi-nameplate_alt text-info push-bit"></i> <br><small>View Organizer</small></h4>
@@ -157,7 +157,7 @@
                                 <h4 class="widget-heading"><i class="gi gi-pizza text-success push-bit"></i> <br><small>Discuss with me!</small></h4>
                             </a>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
                 <!-- END Stats User Widget -->
             </div>
@@ -208,13 +208,13 @@
     <!-- END single Presence Items -->
 </div>
 
-<div class="block full">
+<!--<div class="block full">
     <ul class="pager">
         <button type="button" class="btn btn-block btn-success">Confirm Sponsoring Selection</button>
 
         <button type="button" class="btn btn-block btn-warning">Propose an Offer</button>
     </ul>
-</div>
+</div>-->
 
 
 </div>

@@ -64,7 +64,7 @@
             </div>
 
             <br>
-            <div class="widget">
+            <div class="widget" style ="height: 200px;">
                 <div class="widget-content widget-content-mini themed-background-muted">
                     <i class="gi gi-group"></i>  <strong class="text-dark">Target Audience</strong>
                 </div>
@@ -121,7 +121,7 @@
                         <i class="fa fa-fw fa-trophy"></i> <strong>Organisation</strong>
                     </div>
                     <div class="widget-content text-center">
-                        <img src="{{$selectedEvent -> logo}}" class="img-circle img-thumbnail img-thumbnail-avatar-2x">
+                        <img src="{{$selectedEvent -> org_logo}}" class="img-circle img-thumbnail img-thumbnail-avatar-2x">
                         <h2 class="widget-heading h3 text-muted">{{$selectedEvent -> org_name}}</h2>
                     </div>
                     <div class="widget-content themed-background-muted text-dark text-left">

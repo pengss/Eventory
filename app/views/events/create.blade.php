@@ -248,7 +248,7 @@
                             <div class="col-xs-12">
                                 <div class="block">
                                     <div class="block-title">
-                                        <h4 class="danger">Offer Presence items</h4>
+                                        <h4 class="danger">Offer Sponsoring Benefits</h4>
                                     </div>
                                     <div class="table-responsive">
                                         <table id="presence" class="table table-borderless table-striped table-vcenter" required>

@@ -7,6 +7,7 @@
 	</div>
 	<!-- Gallery Items -->
 	<div class="row gallery">
+		@if (count($relevantEvents) >= 1)
 		@foreach($relevantEvents as $event)
 
 		<div class="col-sm-4">
@@ -78,7 +79,15 @@
 
 	@endforeach
 	<!--end-->
+	@else
 
+	<div class="block ">
+		<!-- Get Started Title -->
+		<div class="block-title text-center">
+			<h2>Sorry, there are no events fitting your criteria at the moment</h2>
+		</div>
+	</div>
+	@endif
 </div>
 <!-- END Gallery Items -->
 </div>

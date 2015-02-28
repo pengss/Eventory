@@ -168,7 +168,7 @@
                             <label class="col-md-3 control-label">Event Details<span class="text-danger">*</span></label>
                             <div class="col-md-9">
                                 <div class="col-xs-12">
-                                    <textarea id="desc" name="desc" rows="10" class="form-control textarea-editor" value = "{{$editEvent->description}}" style="cursor: auto;"></textarea>
+                                    <textarea id="desc" name="desc" rows="10" class="form-control textarea-editor" value = "<?php $editEvent->description ?>" style="cursor: auto;"></textarea>
                                 </div>
                             </div>
                         </div>
