@@ -14,7 +14,7 @@
     // The default initial options.
     var _defaultInitOptions = {
         // The text as table caption, set null to disable caption generation.
-        caption: null,
+        caption: true,
         // Tooltip for caption.
         captionTooltip: null,
         // The total number of empty rows generated when init the grid. This will be ignored if `initData` is assigned.

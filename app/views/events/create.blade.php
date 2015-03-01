@@ -177,7 +177,7 @@
                             <label class="col-md-3 control-label">Event Details<span class="text-danger">*</span></label>
                             <div class="col-md-9">
                                 <div class="col-xs-12">
-                                    <textarea id="desc" name="desc" rows="10" class="form-control textarea-editor" value = "" placeholder="Tell your potential sponsors more about your event!" style="cursor: auto;"></textarea>
+                                    <textarea id="desc" name="desc" rows="10" class="form-control textarea-editor" placeholder="Tell your potential sponsors more about your event!" data-toggle = "tooltip" data-original-title="You may provide link to your event poster/pdf, describe more about the event and what kind of audience will be there" style="cursor: auto;"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -292,7 +292,7 @@
     {{ HTML::script('js/jquery.appendGrid-1.5.1.js'); }}
     {{ HTML::script('js/jquery-ui.js'); }}
     {{ HTML::script('js/custom/addpresence.js'); }}
-    {{ HTML::script('js/vendor/parsley.js'); }}
+    {{ HTML::script('js/vendor/parsley.min.js'); }}
     {{ HTML::script('js/custom/createevent.js'); }}
 </div>
 </div>
