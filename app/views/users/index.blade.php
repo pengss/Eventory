@@ -292,7 +292,7 @@
 			<p style="font-size: 0.90rem">
 				Copyright2015 Eventory Pte. Ltd. Business Registration No. 201429745H. All rights reserved.
 				<br/>
-				<a href="">Terms of Use</a> | <a href ="">Privacy Policy </a>
+				<a href="/Eventory/public/terms.html">Terms of Use</a> | <a href ="/Eventory/public/privacy.html">Privacy Policy </a>
 			</p>
 		</div>
 
