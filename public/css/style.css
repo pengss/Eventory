@@ -401,6 +401,7 @@ ol, ul{
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
 	transition: all 0.3s;
+	font-size: 13px;
 }
 
 .pagetop a:hover{
@@ -526,8 +527,9 @@ a.mobile-menu{
 }
 
 .mobile-drop ul.fullwidth{
-	width:100%;
+	/*width:100%;*/
 	position:relative;
+	float:right;
 }
 
 .mobile-drop ul.fullwidth li{

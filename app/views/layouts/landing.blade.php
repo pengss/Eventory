@@ -15,7 +15,7 @@
 
     <div id="pageloader">   
         <div class="loader-item">
-          <img src="/images/loading.gif" alt='loader' />
+          <img src="/Eventory/public/images/loading.gif" alt='loader' />
       </div>
   </div>
   <section id="home" class="">
@@ -47,9 +47,10 @@
                 <a href="#">
                     <i class="fa fa-instagram"></i>
                 </a>-->
+                <a href="/Eventory/public/sponsors" class="btn btn-xs btn-effect-ripple btn-primary">For Sponsors</a>
 
                 @if (Auth::check())
-                <a href="/Eventory/public/logout"><button type="button" class="btn btn-xs btn-square btn-primary">Logout</button></a>
+                <a href="/Eventory/public/logout" class="btn btn-xs btn-effect-ripple btn-primary">Logout</a>
                 <a href="/profile">{{ Auth::user()->first_name }}</a>
                 @else
                 <a href="#modal-login" class="btn btn-xs btn-effect-ripple btn-primary" data-toggle="modal">Login</a>

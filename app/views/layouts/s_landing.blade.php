@@ -3,23 +3,21 @@
 <head>
     <title>Eventory</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="UvM_NZeKXm_As2V6kelmV6_APyhw2r9-pqvvyW1KSuA" />
     <link rel="shortcut icon" href="/Eventory/public/images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/Eventory/public/favicon.ico" type="image/x-icon">
     
-    
-    
+    {{ HTML::style('/css/reset.css') }}
     {{ HTML::style('/css/bootstrap.min.css') }}
-    {{ HTML::style('/css/font-awesome.css') }}
-    {{ HTML::style('/css/plugins.css') }}
-    {{ HTML::style('/css/style.css') }}
     {{ HTML::style('/css/main.css') }}
-    {{ HTML::style('/css/responsive.css') }}
-
-    {{ HTML::script('js/vendor/jquery-2.1.1.min.js'); }}
-
 </head>
 <body data-spy="scroll" data-target=".nav-menu" data-offset="50">
 
+    <div id="pageloader">   
+        <div class="loader-item">
+          <img src="/Eventory/public/images/loading.gif" alt='loader' />
+      </div>
+  </div>
   <section id="home" class="">
 
 
@@ -32,6 +30,25 @@
             </div>
             
             <div class="col-xs-6 right">
+
+                <!-- Social media 
+                <a href="mailto:support@goldeyestheme.com">
+                    <i class="fa fa-envelope"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-vimeo-square"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-rss"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-instagram"></i>
+                </a>-->
+
+                <a href="/Eventory/public/index" class="btn btn-xs btn-effect-ripple btn-primary">For Event Organizers</a>
 
                 @if (Auth::check())
                 <a href="/Eventory/public/logout" class="btn btn-xs btn-effect-ripple btn-primary">Logout</a>
@@ -53,19 +70,23 @@
 
             <!-- Logo Img -->
             <div class="logo">
-                <a class="scroll" href="/sponsorProfile"><img src="/Eventory/public/images/logo.png" alt="Logo"/></a>
+                <a class="scroll" href="#home"><img src="/Eventory/public/images/logo.png" alt="Logo"/></a>
             </div>
-
 
             <!-- Nav Menu -->
             <div class="nav-menu">
 
                 <ul class="nav main-nav">
 
-                    <li class="active"><a class="scroll" href="Eventory/public/sponsorProfile">My Dashboard</a></li>
-                    <li><a class="scroll" href="Eventory/public/sponsor_category">List my sponsoring criterias</a></li>
-                    <li><a class="scroll" href="Eventory/public/find_events">Find Events</a></li>
-                    <li><a class="scroll" href="Eventory/public/relevant_events">Show me relevant events</a></li>
+                    <li class="active"><a class="scroll" href="#home">home</a></li>
+                    <li><a class="scroll" href="#about">benefits</a></li>
+                    <!--<li><a class="scroll" href="#features">features</a></li>-->
+                    <li><a class="scroll" href="#history">how we work</a></li>
+                    <!--<li><a class="scroll" href="#team">team</a></li>
+                    <li><a class="scroll" href="#portfolio">portfolio</a></li>
+                    <li><a class="scroll" href="#services">services</a></li>-->
+                    <li><a class="scroll" href="#prices">pricing</a></li>
+                    <li><a class="scroll" href="#subscribe">register</a></li>
 
                 </ul>
 
@@ -76,10 +97,15 @@
             <div class="dropdown mobile-drop">
                 <a data-toggle="dropdown" class="mobile-menu" href="#"><i class="fa fa-bars"></i></a>
                 <ul class="nav dropdown-menu fullwidth" role="menu" >
-                    <li class="active"><a class="scroll" href="/sponsorProfile">My Dashboard</a></li>
-                    <li><a class="scroll" href="/sponsor_category">List my sponsoring criterias</a></li>
-                    <li><a class="scroll" href="/find_events">Find Events</a></li>
-                    <li><a class="scroll" href="/relevant_events">Show me relevant events</a></li>
+                    <li><a class="scroll" href="#home">home</a></li>
+                    <li><a class="scroll" href="#about">about</a></li>
+                    <!-- <li><a class="scroll" href="#features">features</a></li>-->
+                    <li><a class="scroll" href="#history">how we work</a></li>
+                    <!--<li><a class="scroll" href="#team">team</a></li>
+                    <li><a class="scroll" href="#portfolio">portfolio</a></li>
+                    <li><a class="scroll" href="#services">services</a></li>
+                    <li><a class="scroll" href="#prices">prices</a></li>-->
+                    <li><a class="scroll" href="#subscribe">register</a></li>
                 </ul>
             </div>
 
@@ -110,17 +136,17 @@
                         <h3 class="modal-title"><strong>Login to Eventory</strong></h3>
                     </div>
                     <div class="modal-body">
-                        {{ Form::open(array('url' => 'index', 'method' => 'post', 'class' => 'form-horizontal form-bordered')) }}
+                        {{ Form::open(array('url' => 'index', 'method' => 'post', 'class' => 'form-horizontal form-bordered login-form', 'id' => 'login-form')) }}
                         <div class="form-group">
                             <label class="col-md-3 control-label">{{Form::label('username','Username')}}</label>
                             <div class="col-md-6">
-                                {{Form::text('username', null,array('class' => 'form-control','required' => 'required','class' => 'form-control'))}}
+                                {{Form::text('username', null,array('class' => 'form-control ', 'data-validate' =>"required"))}}
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-md-3 control-label">{{Form::label('password','Password')}}</label>
                             <div class="col-md-6">
-                                {{Form::password('password',array('class' => 'form-control','required' => 'required','class' => 'form-control'))}}
+                                {{Form::password('password',array('class' => 'form-control', 'data-validate' =>"required"))}}
                             </div>
                         </div>
                         <div class="form-group form-actions">
@@ -139,77 +165,28 @@
         <!-- END Login Modal -->
         @yield('body')
         <!-- Footer Section -->
-        <section id="footer">
-
-            <div class="inner footer">
-
-                <!-- Phone -->
-                <div class="col-xs-4 animated footer-box" data-animation="flipInY" data-animation-delay="0">
-                    <!--<a class="footer-links">
-                        <i class="fa fa-mobile"></i>
-                    </a>
-
-                    <p class="footer-text">
-                        <span>Phone</span>:<span>(123) 456-7890</span>
-                    </p>-->
-                </div>
-
-                <!-- Socials and Mail -->
-                <div class="col-xs-4 animated footer-box" data-animation="flipInY" data-animation-delay="0">
-
-                    <!-- Mail -->
-                    <p class="footer-text">
-                        <span>Mail</span>:<span><a href="mailto:support@eventory.com">support@eventory.com.sg</a></span>
-                    </p>
-
-                    <!-- Copyright -->
-                    <p class="footer-text copyright" style="font-size: 0.99rem; padding-top: 5%" >
-                        Copyright 2015 <br>
-                        Eventory Pte Ltd. <br>
-                        Business Registration No. 201429745H. <br>
-                        All rights reserved. <br>
-                    </p>
-                </div>
-
-                <!-- Adress -->
-                <!--<div class="col-xs-4 animated footer-box" data-animation="flipInY" data-animation-delay="0">
-
-                    <!-- Icon -
-                    <a class="footer-links">
-                        <i class="fa fa-map-marker"></i>
-                    </a>
-
-                    <p class="footer-text">
-                        1234 Street Name, City Name
-                    </p>
-                </div>-->
-
-                <div class="clear"></div>
-            </div> <!-- End Footer inner -->
-
-        </section><!-- End Footer Section -->
+        
     </div>
-    
-    <script>!window.jQuery && document.write(decodeURI('%3Cscript src="js/vendor/jquery-2.1.1.min.js"%3E%3C/script%3E'));</script>
-    {{ HTML::script('js/vendor/bootstrap.min.js'); }}
-    {{ HTML::script('js/app.js'); }}
-    {{ HTML::script('js/plugins2.js'); }}
-    {{ HTML::script('js/pages/formsWizard.js'); }}
-    <script>$(function(){ FormsWizard.init(); });</script>
-    {{ HTML::script('js/pages/formsComponents.js'); }}
-
-
-
-
+    {{ HTML::script('js/jquery-2.1.1.min.js'); }}
+    {{ HTML::script('js/bootstrap.js'); }}
     {{ HTML::script('js/jquery.appear.js'); }}
+    {{ HTML::script('js/waypoints.min.js'); }}
     {{ HTML::script('js/jquery.prettyPhoto.js'); }}
+    {{ HTML::script('js/modernizr-latest.js'); }}
+    {{ HTML::script('js/SmoothScroll.js'); }}
     {{ HTML::script('js/jquery.parallax-1.1.3.js'); }}
+    {{ HTML::script('js/jquery.easing.1.3.js'); }}
     {{ HTML::script('js/jquery.superslides.js'); }}
+    {{ HTML::script('js/jquery.flexslider.js'); }}
+    {{ HTML::script('js/jquery.sticky.js'); }}
     {{ HTML::script('js/owl.carousel.js'); }}
     {{ HTML::script('js/jquery.isotope.js'); }}
+    {{ HTML::script('js/rev-slider/jquery.themepunch.plugins.min.js'); }}
+    {{ HTML::script('js/rev-slider/jquery.themepunch.revolution.min.js'); }}
     {{ HTML::script('js/jquery.mb.YTPlayer.js'); }}
+    {{ HTML::script('js/jquery.fitvids.js'); }}
     {{ HTML::script('js/plugins.js'); }}
-
+    {{ HTML::script('js/vendor/verify.notify.min.js'); }}
     @show
 </body>
 </html>

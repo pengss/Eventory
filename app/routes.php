@@ -16,7 +16,7 @@ Route::get('/', function()
 	return View::make('users.index');
 });
 
-Route::get('sponsor_home', array('as' => 'sponsor_home', 'uses' => 'UsersController@sponsorHome'));
+Route::get('sponsors', array('as' => 'sponsor_home', 'uses' => 'UsersController@sponsorHome'));
 
 Route::get('index', array('as' => 'index', 'uses' => 'UsersController@login')); //route to display log in form
 

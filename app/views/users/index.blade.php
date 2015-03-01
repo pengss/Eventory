@@ -291,6 +291,8 @@
 		<div style = "text-align: center">
 			<p style="font-size: 0.90rem">
 				Copyright2015 Eventory Pte. Ltd. Business Registration No. 201429745H. All rights reserved.
+				<br/>
+				<a href="">Terms of Use</a> | <a href ="">Privacy Policy </a>
 			</p>
 		</div>
 
