@@ -48,7 +48,7 @@
                     <i class="fa fa-instagram"></i>
                 </a>-->
 
-                <a href="/Eventory/public/index" class="btn btn-xs btn-effect-ripple btn-primary">For Event Organizers</a>
+                <a href="/Eventory/public/index" class="btn btn-xs btn-effect-ripple btn-primary">Event Organizers</a>
 
                 @if (Auth::check())
                 <a href="/Eventory/public/logout" class="btn btn-xs btn-effect-ripple btn-primary">Logout</a>

@@ -22,14 +22,14 @@
             <!-- Slide -->
             <li class="revslide" data-transition="random" data-slotamount="7" data-masterspeed="800" >
                 <!-- MAIN IMAGE -->
-                <img src="images/singapore.jpg"  alt="slidebg2"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+                <img src="images/singapore2.jpg"  alt="slidebg2"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
                 <!-- LAYERS -->
 
                 <!-- Layer 1 -->
                 <div class="tp-caption sft customout"
                 data-x="0"
                 data-y="220"
-                data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0.9;transformPerspective:600;transformOrigin:50% 50%;"
                 data-speed="900"
                 data-start="1400"
                 data-easing="Power4.easeOut"

@@ -17,7 +17,7 @@
                             
                         </div>
                         <!-- END Gallery Items -->
-                        <a href="{{ URL::to('create_event') }}" class="btn btn-effect-ripple btn-primary"><i class="fa fa-arrow-left"></i>Create An Event</a>
+                        <a href="javascript:history.back()" class="btn btn-effect-ripple btn-primary"><i class="fa fa-arrow-left"></i>Back to create Event</a>
                  
             </div>
         </div>
