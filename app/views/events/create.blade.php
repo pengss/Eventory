@@ -118,7 +118,7 @@
                                         }
                                         ?>
                                          <br/>
-                                            <li><input type="checkbox" id="event_types" name="event_types[]"  value="others" > Others: <input type="text" id="other_event_types" name="other_event_types"/></li>
+                                            <!--<li><input type="checkbox" id="event_types" name="event_type_others"  value="" > Others: <input type="text" id="other_event_types" name="other_event_types"/></li>-->
                                     </ul>
                                 </fieldset>
                             </div>
@@ -139,7 +139,7 @@
                                             }
                                             ?>
                                             <br/>
-                                            <li><input type="checkbox" id="target_audience" name="target_audience[]" value="others" > Others: <input type="text" id="other_audience" name="other_audience"/></li>
+                                            <!--<li><input type="checkbox" id="target_audience" name="target_audience_others" value="" > Others: <input type="text" id="other_audience" name="other_audience"/></li>-->
                                         </div>
                                     </ul>
                                 </fieldset>
