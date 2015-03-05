@@ -1,4 +1,4 @@
-@extends('layouts.sign_up')
+@extends('layouts.sponsor_sign_up')
 @section('body')
 
 {{ HTML::style('/css/main.css') }}
