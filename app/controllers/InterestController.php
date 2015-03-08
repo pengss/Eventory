@@ -45,6 +45,11 @@ class InterestController extends \BaseController {
 						   ]
 						   ];
 			DB::table('interested_event_organiser') -> insert($newInterest);
+			
+			Mail::send('emails.event_organiser_interest', array('email'=>$data['email'], 'event_name'=>$data['details'], 'name'=>$data['name'], 'date'=>$data['event_date']), function($message){
+				$message->to('support@eventory.com.sg', Input::get('name'))->subject('Eventory - Event Organizer Interest Confirmed');
+			});
+
 			return View::make('users.interest_success');
 		}
 	}

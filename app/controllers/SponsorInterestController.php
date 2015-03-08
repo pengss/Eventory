@@ -44,6 +44,11 @@ class SponsorInterestController extends \BaseController {
 						   ]
 						   ];
 			DB::table('interested_sponsor') -> insert($newInterest);
+
+			Mail::send('emails.sponsor_interest', array('email'=>$data['email'], 'organisation_name'=>$data['organisationName'], 'name'=>$data['name']), function($message){
+				$message->to('support@eventory.com.sg', Input::get('name'))->subject('Eventory - Sponsor Interest Confirmed');
+			});
+
 			return View::make('sponsor.success_interest');
 		}
 	}

@@ -4,7 +4,7 @@
 
 <p>
 	Name: {{$name}} <br>
-	Event Name: {{$eventName}}<br>
+	Event Name: {{$event_name}}<br>
 	Event Date: {{$date}}<br>
-	Email: {{$mail}}
+	Email: {{$email}}
 </p>
