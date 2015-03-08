@@ -1,3 +1,5 @@
-<h1> {{ $username }} </h1>
+<h1> Welcome to Eventory </h1>
 
-<p> Welcome to Eventory </p>
+<p> Your username is {{ $username }} </p>
+
+<p> Your password is {{ $password }} </p>

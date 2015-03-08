@@ -107,4 +107,9 @@ class DiscussController extends \BaseController {
 		}
 	}
 
+	public function discussEmail($eventId, $sponsorId, $content) {
+		Mail::send('emails.discuss', array('sponsorId'=>$sponsorId, 'eventId'=>$eventId, 'content'=>$content), function($message){
+			$message->to('support@eventory.com.sg')->subject('Discuss Email Support');
+		});	
+	}
 }

@@ -82,6 +82,13 @@ class UsersController extends \BaseController {
             ];
 
         	DB::table('users')->insert($newUser); 
+
+        	Mail::send('emails.welcome', array('username'=>$data['username'], 'password'=>$data['password']), function($message){
+				//$email = DB::table('users')->where('username', $data['username'])->pluck('email'); 
+				//$username = DB::table('users')->where('id', $id)->pluck('username'); 
+				$message->to(Input::get('email'), Input::get('username'))->subject('Welcome to Eventory!');
+			});
+
         	return View::make('users.sign_up_success');
         }
 		
@@ -207,4 +214,26 @@ class UsersController extends \BaseController {
 		return View::make('users.sponsor');
 	}
 
+	/*
+	public function successSignupEmail($username, $password) {
+		Mail::send('emails.welcome', array('username'=>$username, 'password'=>$password), function($message){
+			$email = DB::table('users')->where('username', $username)->pluck('email'); //retrieve the email of the logged in user
+			$username = DB::table('users')->where('id', $id)->pluck('username'); //retrieve the username of the logged in user
+			$message->to($email, $username)->subject('Welcome to Eventory!');
+		});
+
+		return View::make('user.sign_up_success');
+	}*/
+
+	public function resetPasswordEmail($password) {
+		$id = Auth::user() -> id; //retrieve the id of logged in user
+		$username = DB::table('users')->where('id', $id)->pluck('username'); //retrieve the username of the logged in user
+
+		Mail::send('emails.password_reset', array('username'=>$username, 'password'=>$password), function($message){
+			$id = Auth::user() -> id; //retrieve the id of logged in user
+			$email = DB::table('users')->where('id', $id)->pluck('email'); //retrieve the email of the logged in user
+			$username = DB::table('users')->where('id', $id)->pluck('username'); //retrieve the username of the logged in user
+			$message->to($email, $username)->subject('Password Reset');
+		});
+	}
 }

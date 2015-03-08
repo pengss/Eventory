@@ -54,7 +54,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => 'chensq27@gmail.com', 'name' => 'Welcome to Eventory'),
+	'from' => array('address' => 'chensq27@gmail.com', 'name' => 'Laravel Admin'),
 
 	/*
 	|--------------------------------------------------------------------------

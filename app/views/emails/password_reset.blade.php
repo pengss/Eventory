@@ -1,0 +1,1 @@
+/Applications/XAMPP/xamppfiles/htdocs/Eventory/app/views/emails/password_reset.blade.php
