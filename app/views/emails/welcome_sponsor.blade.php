@@ -2,7 +2,7 @@
 
 <p> Welcome to <b>Eventory</b>!<p>
 
-<p> Thank you for registering your interest with us. </p>
+<p> Thank you for signing up with us. </p>
 
 <p> We are excited to have you onboard as a partner. </p>
 
