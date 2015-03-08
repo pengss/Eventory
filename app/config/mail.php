@@ -54,7 +54,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => 'chensq27@gmail.com', 'name' => 'Laravel Admin'),
+	'from' => array('address' => 'eventory@eventory.com.sg', 'name' => 'Eventory Admin'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -80,7 +80,7 @@ return array(
 	|
 	*/
 
-	'username' => 'chensq27@gmail.com',
+	'username' => 'eventory@eventory.com.sg',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,7 +93,7 @@ return array(
 	|
 	*/
 
-	'password' => 's9076659G',
+	'password' => 'eventory2015',
 
 	/*
 	|--------------------------------------------------------------------------

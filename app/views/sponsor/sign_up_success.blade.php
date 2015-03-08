@@ -10,7 +10,7 @@
         <div id="error-container">
             <div class="row text-center">
                 <div class="col-md-8 col-md-offset-2">
-                    <h1 class="text-light animation-fadeInQuick"><strong>Congratualations</strong></h1>
+                    <h1 class="text-light animation-fadeInQuick"><strong>Congratulations</strong></h1>
                     <h2 class="text-muted animation-fadeInQuickInv"><em>You are now a member of Eventory, please log in to start looking at events</em></h2>
                 </div>
                 <div class="row gallery2">

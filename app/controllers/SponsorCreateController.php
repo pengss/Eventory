@@ -81,6 +81,11 @@ class SponsorCreateController extends \BaseController {
             ];
 
         	DB::table('users')->insert($newUser); 
+
+        	Mail::send('emails.welcome_sponsor', array('username'=>$data['username'], 'password'=>$data['password'], 'name'=>$data['name']), function($message){
+				$message->to(Input::get('email'), Input::get('username'))->subject('Confirmation email');
+			});
+
         	return View::make('sponsor.sign_up_success');
         }
 		

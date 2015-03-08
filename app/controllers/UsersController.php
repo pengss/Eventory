@@ -83,10 +83,8 @@ class UsersController extends \BaseController {
 
         	DB::table('users')->insert($newUser); 
 
-        	Mail::send('emails.welcome', array('username'=>$data['username'], 'password'=>$data['password']), function($message){
-				//$email = DB::table('users')->where('username', $data['username'])->pluck('email'); 
-				//$username = DB::table('users')->where('id', $id)->pluck('username'); 
-				$message->to(Input::get('email'), Input::get('username'))->subject('Welcome to Eventory!');
+        	Mail::send('emails.welcome_event_organizer', array('username'=>$data['username'], 'password'=>$data['password'], 'name'=>$data['name']), function($message){
+				$message->to(Input::get('email'), Input::get('username'))->subject('Confirmation email');
 			});
 
         	return View::make('users.sign_up_success');
