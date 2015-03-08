@@ -126,7 +126,7 @@ class InterestController extends \BaseController {
 		return View::make('sponsor.success_payment');
 	}
 
-	public function interestEmail($name, $email, $details, $eventDate) {
+	/*public function interestEmail($name, $email, $details, $eventDate) {
 		Mail::send('emails.interest', array('details'=>$details, 'email'=>$email, 'name'=>$name, 'eventDate'=>$event_date), function($message){
 			$message->to('support@eventory.com.sg')->subject('Interest Support');
 		});	
@@ -136,5 +136,5 @@ class InterestController extends \BaseController {
 		Mail::send('emails.process_presence', array('sponsorId'=>$sponsorId, 'eventId'=>$eventId, 'presence'=>$presence), function($message){
 			$message->to('support@eventory.com.sg')->subject('Process Presence Support');
 		});	
-	}
+	}*/
 }
