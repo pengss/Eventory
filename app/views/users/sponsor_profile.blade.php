@@ -15,16 +15,18 @@
 		<img src="images/socialnet_header.jpg" alt="Header Image" class="animation-pulseSlow">
 	</div>
 	<!-- START if no events -->
+	@if($criteria == false)
 	<div class="content-header">
 		<div class="header-section clearfix">
 			<div class="widget-icon themed-background-danger pull-right">
 				<i class="gi gi-pushpin text-light-op"></i>
 			</div>
 			<h1>My Sponsored Events</h1>
-			<h2>Seems like you have no current sponsoring events. Click <a href ="{{ URL::to('find_event') }}">here</a> to discover new exciting events!</h2>
+			<h2>Seems like you have not listed your sponsoring criterias. Click <a href ="{{ URL::to('sponsor_category') }}">here</a> to list your criterias!</h2>
 		</div>
 	</div>
 	<div class="block">
+	@endif	
 		<!-- Start message -->
 		<div class="tab-content">
 			<ol>

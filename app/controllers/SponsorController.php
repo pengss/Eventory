@@ -92,7 +92,7 @@ class SponsorController extends \BaseController {
 
 			$name = Auth::user()->name;
 			View::share('nameOfSponsor', $name);
-			return View::make('users.sponsor_profile'); //Links to Sponsor Page
+			return View::make('sponsor.category_success'); //Links to Sponsor Page
 		}
 		else{
 			return 'Error';
@@ -205,5 +205,12 @@ class SponsorController extends \BaseController {
 
 	public function successPayment(){
 		return View::make('sponsor.success_payment');
+	}
+
+	public function findRelevantEvents($sponsorId){
+		$sponsorAudience = DB::table('sponsor_audience') -> where('sponsor_id', $sponsorId) -> select('audience_id') -> get();
+		$sponsorEventType = DB::table('sponsor_event_type') -> where('sponsor_id', $sponsorId) -> select('event_type_id') -> get();
+		$sponsorTurnout = DB::table('sponsor_turnout') -> where('sponsor_id', $sponsorId) -> select('expected_turnout') -> get();
+		$sponsorSponsorship = DB::table('sponsor_sponsorship_type') -> where('sponsor_id', $sponsorId) -> select('sponsorship_type_id') -> get();
 	}
 }

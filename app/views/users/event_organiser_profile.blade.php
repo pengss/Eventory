@@ -16,6 +16,7 @@
 	</div>
 
 	<!-- START if no events -->
+	@if(count($allEvents) < 1)
 	<div class="content-header">
 		<div class="header-section clearfix">
 			<div class="widget-icon themed-background-danger pull-right">
@@ -26,7 +27,8 @@
 		</div>
 	</div>
 	<div class="block">
-		<!-- Search Styles Title -->
+	@endif
+	<!-- Search Styles Title -->
 
 		<!-- END Search Styles Title -->
 

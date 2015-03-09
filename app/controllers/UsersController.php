@@ -167,12 +167,29 @@ class UsersController extends \BaseController {
 
 	public function eventOrganiserProfile(){
 		$name = Auth::user()->name;
+		$userId = Auth::user()->id;
+        $events = DB::table('event')->where('creator_id', $userId)->get();
+        View::share('allEvents', $events);
 		View::share('nameOfEventOrganiser', $name);
 		return View::make('users.event_organiser_profile'); //Links to the Event Organiser Page
 	}
 
 	public function sponsorProfile(){
 		$name = Auth::user()->name;
+		$userId = Auth::user()->id;
+		
+		$criteria = true;
+		
+		$eventTypes = DB::table('sponsor_event_type')->where('sponsor_id', $userId)->get();
+		$audiences = DB::table('sponsor_audience')->where('sponsor_id', $userId)->get();  
+		$turnout = DB::table('sponsor_turnout')->where('sponsor_id', $userId)->get();
+		$sponsorship = DB::table('sponsor_sponsorship_type')->where('sponsor_id', $userId)->get();
+
+		if($eventTypes == null && $audiences == null && $turnout == null && $sponsorship == null){
+			$criteria = false;
+		}
+
+		View::share('criteria', $criteria);
 		View::share('nameOfSponsor', $name);
 		return View::make('users.sponsor_profile'); //Links to Sponsor Page
 	}
